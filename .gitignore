@@ -1,0 +1,654 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must ends with two \r.
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Library/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+/*.csproj
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+
+/*.sln
+/*.sln
+/*.userprefs
+/*.sln
+/*.userprefs
+/*.unityproj
+/*.csproj
+/*.apk
+/Assets/Minimal_Sample.meta
+Assets/AndroidImmersiveMode.meta
+Assets/AndroidImmersiveMode/Instructions.meta
+Assets/AndroidImmersiveMode/Plugins.meta
+Assets/AndroidImmersiveMode/Plugins/Android.meta
+Assets/AndromedaSystem/Demo.meta
+Assets/AndromedaSystem/Demo/Demo Models.meta
+Assets/AndromedaSystem/Demo/Demo Models/Materials.meta
+Assets/AndromedaSystem/Demo/Demo Models/Model Prefabs.meta
+Assets/AndromedaSystem/Demo/Demo Models/Models.meta
+Assets/AndromedaSystem/Demo/Demo Models/Models/Hologram Machine.meta
+Assets/AndromedaSystem/Demo/Demo Models/Models/Hologram Machine/Hologram Plane.meta
+Assets/AndromedaSystem/Demo/Demo Models/Models/Hologram Machine/Hologram Plane/Materials.meta
+Assets/AndromedaSystem/Demo/Demo Models/Models/Hologram Machine/Materials.meta
+Assets/AndromedaSystem/Demo/Demo Models/Models/Robot Kyle.meta
+Assets/AndromedaSystem/Demo/Demo Models/Models/Robot Kyle/Materials.meta
+Assets/AndromedaSystem/Materials/Demo Models.meta
+Assets/AndromedaSystem/Materials/Demo Models/Hologram Machine.meta
+Assets/AndromedaSystem/Materials/Demo Models/Hologram Machine/Hologram Plane.meta
+Assets/AndromedaSystem/Materials/Demo Models/Robot Kyle.meta
+Assets/AndromedaSystem/Prefabs.meta
+Assets/AndromedaSystem/Textures.meta
+Assets/AndromedaSystem/Textures/Demo Models.meta
+Assets/AndromedaSystem/Textures/Demo Models/Hologram Machine.meta
+Assets/AndromedaSystem/Textures/Demo Models/Robot Kyle.meta
+Assets/AndromedaSystem/Textures/Hologram Textures.meta
+Assets/Aubergine.meta
+Assets/Aubergine/Materials.meta
+Assets/Aubergine/Shaders.meta
+Assets/Aubergine/Shaders/_Includes.meta
+Assets/Elementals.meta
+Assets/Elementals/Prefabs (Mobile).meta
+Assets/Elementals/Prefabs (Mobile)/Darkness.meta
+Assets/Elementals/Prefabs (Mobile)/Earth.meta
+Assets/Elementals/Prefabs (Mobile)/Fire.meta
+Assets/Elementals/Prefabs (Mobile)/Ice.meta
+Assets/Elementals/Prefabs (Mobile)/Light.meta
+Assets/Elementals/Prefabs (Mobile)/Thunder.meta
+Assets/Elementals/Prefabs (Mobile)/Water.meta
+Assets/Elementals/Prefabs (Mobile)/Wind.meta
+Assets/Examples.meta
+Assets/Examples/Textures.meta
+Assets/FPSGraph.meta
+Assets/FPSGraph/Heureka.meta
+Assets/FPSGraph/Heureka/AssetHunter.meta
+Assets/FPSGraph/Heureka/AssetHunter/Editor.meta
+Assets/FPSGraph/Heureka/AssetHunter/Editor/Settings.meta
+Assets/FPSGraph/Heureka/AssetHunter/Editor/UI.meta
+Assets/FPSGraph/Heureka/HeurekaShared.meta
+Assets/FPSGraph/Heureka/HeurekaShared/Editor.meta
+Assets/FPSGraph/Heureka/HeurekaShared/Editor/ClassBuilder.meta
+Assets/GooglePlayGames.meta
+Assets/GooglePlayGames/BasicApi.meta
+Assets/GooglePlayGames/BasicApi/RealTimeMultiplayer.meta
+Assets/GooglePlayGames/RealTimeMultiplayer.meta
+Assets/Models/-Tutorial characters.meta
+Assets/Models/-Tutorial characters/Girl.meta
+Assets/Models/-Tutorial characters/Girl/Materials.meta
+Assets/NGUI/Plugins.meta
+Assets/NGUI/Plugins/AmazonCommon.meta
+Assets/NGUI/Plugins/AmazonCommon/Source.meta
+Assets/NGUI/Plugins/AmazonCommon/Source/MiniJSON.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Prefabs.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/AchievementsClient.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/AchievementsClient/DataModel.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/AchievementsClient/Responses.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/LeaderboardsClient.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/LeaderboardsClient/DataModel.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/LeaderboardsClient/Responses.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/PlayerClient.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/PlayerClient/DataModel.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/PlayerClient/Responses.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/ProfilesClient.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/ProfilesClient/DataModel.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/UnitySocialAPI.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/WhispersyncClient.meta
+Assets/NGUI/Plugins/AmazonGameCirclePlugin/Source/WhispersyncClient/DataModel.meta
+Assets/NGUI/Plugins/Android.meta
+Assets/NGUI/Plugins/Android/PlayGameServices_lib.meta
+Assets/NGUI/Plugins/Android/PlayGameServices_lib/libs.meta
+Assets/NGUI/Plugins/Android/assets.meta
+Assets/NGUI/Plugins/Android/facebook.meta
+Assets/NGUI/Plugins/Android/facebook/assets.meta
+Assets/NGUI/Plugins/Android/facebook/fbsrc.meta
+Assets/NGUI/Plugins/Android/facebook/fbsrc/com.meta
+Assets/NGUI/Plugins/Android/facebook/fbsrc/com/facebook.meta
+Assets/NGUI/Plugins/Android/facebook/fbsrc/com/facebook/unity.meta
+Assets/NGUI/Plugins/Android/facebook/libs.meta
+Assets/NGUI/Plugins/Android/facebook/res.meta
+Assets/NGUI/Plugins/Android/facebook/res/drawable-hdpi.meta
+Assets/NGUI/Plugins/Android/facebook/res/drawable-ldpi.meta
+Assets/NGUI/Plugins/Android/facebook/res/drawable-mdpi.meta
+Assets/NGUI/Plugins/Android/facebook/res/drawable-xhdpi.meta
+Assets/NGUI/Plugins/Android/facebook/res/drawable-xxhdpi.meta
+Assets/NGUI/Plugins/Android/facebook/res/drawable.meta
+Assets/NGUI/Plugins/Android/facebook/res/layout.meta
+Assets/NGUI/Plugins/Android/facebook/res/values-es.meta
+Assets/NGUI/Plugins/Android/facebook/res/values-hdpi.meta
+Assets/NGUI/Plugins/Android/facebook/res/values-he.meta
+Assets/NGUI/Plugins/Android/facebook/res/values-iw.meta
+Assets/NGUI/Plugins/Android/facebook/res/values-ldpi.meta
+Assets/NGUI/Plugins/Android/facebook/res/values-mdpi.meta
+Assets/NGUI/Plugins/Android/facebook/res/values-xhdpi.meta
+Assets/NGUI/Plugins/Android/facebook/res/values.meta
+Assets/NGUI/Plugins/Android/facebook/src.meta
+Assets/NGUI/Plugins/Android/facebook/src/com.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/assets.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/bin.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/gen.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/libs.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/color.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/drawable-hdpi.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/drawable-ldpi.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/drawable-mdpi.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/drawable-tvdpi.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/drawable-xhdpi.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/drawable-xxhdpi.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/drawable.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/layout.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/raw.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-af.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-am.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ar.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-be.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-bg.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-bn-rBD.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ca.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-cs.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-da.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-de.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-el.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-en-rAU.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-en-rGB.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-en-rIN.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-es-rUS.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-es.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-et-rEE.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-eu-rES.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-fa.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-fi.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-fr-rCA.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-fr.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-gl-rES.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-hi.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-hr.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-hu.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-hy-rAM.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-in.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-is-rIS.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-it.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-iw.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ja.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ka-rGE.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-kk-rKZ.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-km-rKH.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-kn-rIN.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ko.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ky-rKG.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-lo-rLA.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-lt.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-lv.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-mk-rMK.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ml-rIN.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-mn-rMN.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-mr-rIN.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ms-rMY.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-my-rMM.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-nb.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ne-rNP.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-nl.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-pl.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-pt-rBR.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-pt-rPT.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-pt.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ro.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ru.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-si-rLK.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-sk.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-sl.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-sr.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-sv.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-sw.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ta-rIN.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-te-rIN.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-th.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-tl.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-tr.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-uk.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-ur-rPK.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-uz-rUZ.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-vi.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-zh-rCN.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-zh-rHK.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-zh-rTW.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values-zu.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/res/values.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/src.meta
+Assets/NGUI/Plugins/Android/google-play-services_lib/src/android.meta
+Assets/NGUI/Plugins/Android/libs.meta
+Assets/NGUI/Plugins/Android/res.meta
+Assets/NGUI/Plugins/Android/res/drawable-hdpi.meta
+Assets/NGUI/Plugins/Android/res/drawable-mdpi.meta
+Assets/NGUI/Plugins/Android/res/drawable-xhdpi.meta
+Assets/NGUI/Plugins/Android/res/drawable-xxhdpi.meta
+Assets/NGUI/Plugins/Android/res/drawable.meta
+Assets/NGUI/Plugins/Android/res/layout.meta
+Assets/NGUI/Plugins/Android/res/raw.meta
+Assets/NGUI/Plugins/Android/res/values-ar.meta
+Assets/NGUI/Plugins/Android/res/values-az.meta
+Assets/NGUI/Plugins/Android/res/values-bg.meta
+Assets/NGUI/Plugins/Android/res/values-bn.meta
+Assets/NGUI/Plugins/Android/res/values-ca.meta
+Assets/NGUI/Plugins/Android/res/values-cs.meta
+Assets/NGUI/Plugins/Android/res/values-da.meta
+Assets/NGUI/Plugins/Android/res/values-de.meta
+Assets/NGUI/Plugins/Android/res/values-el.meta
+Assets/NGUI/Plugins/Android/res/values-en-rGB.meta
+Assets/NGUI/Plugins/Android/res/values-en-rPH.meta
+Assets/NGUI/Plugins/Android/res/values-en-rUS.meta
+Assets/NGUI/Plugins/Android/res/values-en.meta
+Assets/NGUI/Plugins/Android/res/values-es-rAR.meta
+Assets/NGUI/Plugins/Android/res/values-es-rBO.meta
+Assets/NGUI/Plugins/Android/res/values-es-rCL.meta
+Assets/NGUI/Plugins/Android/res/values-es-rCO.meta
+Assets/NGUI/Plugins/Android/res/values-es-rCR.meta
+Assets/NGUI/Plugins/Android/res/values-es-rCU.meta
+Assets/NGUI/Plugins/Android/res/values-es-rDO.meta
+Assets/NGUI/Plugins/Android/res/values-es-rEC.meta
+Assets/NGUI/Plugins/Android/res/values-es-rGT.meta
+Assets/NGUI/Plugins/Android/res/values-es-rGY.meta
+Assets/NGUI/Plugins/Android/res/values-es-rHN.meta
+Assets/NGUI/Plugins/Android/res/values-es-rHT.meta
+Assets/NGUI/Plugins/Android/res/values-es-rMX.meta
+Assets/NGUI/Plugins/Android/res/values-es-rNI.meta
+Assets/NGUI/Plugins/Android/res/values-es-rPA.meta
+Assets/NGUI/Plugins/Android/res/values-es-rPE.meta
+Assets/NGUI/Plugins/Android/res/values-es-rPR.meta
+Assets/NGUI/Plugins/Android/res/values-es-rPY.meta
+Assets/NGUI/Plugins/Android/res/values-es-rSV.meta
+Assets/NGUI/Plugins/Android/res/values-es-rUS.meta
+Assets/NGUI/Plugins/Android/res/values-es-rUY.meta
+Assets/NGUI/Plugins/Android/res/values-es-rVE.meta
+Assets/NGUI/Plugins/Android/res/values-es.meta
+Assets/NGUI/Plugins/Android/res/values-et.meta
+Assets/NGUI/Plugins/Android/res/values-eu.meta
+Assets/NGUI/Plugins/Android/res/values-fa.meta
+Assets/NGUI/Plugins/Android/res/values-fi.meta
+Assets/NGUI/Plugins/Android/res/values-fr-rCA.meta
+Assets/NGUI/Plugins/Android/res/values-fr.meta
+Assets/NGUI/Plugins/Android/res/values-ga.meta
+Assets/NGUI/Plugins/Android/res/values-gl.meta
+Assets/NGUI/Plugins/Android/res/values-gu.meta
+Assets/NGUI/Plugins/Android/res/values-ha.meta
+Assets/NGUI/Plugins/Android/res/values-he.meta
+Assets/NGUI/Plugins/Android/res/values-hi.meta
+Assets/NGUI/Plugins/Android/res/values-hr.meta
+Assets/NGUI/Plugins/Android/res/values-hu.meta
+Assets/NGUI/Plugins/Android/res/values-hy.meta
+Assets/NGUI/Plugins/Android/res/values-id.meta
+Assets/NGUI/Plugins/Android/res/values-ig.meta
+Assets/NGUI/Plugins/Android/res/values-in.meta
+Assets/NGUI/Plugins/Android/res/values-is.meta
+Assets/NGUI/Plugins/Android/res/values-it.meta
+Assets/NGUI/Plugins/Android/res/values-iw.meta
+Assets/NGUI/Plugins/Android/res/values-ja.meta
+Assets/NGUI/Plugins/Android/res/values-ka.meta
+Assets/NGUI/Plugins/Android/res/values-kk.meta
+Assets/NGUI/Plugins/Android/res/values-kn.meta
+Assets/NGUI/Plugins/Android/res/values-ko.meta
+Assets/NGUI/Plugins/Android/res/values-lt.meta
+Assets/NGUI/Plugins/Android/res/values-lv.meta
+Assets/NGUI/Plugins/Android/res/values-mk.meta
+Assets/NGUI/Plugins/Android/res/values-ml.meta
+Assets/NGUI/Plugins/Android/res/values-mr.meta
+Assets/NGUI/Plugins/Android/res/values-ms.meta
+Assets/NGUI/Plugins/Android/res/values-nb.meta
+Assets/NGUI/Plugins/Android/res/values-nl.meta
+Assets/NGUI/Plugins/Android/res/values-pa.meta
+Assets/NGUI/Plugins/Android/res/values-pl.meta
+Assets/NGUI/Plugins/Android/res/values-pt-rBR.meta
+Assets/NGUI/Plugins/Android/res/values-pt.meta
+Assets/NGUI/Plugins/Android/res/values-ro.meta
+Assets/NGUI/Plugins/Android/res/values-ru.meta
+Assets/NGUI/Plugins/Android/res/values-sk.meta
+Assets/NGUI/Plugins/Android/res/values-sl.meta
+Assets/NGUI/Plugins/Android/res/values-sr.meta
+Assets/NGUI/Plugins/Android/res/values-sv.meta
+Assets/NGUI/Plugins/Android/res/values-ta.meta
+Assets/NGUI/Plugins/Android/res/values-te.meta
+Assets/NGUI/Plugins/Android/res/values-th.meta
+Assets/NGUI/Plugins/Android/res/values-tr.meta
+Assets/NGUI/Plugins/Android/res/values-uk.meta
+Assets/NGUI/Plugins/Android/res/values-ur.meta
+Assets/NGUI/Plugins/Android/res/values-vi.meta
+Assets/NGUI/Plugins/Android/res/values-yo.meta
+Assets/NGUI/Plugins/Android/res/values-zh-rHK.meta
+Assets/NGUI/Plugins/Android/res/values-zh-rSG.meta
+Assets/NGUI/Plugins/Android/res/values-zh-rTW.meta
+Assets/NGUI/Plugins/Android/res/values-zh.meta
+Assets/NGUI/Plugins/Android/res/values.meta
+Assets/NGUI/Plugins/GameCenter.meta
+Assets/NGUI/Plugins/GameCenter/demo.meta
+Assets/NGUI/Plugins/Metro.meta
+Assets/NGUI/Plugins/NGUI.meta
+Assets/NGUI/Plugins/NGUI/Interaction.meta
+Assets/NGUI/Plugins/NGUI/Internal.meta
+Assets/NGUI/Plugins/NGUI/Tweening.meta
+Assets/NGUI/Plugins/NGUI/UI.meta
+Assets/NGUI/Plugins/PSDK.meta
+Assets/NGUI/Plugins/PSDK/AppLifeCycleMgrService.meta
+Assets/NGUI/Plugins/PSDK/AppsFlyer.meta
+Assets/NGUI/Plugins/PSDK/Banners.meta
+Assets/NGUI/Plugins/PSDK/EventsListeners.meta
+Assets/NGUI/Plugins/PSDK/GameLevelData.meta
+Assets/NGUI/Plugins/PSDK/Interfaces.meta
+Assets/NGUI/Plugins/PSDK/LocationMgrService.meta
+Assets/NGUI/Plugins/PSDK/Monetization.meta
+Assets/NGUI/Plugins/PSDK/PSDKAnalytics.meta
+Assets/NGUI/Plugins/PSDK/RewardedAds.meta
+Assets/NGUI/Plugins/PSDK/ServiceMgr.meta
+Assets/NGUI/Plugins/PSDK/Settings.meta
+Assets/NGUI/Plugins/PSDK/Splash.meta
+Assets/NGUI/Plugins/PSDK/Utils.meta
+Assets/NGUI/Plugins/PlayGameServices.meta
+Assets/NGUI/Plugins/PlayGameServices/CommonFiles.meta
+Assets/NGUI/Plugins/PlayGameServices/CommonFiles/Core.meta
+Assets/NGUI/Plugins/PlayGameServices/CommonFiles/RealTimeMultiplayer.meta
+Assets/NGUI/Plugins/PlayGameServices/CommonFiles/TurnBasedMultiplayer.meta
+Assets/NGUI/Plugins/PlayGameServicesAndroid.meta
+Assets/NGUI/Plugins/Uniject.meta
+Assets/NGUI/Plugins/Uniject/Assembly.meta
+Assets/NGUI/Plugins/Uniject/Interface.meta
+Assets/NGUI/Plugins/Uniject/impl.meta
+Assets/NGUI/Plugins/WP8.meta
+Assets/NGUI/Plugins/iOS.meta
+Assets/NGUI/Plugins/iOS/AppsFlyer.meta
+Assets/NGUI/Plugins/unibill.meta
+Assets/NGUI/Plugins/unibill/assembly.meta
+Assets/NGUI/Plugins/unibill/generated.meta
+Assets/NGUI/Plugins/unibill/generated/googleplay.meta
+Assets/NGUI/Plugins/unibill/generated/storekit.meta
+Assets/NGUI/Plugins/unibill/resources.meta
+Assets/NGUI/Plugins/unibill/scenes.meta
+Assets/NGUI/Plugins/unibill/screenshots.meta
+Assets/NGUI/Plugins/unibill/src.meta
+Assets/NGUI/Plugins/unibill/src/AmazonAppStore.meta
+Assets/NGUI/Plugins/unibill/src/AppleAppStore.meta
+Assets/NGUI/Plugins/unibill/src/GooglePlay.meta
+Assets/NGUI/Plugins/unibill/src/SamsungApps.meta
+Assets/NGUI/Plugins/unibill/src/WP8.meta
+Assets/NGUI/Plugins/unibill/src/Win8_1.meta
+Assets/NGUI/Plugins/unibill/src/impl.meta
+Assets/NGUI/Plugins/unibill/src/impl/DLC.meta
+Assets/NGUI/Plugins/unibill/static.meta
+Assets/NGUI/Plugins/unibillosx.bundle.meta
+Assets/NGUI/Plugins/unibillosx.bundle/Contents.meta
+Assets/NGUI/Plugins/unibillosx.bundle/Contents/MacOS.meta
+Assets/NGUI/Plugins/unibillosx.bundle/Contents/Resources.meta
+Assets/NGUI/Plugins/unibillosx.bundle/Contents/Resources/en.lproj.meta
+Assets/PSDK.meta
+Assets/PSDK/Demo.meta
+Assets/PSDK/Demo/Monetization.meta
+Assets/PSDK/Demo/Monetization/sprites.meta
+Assets/PSDK/Documents.meta
+Assets/PSDK/Documents/GameLevelData.meta
+Assets/PSDK/Documents/Monetization.meta
+Assets/PSDK/Documents/PublishingSDKCore.meta
+Assets/PSDK/Documents/RewardedAds.meta
+Assets/PSDK/Documents/Splash.meta
+Assets/PSDK/Editor.meta
+Assets/PSDK/Editor/Installer.meta
+Assets/PSDK/Editor/iOS.meta
+Assets/PSDK/Editor/iOS/AppsFlyer.meta
+Assets/PSDK/Editor/iOS/AppsFlyer/PSDKAppsFlyer.framework.meta
+Assets/PSDK/Editor/iOS/AppsFlyer/PSDKAppsFlyer.framework/Headers.meta
+Assets/PSDK/Editor/iOS/AppsFlyer/PSDKAppsFlyer.framework/Versions.meta
+Assets/PSDK/Editor/iOS/AppsFlyer/PSDKAppsFlyer.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/AppsFlyer/PSDKAppsFlyer.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/AppsFlyer/PSDKAppsFlyer.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/AppsFlyer/PSDKAppsFlyer.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/Banners.meta
+Assets/PSDK/Editor/iOS/Banners/Banners.framework.meta
+Assets/PSDK/Editor/iOS/Banners/Banners.framework/Headers.meta
+Assets/PSDK/Editor/iOS/Banners/Banners.framework/Versions.meta
+Assets/PSDK/Editor/iOS/Banners/Banners.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/Banners/Banners.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/Banners/Banners.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/Banners/Banners.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/GameLevelData.meta
+Assets/PSDK/Editor/iOS/GameLevelData/GameLevelData.framework.meta
+Assets/PSDK/Editor/iOS/GameLevelData/GameLevelData.framework/Headers.meta
+Assets/PSDK/Editor/iOS/GameLevelData/GameLevelData.framework/Versions.meta
+Assets/PSDK/Editor/iOS/GameLevelData/GameLevelData.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/GameLevelData/GameLevelData.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/GameLevelData/GameLevelData.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/GameLevelData/GameLevelData.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/GameLevelData/RuntimeConfig.framework.meta
+Assets/PSDK/Editor/iOS/GameLevelData/RuntimeConfig.framework/Headers.meta
+Assets/PSDK/Editor/iOS/GameLevelData/RuntimeConfig.framework/Versions.meta
+Assets/PSDK/Editor/iOS/GameLevelData/RuntimeConfig.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/GameLevelData/RuntimeConfig.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/GameLevelData/RuntimeConfig.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/GameLevelData/RuntimeConfig.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/Monetization.meta
+Assets/PSDK/Editor/iOS/Monetization/Monetization.framework.meta
+Assets/PSDK/Editor/iOS/Monetization/Monetization.framework/Headers.meta
+Assets/PSDK/Editor/iOS/Monetization/Monetization.framework/Versions.meta
+Assets/PSDK/Editor/iOS/Monetization/Monetization.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/Monetization/Monetization.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/Monetization/Monetization.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/Monetization/Monetization.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/PSDKAnalytics.meta
+Assets/PSDK/Editor/iOS/PSDKAnalytics/PSDKAnalytics.framework.meta
+Assets/PSDK/Editor/iOS/PSDKAnalytics/PSDKAnalytics.framework/Headers.meta
+Assets/PSDK/Editor/iOS/PSDKAnalytics/PSDKAnalytics.framework/Versions.meta
+Assets/PSDK/Editor/iOS/PSDKAnalytics/PSDKAnalytics.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/PSDKAnalytics/PSDKAnalytics.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/PSDKAnalytics/PSDKAnalytics.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/PSDKAnalytics/PSDKAnalytics.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/PSDKGoogleAnalytics.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/ConfigurationFetcher.framework.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/ConfigurationFetcher.framework/Headers.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/ConfigurationFetcher.framework/Versions.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/ConfigurationFetcher.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/ConfigurationFetcher.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/ConfigurationFetcher.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/ConfigurationFetcher.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/PublishingSDKCore.framework.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/PublishingSDKCore.framework/Headers.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/PublishingSDKCore.framework/Versions.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/PublishingSDKCore.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/PublishingSDKCore.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/PublishingSDKCore.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/PublishingSDKCore/PublishingSDKCore.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/RewardedAds.meta
+Assets/PSDK/Editor/iOS/RewardedAds/RewardedAds.framework.meta
+Assets/PSDK/Editor/iOS/RewardedAds/RewardedAds.framework/Headers.meta
+Assets/PSDK/Editor/iOS/RewardedAds/RewardedAds.framework/Versions.meta
+Assets/PSDK/Editor/iOS/RewardedAds/RewardedAds.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/RewardedAds/RewardedAds.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/RewardedAds/RewardedAds.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/RewardedAds/RewardedAds.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/Splash.meta
+Assets/PSDK/Editor/iOS/Splash/Splash.framework.meta
+Assets/PSDK/Editor/iOS/Splash/Splash.framework/Headers.meta
+Assets/PSDK/Editor/iOS/Splash/Splash.framework/Versions.meta
+Assets/PSDK/Editor/iOS/Splash/Splash.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/Splash/Splash.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/Splash/Splash.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/Splash/Splash.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty.meta
+Assets/PSDK/Editor/iOS/ThirdParty/AdColony.framework.meta
+Assets/PSDK/Editor/iOS/ThirdParty/AdColony.framework/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/AdColony.framework/Versions.meta
+Assets/PSDK/Editor/iOS/ThirdParty/AdColony.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/ThirdParty/AdColony.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/AdColony.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/ThirdParty/AdColony.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/Chartboost.framework.meta
+Assets/PSDK/Editor/iOS/ThirdParty/Chartboost.framework/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/Chartboost.framework/Versions.meta
+Assets/PSDK/Editor/iOS/ThirdParty/Chartboost.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/ThirdParty/Chartboost.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/Chartboost.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/ThirdParty/Chartboost.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/MillennialMedia.framework.meta
+Assets/PSDK/Editor/iOS/ThirdParty/MillennialMedia.framework/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/MillennialMedia.framework/Versions.meta
+Assets/PSDK/Editor/iOS/ThirdParty/MillennialMedia.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/ThirdParty/MillennialMedia.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/MillennialMedia.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/ThirdParty/MillennialMedia.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Resources.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Resources/English.lproj.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Versions.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Versions/A/Resources.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Versions/A/Resources/English.lproj.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Versions/Current/Resources.meta
+Assets/PSDK/Editor/iOS/ThirdParty/SpeechKit.framework/Versions/Current/Resources/English.lproj.meta
+Assets/PSDK/Editor/iOS/ThirdParty/StartApp.bundle.meta
+Assets/PSDK/Editor/iOS/ThirdParty/StartApp.framework.meta
+Assets/PSDK/Editor/iOS/ThirdParty/StartApp.framework/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/StartApp.framework/Versions.meta
+Assets/PSDK/Editor/iOS/ThirdParty/StartApp.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/ThirdParty/StartApp.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/StartApp.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/ThirdParty/StartApp.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/UnityAds.bundle.meta
+Assets/PSDK/Editor/iOS/ThirdParty/UnityAds.bundle/en.lproj.meta
+Assets/PSDK/Editor/iOS/ThirdParty/UnityAds.framework.meta
+Assets/PSDK/Editor/iOS/ThirdParty/UnityAds.framework/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/UnityAds.framework/Resources.meta
+Assets/PSDK/Editor/iOS/ThirdParty/UnityAds.framework/Resources/en.lproj.meta
+Assets/PSDK/Editor/iOS/ThirdParty/VungleSDK.framework.meta
+Assets/PSDK/Editor/iOS/ThirdParty/VungleSDK.framework/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/VungleSDK.framework/Resources.meta
+Assets/PSDK/Editor/iOS/ThirdParty/VungleSDK.framework/Versions.meta
+Assets/PSDK/Editor/iOS/ThirdParty/VungleSDK.framework/Versions/A.meta
+Assets/PSDK/Editor/iOS/ThirdParty/VungleSDK.framework/Versions/A/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/VungleSDK.framework/Versions/A/Resources.meta
+Assets/PSDK/Editor/iOS/ThirdParty/VungleSDK.framework/Versions/Current.meta
+Assets/PSDK/Editor/iOS/ThirdParty/VungleSDK.framework/Versions/Current/Headers.meta
+Assets/PSDK/Editor/iOS/ThirdParty/VungleSDK.framework/Versions/Current/Resources.meta
+Assets/PSDK/FileSet.meta
+Assets/Plugins/Android/facebook.meta
+Assets/Plugins/Android/facebook/assets.meta
+Assets/Plugins/Android/facebook/src.meta
+Assets/Plugins/Android/facebook/src/com.meta
+Assets/Plugins/Android/google-play-services_lib/assets.meta
+Assets/Plugins/Android/google-play-services_lib/bin.meta
+Assets/Plugins/Android/google-play-services_lib/gen.meta
+Assets/Plugins/Android/google-play-services_lib/res/drawable-ldpi.meta
+Assets/Plugins/Android/google-play-services_lib/res/layout.meta
+Assets/Plugins/Uniject/Assembly.meta
+Assets/Plugins/unibill/assembly.meta
+Assets/Plugins/unibill/screenshots.meta
+Assets/Plugins/unibill/src/impl/DLC.meta
+Assets/Puppet2D.meta
+Assets/Puppet2D/Animation.meta
+Assets/Puppet2D/Animation/Baked.meta
+Assets/Puppet2D/Models.meta
+Assets/Puppet2D/Models/DemoModel.meta
+Assets/Puppet2D/Models/DemoModel/Materials.meta
+Assets/Puppet2D/Models/Materials.meta
+Assets/Puppet2D/Prefabs.meta
+Assets/Puppet2D/Shaders.meta
+Assets/Standard Assets/Image Effects (Pro Only)/_Sources.meta
+Assets/Standard Assets/Image Effects (Pro Only)/_Sources/Shaders.meta
+Assets/Standard Assets/Image Effects (Pro Only)/_Sources/Shaders/Contrast Stretch.meta
+Assets/Standard Assets/Image Effects (Pro Only)/_Sources/Shaders/_Antialiasing.meta
+Assets/Standard Assets/Image Effects (Pro Only)/_Sources/Shaders/_BloomAndFlares.meta
+Assets/Standard Assets/Image Effects (Pro Only)/_Sources/Shaders/_DepthOfField.meta
+Assets/Standard Assets/Image Effects (Pro Only)/_Sources/Textures.meta
+Assets/Standard Assets/Light Flares/Sources.meta
+Assets/Standard Assets/Light Flares/Sources/Materials.meta
+Assets/Standard Assets/Particles/Dust.meta
+Assets/Standard Assets/Particles/Fire.meta
+Assets/Standard Assets/Particles/Misc.meta
+Assets/Standard Assets/Particles/Smoke.meta
+Assets/Standard Assets/Particles/Sources/Animations.meta
+Assets/Standard Assets/Particles/Sources/Shaders.meta
+Assets/Standard Assets/Particles/Sparkles.meta
+Assets/Standard Assets/Particles/Water.meta
+Assets/Standard Assets/Skyboxes.meta
+Assets/Standard Assets/Skyboxes/Textures.meta
+Assets/Standard Assets/Skyboxes/Textures/MoonShine.meta
+Assets/Standard Assets/Terrain Assets.meta
+Assets/Standard Assets/Terrain Assets/Terrain Textures.meta
+Assets/Standard Assets/Terrain Assets/Trees Ambient-Occlusion.meta
+Assets/Standard Assets/Terrain Assets/Trees Ambient-Occlusion/Palm.meta
+Assets/Standard Assets/Terrain Assets/Trees Ambient-Occlusion/Palm/Materials.meta
+Assets/StreamingAssets/splash.meta
+Assets/StreamingAssets/ttpsdk/gld.meta
+Assets/Textures/Atlas_BugOPedia/Art.meta
+Assets/Textures/WarningPopup.meta
+Assets/Textures/WarningPopup/popup-saveme.meta
+Assets/Textures/__MACOSX.meta
+Assets/UnifiedGameServices.meta
+Assets/UnifiedGameServices/Editor.meta
+Assets/UnifiedGameServices/Editor/XCodeEditor.meta
