@@ -6,18 +6,9 @@ using UnityEngine;
 /// This keeps track of the various parts of the recording and text display process.
 /// </summary>
 
-[RequireComponent(typeof(AudioSource), typeof(MicrophoneManager), typeof(KeywordManager))]
+[RequireComponent(typeof(AudioSource), typeof(MicrophoneManager))]
 public class Communicator : MonoBehaviour
 {
-    [Tooltip("The button to be selected when the user wants to record audio and dictation.")]
-    public Button RecordButton;
-    [Tooltip("The button to be selected when the user wants to stop recording.")]
-    public Button RecordStopButton;
-    [Tooltip("The button to be selected when the user wants to play audio.")]
-    public Button PlayButton;
-    [Tooltip("The button to be selected when the user wants to stop playing.")]
-    public Button PlayStopButton;
-
     [Tooltip("The sound to be played when the recording session starts.")]
     public AudioClip StartListeningSound;
     [Tooltip("The sound to be played when the recording session ends.")]
@@ -50,23 +41,23 @@ public class Communicator : MonoBehaviour
 
     private MicrophoneManager microphoneManager;
 
-    void Start()
-    {
-        dictationAudio = gameObject.GetComponent<AudioSource>();
+	void Awake ()
+	{
+		dictationAudio = gameObject.GetComponent<AudioSource>();
 
-        startAudio = gameObject.AddComponent<AudioSource>();
-        stopAudio = gameObject.AddComponent<AudioSource>();
+		startAudio = gameObject.AddComponent<AudioSource>();
+		stopAudio = gameObject.AddComponent<AudioSource>();
 
-        startAudio.playOnAwake = false;
-        startAudio.clip = StartListeningSound;
-        stopAudio.playOnAwake = false;
-        stopAudio.clip = StopListeningSound;
+		startAudio.playOnAwake = false;
+		startAudio.clip = StartListeningSound;
+		stopAudio.playOnAwake = false;
+		stopAudio.clip = StopListeningSound;
 
-        microphoneManager = GetComponent<MicrophoneManager>();
+		microphoneManager = GetComponent<MicrophoneManager>();
 
-        origLocalScale = Waveform.localScale.y;
-        animateWaveform = false;
-    }
+		origLocalScale = Waveform.localScale.y;
+		animateWaveform = false;
+	}
 
     void Update()
     {
@@ -76,75 +67,32 @@ public class Communicator : MonoBehaviour
             newScale.y = Mathf.Sin(Time.time * 2.0f) * origLocalScale;
             Waveform.localScale = newScale;
         }
-
-        // If the audio has stopped playing and the PlayStop button is still active,  reset the UI.
-        if (!dictationAudio.isPlaying && PlayStopButton.enabled)
-        {
-            PlayStop();
-        }
     }
 
-    public void Record()
+	void OnEnable ()
     {
-        if (RecordButton.IsOn())
-        {
-            // Turn the microphone on, which returns the recorded audio.
-            dictationAudio.clip = microphoneManager.StartRecording();
+        // Turn the microphone on, which returns the recorded audio.
+        dictationAudio.clip = microphoneManager.StartRecording();
 
-            // Set proper UI state and play a sound.
-            SetUI(true, Message.PressStop, startAudio);
-
-            RecordButton.gameObject.SetActive(false);
-            RecordStopButton.gameObject.SetActive(true);
-        }
+        // Set proper UI state and play a sound.
+        SetUI(true, Message.PressStop, startAudio);
     }
 
-    public void RecordStop()
+	void OnDisable ()
     {
-        if (RecordStopButton.IsOn())
-        {
-            // Turn off the microphone.
-            microphoneManager.StopRecording();
-            // Restart the PhraseRecognitionSystem and KeywordRecognizer
-            microphoneManager.StartCoroutine("RestartSpeechSystem", GetComponent<KeywordManager>());
+        // Turn off the microphone.
+        microphoneManager.StopRecording();
 
-            // Set proper UI state and play a sound.
-            SetUI(false, Message.SendMessage, stopAudio);
-
-            PlayButton.SetActive(true);
-            RecordStopButton.SetActive(false);
-        }
-    }
-
-    public void Play()
-    {
-        if (PlayButton.IsOn())
-        {
-            PlayButton.gameObject.SetActive(false);
-            PlayStopButton.gameObject.SetActive(true);
-
-            dictationAudio.Play();
-        }
-    }
-
-    public void PlayStop()
-    {
-        if (PlayStopButton.IsOn())
-        {
-            PlayStopButton.gameObject.SetActive(false);
-            PlayButton.gameObject.SetActive(true);
-
-            dictationAudio.Stop();
-        }
+        // Set proper UI state and play a sound.
+        SetUI(false, Message.SendMessage, stopAudio);
     }
 
     void ResetAfterTimeout()
     {
         // Set proper UI state and play a sound.
         SetUI(false, Message.PressMic, stopAudio);
-
-        RecordStopButton.gameObject.SetActive(false);
-        RecordButton.gameObject.SetActive(true);
+		gameObject.SetActive (false);
+		gameObject.SetActive (true);
     }
 
     private void SetUI(bool enabled, Message newMessage, AudioSource soundToPlay)
