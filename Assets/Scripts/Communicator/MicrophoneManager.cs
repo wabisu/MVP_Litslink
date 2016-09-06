@@ -137,7 +137,7 @@ public class MicrophoneManager : MonoBehaviour
         // 3.a: Set DictationDisplay text to be textSoFar
         DictationDisplay.text = textSoFar.ToString();
 
-		if (textSoFar.ToString ().ToLower().Equals (/*"we build ar communication training tools"*/"test")) {
+		if (textSoFar.ToString ().ToLower().Equals ("we build ar communication training tools"/*"test"*/)) {
 			isRecognized = true;
 			ericBehaviour.GoNextState ();
 		} else {
