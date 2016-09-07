@@ -93,13 +93,13 @@ public class EricBehaviour : MonoBehaviour {
 
 	public void OnYouTalking()
 	{
-		communicatorObject.SetActive (true);
+		communicatorObject.GetComponent<Communicator>().One();
 		textNavigationImage.sprite = youTalking;
 	}
 
 	public void OnState6()
 	{
-		communicatorObject.SetActive (false);
+		communicatorObject.GetComponent<Communicator>().Two();
 		textNavigationImage.sprite = ericText4;
 	}
 

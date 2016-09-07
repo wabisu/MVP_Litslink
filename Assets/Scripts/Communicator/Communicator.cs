@@ -6,7 +6,7 @@ using UnityEngine;
 /// This keeps track of the various parts of the recording and text display process.
 /// </summary>
 
-[RequireComponent(typeof(AudioSource), typeof(MicrophoneManager))]
+[RequireComponent(typeof(AudioSource))]
 public class Communicator : MonoBehaviour
 {
     [Tooltip("The sound to be played when the recording session starts.")]
@@ -39,7 +39,7 @@ public class Communicator : MonoBehaviour
         SendMessage
     };
 
-    private MicrophoneManager microphoneManager;
+    public MicrophoneManager microphoneManager;
 
 	void Awake ()
 	{
@@ -52,8 +52,6 @@ public class Communicator : MonoBehaviour
 		startAudio.clip = StartListeningSound;
 		stopAudio.playOnAwake = false;
 		stopAudio.clip = StopListeningSound;
-
-		microphoneManager = GetComponent<MicrophoneManager>();
 
 		origLocalScale = Waveform.localScale.y;
 		animateWaveform = false;
@@ -69,41 +67,52 @@ public class Communicator : MonoBehaviour
         }
     }
 
+	public void One()
+	{
+		// Turn the microphone on, which returns the recorded audio.
+		dictationAudio.clip = microphoneManager.StartRecording();
+
+		// Set proper UI state and play a sound.
+		SetUI(true, Message.PressStop, startAudio);
+	}
+
+	public void Two ()
+	{
+		// Turn off the microphone.
+		microphoneManager.StopRecording();
+		microphoneManager.StartCoroutine ("RestartSpeechSystem");
+
+		// Set proper UI state and play a sound.
+		SetUI(false, Message.SendMessage, stopAudio);
+	}
+
 	void OnEnable ()
     {
-        // Turn the microphone on, which returns the recorded audio.
-        dictationAudio.clip = microphoneManager.StartRecording();
-
-        // Set proper UI state and play a sound.
-        SetUI(true, Message.PressStop, startAudio);
     }
 
 	void OnDisable ()
     {
-        // Turn off the microphone.
-        microphoneManager.StopRecording();
-
-        // Set proper UI state and play a sound.
-        SetUI(false, Message.SendMessage, stopAudio);
     }
 
-    void ResetAfterTimeout()
+    public void ResetAfterTimeout()
     {
         // Set proper UI state and play a sound.
-        SetUI(false, Message.PressMic, stopAudio);
-		gameObject.SetActive (false);
-		gameObject.SetActive (true);
+        //SetUI(false, Message.PressMic, stopAudio);
+		//gameObject.SetActive (false);
+		//gameObject.SetActive (true);
+		microphoneManager.StopRecording();
+		dictationAudio.clip = microphoneManager.StartRecording();
     }
 
     private void SetUI(bool enabled, Message newMessage, AudioSource soundToPlay)
     {
-        animateWaveform = enabled;
+       /* animateWaveform = enabled;
         SoundMeter.gameObject.SetActive(enabled);
         MicIcon.SetActive(enabled);
 
         StartCoroutine(ChangeLabel(newMessage));
 
-        soundToPlay.Play();
+        soundToPlay.Play();*/
     }
 
     private IEnumerator ChangeLabel(Message newMessage)

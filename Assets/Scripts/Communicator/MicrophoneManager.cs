@@ -23,11 +23,14 @@ public class MicrophoneManager : MonoBehaviour
     // Use this to reset the UI once the Microphone is done recording after it was started.
     private bool hasRecordingStarted;
 
-	public KeywordManager keyWordManager;
+	private KeywordManager keyWordManager;
 	public EricBehaviour ericBehaviour;
+	public Communicator communicator;
 
     void Awake()
     {
+		keyWordManager = GetComponent<KeywordManager> ();
+
         /* TODO: DEVELOPER CODING EXERCISE 3.a */
 
         // 3.a: Create a new DictationRecognizer and assign it to dictationRecognizer variable.
@@ -63,7 +66,7 @@ public class MicrophoneManager : MonoBehaviour
     void Update()
     {
         // 3.a: Add condition to check if dictationRecognizer.Status is Running
-        if (hasRecordingStarted && !Microphone.IsRecording(deviceName) && dictationRecognizer.Status == SpeechSystemStatus.Running)
+        /*if (hasRecordingStarted && !Microphone.IsRecording(deviceName) && dictationRecognizer.Status == SpeechSystemStatus.Running)
         {
             // Reset the flag now that we're cleaning up the UI.
             hasRecordingStarted = false;
@@ -72,7 +75,7 @@ public class MicrophoneManager : MonoBehaviour
             // If the microphone stops as a result of timing out, make sure to manually stop the dictation recognizer.
             // Look at the StopRecording function.
             SendMessage("RecordStop");
-        }
+        }*/
     }
 
     /// <summary>
@@ -81,9 +84,10 @@ public class MicrophoneManager : MonoBehaviour
     /// <returns>The audio clip recorded from the microphone.</returns>
     public AudioClip StartRecording()
     {
-		isRecognized = false;
-		
+		textSoFar.Remove (0, textSoFar.Length);
+
         // 3.a Shutdown the PhraseRecognitionSystem. This controls the KeywordRecognizers
+		keyWordManager.StopKeywordRecognizer();
         PhraseRecognitionSystem.Shutdown();
 
         // 3.a: Start dictationRecognizer
@@ -137,15 +141,13 @@ public class MicrophoneManager : MonoBehaviour
         // 3.a: Set DictationDisplay text to be textSoFar
         DictationDisplay.text = textSoFar.ToString();
 
-		if (textSoFar.ToString ().ToLower().Equals ("we build ar communication training tools"/*"test"*/)) {
-			isRecognized = true;
+		if (textSoFar.ToString ().ToLower ().Equals ("we build ar communication training tools")) {
 			ericBehaviour.GoNextState ();
+			StartCoroutine (RestartSpeechSystem());
 		} else {
 			textSoFar.Remove (0, textSoFar.Length);
 		}
     }
-
-	private bool isRecognized = false;
 
     /// <summary>
     /// This event is fired when the recognizer stops, whether from Stop() being called, a timeout occurring, or some other error.
@@ -157,13 +159,9 @@ public class MicrophoneManager : MonoBehaviour
         // If Timeout occurs, the user has been silent for too long.
         // With dictation, the default timeout after a recognition is 20 seconds.
         // The default timeout with initial silence is 5 seconds.
-		if (cause == DictationCompletionCause.TimeoutExceeded && !isRecognized) {
-			Microphone.End (deviceName);
-
-			DictationDisplay.text = "Dictation has timed out. Please press the record button again.";
-			SendMessage ("ResetAfterTimeout");
-		} else {
-			keyWordManager.StartKeywordRecognizer();
+		if (cause == DictationCompletionCause.TimeoutExceeded) {
+			DictationDisplay.text = "Dictation has timed out. Restarting...";
+			communicator.ResetAfterTimeout ();
 		}
     }
 
@@ -176,5 +174,16 @@ public class MicrophoneManager : MonoBehaviour
     {
         // 3.a: Set DictationDisplay text to be the error string
         DictationDisplay.text = error + "\nHRESULT: " + hresult;
+		communicator.ResetAfterTimeout ();
     }
+
+	private IEnumerator RestartSpeechSystem()
+	{
+		while (dictationRecognizer != null && dictationRecognizer.Status == SpeechSystemStatus.Running)
+		{
+			yield return null;
+		}
+
+		keyWordManager.StartKeywordRecognizer();
+	}
 }
