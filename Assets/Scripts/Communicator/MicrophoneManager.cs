@@ -7,9 +7,6 @@ using UnityEngine.Windows.Speech;
 
 public class MicrophoneManager : MonoBehaviour
 {
-    [Tooltip("A text area for the recognizer to display the recognized strings.")]
-    public Text DictationDisplay;
-
     private DictationRecognizer dictationRecognizer;
 
     // Use this string to cache the text currently displayed in the text box.
@@ -20,12 +17,8 @@ public class MicrophoneManager : MonoBehaviour
     private int samplingRate;
     private const int messageLength = 10;
 
-    // Use this to reset the UI once the Microphone is done recording after it was started.
-    private bool hasRecordingStarted;
-
+	public InvestorCommunicator communicator;
 	private KeywordManager keyWordManager;
-	public EricBehaviour ericBehaviour;
-	public Communicator communicator;
 
     void Awake()
     {
@@ -58,25 +51,12 @@ public class MicrophoneManager : MonoBehaviour
 
         // Use this string to cache the text currently displayed in the text box.
         textSoFar = new StringBuilder();
-
-        // Use this to reset the UI once the Microphone is done recording after it was started.
-        hasRecordingStarted = false;
     }
 
-    void Update()
-    {
-        // 3.a: Add condition to check if dictationRecognizer.Status is Running
-        /*if (hasRecordingStarted && !Microphone.IsRecording(deviceName) && dictationRecognizer.Status == SpeechSystemStatus.Running)
-        {
-            // Reset the flag now that we're cleaning up the UI.
-            hasRecordingStarted = false;
-
-            // This acts like pressing the Stop button and sends the message to the Communicator.
-            // If the microphone stops as a result of timing out, make sure to manually stop the dictation recognizer.
-            // Look at the StopRecording function.
-            SendMessage("RecordStop");
-        }*/
-    }
+	public bool IsDictationRunning ()
+	{
+		return dictationRecognizer != null && dictationRecognizer.Status == SpeechSystemStatus.Running;
+	}
 
     /// <summary>
     /// Turns on the dictation recognizer and begins recording audio from the default microphone.
@@ -84,20 +64,12 @@ public class MicrophoneManager : MonoBehaviour
     /// <returns>The audio clip recorded from the microphone.</returns>
     public AudioClip StartRecording()
     {
-		textSoFar.Remove (0, textSoFar.Length);
-
         // 3.a Shutdown the PhraseRecognitionSystem. This controls the KeywordRecognizers
 		keyWordManager.StopKeywordRecognizer();
         PhraseRecognitionSystem.Shutdown();
 
         // 3.a: Start dictationRecognizer
         dictationRecognizer.Start();
-
-        // 3.a Uncomment this line
-        DictationDisplay.text = "Dictation is starting. It may take time to display your text the first time, but begin speaking now...";
-
-        // Set the flag that we've started recording.
-        hasRecordingStarted = true;
 
         // Start recording from the microphone for 10 seconds.
         return Microphone.Start(deviceName, false, messageLength, samplingRate);
@@ -123,9 +95,13 @@ public class MicrophoneManager : MonoBehaviour
     /// <param name="text">The currently hypothesized recognition.</param>
     private void DictationRecognizer_DictationHypothesis(string text)
     {
+		textSoFar.Remove (0, textSoFar.Length);
+		textSoFar.Append (text);
+		textSoFar.Append ("...");
+
         // 3.a: Set DictationDisplay text to be textSoFar and new hypothesized text
         // We don't want to append to textSoFar yet, because the hypothesis may have changed on the next event
-        DictationDisplay.text = textSoFar.ToString() + " " + text + "...";
+		communicator.SetTextSaid(textSoFar.ToString());
     }
 
     /// <summary>
@@ -136,17 +112,11 @@ public class MicrophoneManager : MonoBehaviour
     private void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence)
     {
         // 3.a: Append textSoFar with latest text
-        textSoFar.Append(text);
+		textSoFar.Remove (0, textSoFar.Length);
+		textSoFar.Append (text);
 
         // 3.a: Set DictationDisplay text to be textSoFar
-        DictationDisplay.text = textSoFar.ToString();
-
-		if (textSoFar.ToString ().ToLower ().Equals ("we build ar communication training tools")) {
-			ericBehaviour.GoNextState ();
-			StartCoroutine (RestartSpeechSystem());
-		} else {
-			textSoFar.Remove (0, textSoFar.Length);
-		}
+		communicator.SetAndVirefyTextSaid(textSoFar.ToString());
     }
 
     /// <summary>
@@ -160,7 +130,6 @@ public class MicrophoneManager : MonoBehaviour
         // With dictation, the default timeout after a recognition is 20 seconds.
         // The default timeout with initial silence is 5 seconds.
 		if (cause == DictationCompletionCause.TimeoutExceeded) {
-			DictationDisplay.text = "Dictation has timed out. Restarting...";
 			communicator.ResetAfterTimeout ();
 		}
     }
@@ -173,7 +142,6 @@ public class MicrophoneManager : MonoBehaviour
     private void DictationRecognizer_DictationError(string error, int hresult)
     {
         // 3.a: Set DictationDisplay text to be the error string
-        DictationDisplay.text = error + "\nHRESULT: " + hresult;
 		communicator.ResetAfterTimeout ();
     }
 
