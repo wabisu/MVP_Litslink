@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class EricBehaviour : MonoBehaviour {
 	public List<Sprite> ericTexts = new List<Sprite>();
+	public List<AudioClip> ericVoice = new List<AudioClip> ();
 
 	public Image textNavigationImage;
 
@@ -15,6 +16,7 @@ public class EricBehaviour : MonoBehaviour {
 	{
 		public int currEricMenuState;
 		public int currDictationState;
+		public int currAudioState;
 		private Vector2 nextAllowedConvStates;
 
 		public Vector2 NextAllowedConvStates
@@ -24,11 +26,12 @@ public class EricBehaviour : MonoBehaviour {
 			}
 		}
 
-		public ConversationState (int ericMenuState, int dictationState, Vector2 alowedConvStates)
+		public ConversationState (int ericMenuState, int dictationState, int audioState, Vector2 alowedConvStates)
 		{
 			currEricMenuState = ericMenuState;
 			currDictationState = dictationState;
 			nextAllowedConvStates = alowedConvStates;
+			currAudioState = audioState;
 		}
 
 		public bool IsNextConvStateAllowed (int nextConvStateIndex)
@@ -55,20 +58,20 @@ public class EricBehaviour : MonoBehaviour {
 	//---------------------------------------------
 	void Start () {
 		//ToDo Create scenario FROM file loading mechanism
-		ConversationState newState0 = new ConversationState (0, -3, new Vector2(1, -1));
-		ConversationState newState1 = new ConversationState (1, -3, new Vector2(2, -1));
-		ConversationState newState2 = new ConversationState (2, -3, new Vector2(3, 0));
-		ConversationState newState3 = new ConversationState (-1, -1, new Vector2(4, -1));
-		ConversationState newState4 = new ConversationState (-1, 0, new Vector2(5, -1));
-		ConversationState newState5 = new ConversationState (-1, 1, new Vector2(6, -1));
-		ConversationState newState6 = new ConversationState (-1, -1, new Vector2(7, -1));
-		ConversationState newState7 = new ConversationState (-1, 2, new Vector2(8, -1));
-		ConversationState newState8 = new ConversationState (-1, 3, new Vector2(9, -1));
-		ConversationState newState9 = new ConversationState (-1, 4, new Vector2(10, -1));
-		ConversationState newState10 = new ConversationState (-1, -1, new Vector2(11, -1));
-		ConversationState newState11 = new ConversationState (-1, 5, new Vector2(12, -1));
-		ConversationState newState12 = new ConversationState (3, -2, new Vector2(13, 0));
-		ConversationState newState13 = new ConversationState (4, -3, new Vector2(0, -1));
+		ConversationState newState0 = new ConversationState (0, -3, -1, new Vector2(1, -1));
+		ConversationState newState1 = new ConversationState (1, -3, -1, new Vector2(2, -1));
+		ConversationState newState2 = new ConversationState (2, -3, -1, new Vector2(3, 0));
+		ConversationState newState3 = new ConversationState (-1, -1, 0, new Vector2(4, -1));
+		ConversationState newState4 = new ConversationState (-1, 0, -1, new Vector2(5, -1));
+		ConversationState newState5 = new ConversationState (-1, 1, 1, new Vector2(6, -1));
+		ConversationState newState6 = new ConversationState (-1, -1, 2, new Vector2(7, -1));
+		ConversationState newState7 = new ConversationState (-1, 2, -1, new Vector2(8, -1));
+		ConversationState newState8 = new ConversationState (-1, 3, -1, new Vector2(9, -1));
+		ConversationState newState9 = new ConversationState (-1, 4, -1, new Vector2(10, -1));
+		ConversationState newState10 = new ConversationState (-1, -1, 3, new Vector2(11, -1));
+		ConversationState newState11 = new ConversationState (-1, 5, -1, new Vector2(12, -1));
+		ConversationState newState12 = new ConversationState (3, -2, -1, new Vector2(13, 0));
+		ConversationState newState13 = new ConversationState (4, -3, -1, new Vector2(0, -1));
 
 		possibleConvStates.Add (newState0);
 		possibleConvStates.Add (newState1);
@@ -139,6 +142,24 @@ public class EricBehaviour : MonoBehaviour {
 
 	private void OnStateChanged ()
 	{
+		//----------Audio part-----------
+		CancelInvoke ();
+		AudioSource audio = GetComponent<AudioSource> ();
+		if (audio.isPlaying) {
+			audio.Stop ();
+		}
+
+		int audioToPlayIndex = possibleConvStates [convStateIndex].currAudioState;
+		if (audioToPlayIndex >= 0) {
+			audio.clip = ericVoice [audioToPlayIndex];
+			audio.Play ();
+
+			if (possibleConvStates [convStateIndex].currDictationState < 0) {
+				Invoke ("GoNextState", audio.clip.length);
+			}
+		}
+		//-------------------------------
+
 		communicatorScript.ResetCorrectWordsOffset ();
 
 		//Set Eric Text
