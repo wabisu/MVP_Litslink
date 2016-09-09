@@ -139,6 +139,8 @@ public class EricBehaviour : MonoBehaviour {
 
 	private void OnStateChanged ()
 	{
+		communicatorScript.ResetCorrectWordsOffset ();
+
 		//Set Eric Text
 		if (possibleConvStates [convStateIndex].currEricMenuState < 0) {
 			textNavigationImage.gameObject.SetActive (false);

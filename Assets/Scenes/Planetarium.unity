@@ -461,8 +461,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 1
-  m_Color: {r: 1, g: 0.9432049, b: 0.7941176, a: 1}
-  m_Intensity: 0.6
+  m_Color: {r: 0.9117647, g: 0.6596886, b: 0.5229239, a: 1}
+  m_Intensity: 0.69
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1977,7 +1977,7 @@ Transform:
   m_GameObject: {fileID: 887064842}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.115, y: 0.115, z: 0.115}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children:
   - {fileID: 395489502}
@@ -2032,8 +2032,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.35, y: 0.6, z: 0.27}
-  m_Center: {x: 0, y: 1.6, z: 0}
+  m_Size: {x: 0.35, y: 0.6, z: 0.4}
+  m_Center: {x: 0, y: 1.51, z: 0.04}
 --- !u!1 &890443766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2153,7 +2153,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 940439143}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0469, y: 0.1718, z: 0.02}
+  m_LocalPosition: {x: -0.0477, y: 0.1974, z: 0.05}
   m_LocalScale: {x: 0.0125, y: 0.0125, z: 0.0125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2465,6 +2465,7 @@ GameObject:
   - 65: {fileID: 1052909949}
   - 114: {fileID: 1052909948}
   - 114: {fileID: 1052909947}
+  - 114: {fileID: 1052909951}
   m_Layer: 0
   m_Name: Playground
   m_TagString: Untagged
@@ -2542,6 +2543,17 @@ Transform:
   - {fileID: 1150329396}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1052909951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1052909946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1469b4bd423d5604284254cef19c45d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1084439204
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,7 +3755,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.009521492, y: 0.19005403}
+  m_AnchoredPosition: {x: 0.009521492, y: 0.21294087}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539313114

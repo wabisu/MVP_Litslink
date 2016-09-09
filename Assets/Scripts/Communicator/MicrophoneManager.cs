@@ -10,7 +10,8 @@ public class MicrophoneManager : MonoBehaviour
     private DictationRecognizer dictationRecognizer;
 
     // Use this string to cache the text currently displayed in the text box.
-    private StringBuilder textSoFar;
+	private StringBuilder textSaid;
+	private StringBuilder textVerified;
 
     // Using an empty string specifies the default microphone. 
     private static string deviceName = string.Empty;
@@ -50,12 +51,18 @@ public class MicrophoneManager : MonoBehaviour
         Microphone.GetDeviceCaps(deviceName, out unused, out samplingRate);
 
         // Use this string to cache the text currently displayed in the text box.
-        textSoFar = new StringBuilder();
+		textSaid = new StringBuilder();
+		textVerified = new StringBuilder();
     }
 
 	public bool IsDictationRunning ()
 	{
 		return dictationRecognizer != null && dictationRecognizer.Status == SpeechSystemStatus.Running;
+	}
+
+	public void ResetVerifiedText ()
+	{
+		textVerified.Remove (0, textVerified.Length);
 	}
 
     /// <summary>
@@ -95,13 +102,18 @@ public class MicrophoneManager : MonoBehaviour
     /// <param name="text">The currently hypothesized recognition.</param>
     private void DictationRecognizer_DictationHypothesis(string text)
     {
-		textSoFar.Remove (0, textSoFar.Length);
-		textSoFar.Append (text);
-		textSoFar.Append ("...");
+		textSaid.Remove (0, textSaid.Length);
+
+		if (textVerified.Length > 0) {
+			textSaid.Append (" ");
+		}
+
+		textSaid.Append (text);
+		textSaid.Append ("...");
 
         // 3.a: Set DictationDisplay text to be textSoFar and new hypothesized text
         // We don't want to append to textSoFar yet, because the hypothesis may have changed on the next event
-		communicator.SetTextSaid(textSoFar.ToString());
+		communicator.SetTextSaid(textVerified.ToString() + textSaid.ToString());
     }
 
     /// <summary>
@@ -111,12 +123,8 @@ public class MicrophoneManager : MonoBehaviour
     /// <param name="confidence">A representation of how confident (rejected, low, medium, high) the recognizer is of this recognition.</param>
     private void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence)
     {
-        // 3.a: Append textSoFar with latest text
-		textSoFar.Remove (0, textSoFar.Length);
-		textSoFar.Append (text);
-
         // 3.a: Set DictationDisplay text to be textSoFar
-		communicator.SetAndVirefyTextSaid(textSoFar.ToString());
+		communicator.SetAndVirefyTextSaid(textVerified, text);
     }
 
     /// <summary>

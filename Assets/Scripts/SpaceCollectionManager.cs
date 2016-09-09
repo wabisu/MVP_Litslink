@@ -41,6 +41,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 			playgroundPrefab.transform.rotation = rotation;
 			playgroundPrefab.transform.parent = gameObject.transform;
 			playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
+			playgroundPrefab.GetComponent<HoloToolkit.Billboard> ().UpdateDefaultRotation ();
 
 			return true;
 		}
@@ -120,6 +121,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 					playgroundPrefab.transform.rotation = rotation;
 					playgroundPrefab.transform.parent = gameObject.transform;
 					playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
+					playgroundPrefab.GetComponent<HoloToolkit.Billboard> ().UpdateDefaultRotation ();
 
 					GameObject.Find ("debug").GetComponent<Text> ().text = "angle placed = " + minAngle.ToString ();
 
@@ -132,6 +134,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 					playgroundPrefab.transform.rotation = rotation;
 					playgroundPrefab.transform.parent = gameObject.transform;
 					playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
+					playgroundPrefab.GetComponent<HoloToolkit.Billboard> ().UpdateDefaultRotation ();
 
 					GameObject.Find ("debug").GetComponent<Text> ().text = "placed in the air";
 
@@ -147,6 +150,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 			playgroundPrefab.transform.rotation = rotation;
 			playgroundPrefab.transform.parent = gameObject.transform;
 			playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
+			playgroundPrefab.GetComponent<HoloToolkit.Billboard> ().UpdateDefaultRotation ();
 
 			GameObject.Find ("debug").GetComponent<Text> ().text = "placed in the air";
 
