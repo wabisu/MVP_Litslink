@@ -34,11 +34,6 @@ namespace HoloToolkit
             DefaultRotation = gameObject.transform.rotation;
         }
 
-		public void UpdateDefaultRotation ()
-		{
-			DefaultRotation = gameObject.transform.rotation;
-		}
-
         /// <summary>
         /// The billboard logic is performed in FixedUpdate to update the object
         /// with the player independent of the frame rate.  This allows the object to 

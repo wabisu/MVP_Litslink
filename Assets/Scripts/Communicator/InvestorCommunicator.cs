@@ -25,7 +25,7 @@ public class InvestorCommunicator : MonoBehaviour
     private AudioSource startAudio;
     private AudioSource stopAudio;
 
-	public EricBehaviour ericScript;
+	public SceneBehaviour sceneScript;
 	public MicrophoneManager microphoneManager;
 
 	private const string DICTATION_START_TXT = "Dictation is starting. It may take time to display your text the first time, but begin speaking now...";
@@ -119,8 +119,8 @@ public class InvestorCommunicator : MonoBehaviour
 		saidSentenceToWords = ParseToWords (additionalText);
 		int wordToStart = correctWordsOffset;
 
-		for (int i = wordToStart; i < initialSentencesToWords[ericScript.GetCurrDictationState ()].Length; i++) {
-			if (saidSentenceToWords [i - wordToStart].Equals (initialSentencesToWords [ericScript.GetCurrDictationState ()] [i])) {
+		for (int i = wordToStart; i < initialSentencesToWords[sceneScript.GetCurrDictationState ()].Length; i++) {
+			if (saidSentenceToWords [i - wordToStart].Equals (initialSentencesToWords [sceneScript.GetCurrDictationState ()] [i])) {
 				if (currText.Length > 0) {
 					currText.Append (" ");
 				}
@@ -134,12 +134,12 @@ public class InvestorCommunicator : MonoBehaviour
 
 		textSaidLabel.text = currText.ToString();
 
-		if (correctWordsOffset >= initialSentencesToWords [ericScript.GetCurrDictationState ()].Length) 
+		if (correctWordsOffset >= initialSentencesToWords [sceneScript.GetCurrDictationState ()].Length) 
 		{
-			ericScript.OnCurrSentenceSaid ();
+			sceneScript.OnCurrSentenceSaid ();
 
-			if (ericScript.GetCurrDictationState() > 0) {
-				textToSayLabel.text = initialSentences [ericScript.GetCurrDictationState()];
+			if (sceneScript.GetCurrDictationState() > 0) {
+				textToSayLabel.text = initialSentences [sceneScript.GetCurrDictationState()];
 				textSaidLabel.text = "";
 			}
 		}
@@ -152,7 +152,7 @@ public class InvestorCommunicator : MonoBehaviour
 		textSaidLabel.gameObject.SetActive (true);
 
 		// Turn the microphone on, which returns the recorded audio.
-		textToSayLabel.text = initialSentences [ericScript.GetCurrDictationState()];
+		textToSayLabel.text = initialSentences [sceneScript.GetCurrDictationState()];
 		textSaidLabel.text = DICTATION_START_TXT;
 
 		if (!microphoneManager.IsDictationRunning ()) {
@@ -167,9 +167,9 @@ public class InvestorCommunicator : MonoBehaviour
 			microphoneManager.StopRecording ();
 		}
 
-		if (ericScript.GetCurrDictationState() == -2) {
+		if (sceneScript.GetCurrDictationState() == -2) {
 			microphoneManager.StartCoroutine ("RestartSpeechSystem");
-		} else if (ericScript.GetCurrDictationState() == -1) {
+		} else if (sceneScript.GetCurrDictationState() == -1) {
 			textInvestorLabel.text = INVESTOR_TALKING_TXT;
 
 			textInvestorLabel.gameObject.SetActive (true);
