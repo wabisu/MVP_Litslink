@@ -21,6 +21,8 @@ public class MicrophoneManager : MonoBehaviour
 	public InvestorCommunicator communicator;
 	private KeywordManager keyWordManager;
 
+	private bool isUserTalking = false;
+
     void Awake()
     {
 		keyWordManager = GetComponent<KeywordManager> ();
@@ -65,6 +67,11 @@ public class MicrophoneManager : MonoBehaviour
 		textVerified.Remove (0, textVerified.Length);
 	}
 
+	public bool IsUserTalking ()
+	{
+		return isUserTalking;
+	}
+
     /// <summary>
     /// Turns on the dictation recognizer and begins recording audio from the default microphone.
     /// </summary>
@@ -102,6 +109,8 @@ public class MicrophoneManager : MonoBehaviour
     /// <param name="text">The currently hypothesized recognition.</param>
     private void DictationRecognizer_DictationHypothesis(string text)
     {
+		isUserTalking = true;
+
 		textSaid.Remove (0, textSaid.Length);
 
 		if (textVerified.Length > 0) {
@@ -123,8 +132,9 @@ public class MicrophoneManager : MonoBehaviour
     /// <param name="confidence">A representation of how confident (rejected, low, medium, high) the recognizer is of this recognition.</param>
     private void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence)
     {
-        // 3.a: Set DictationDisplay text to be textSoFar
+		// 3.a: Set DictationDisplay text to be textSoFar
 		communicator.SetAndVirefyTextSaid(textVerified, text);
+		isUserTalking = false;
     }
 
     /// <summary>

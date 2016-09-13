@@ -18,40 +18,16 @@ public class SceneBehaviour : MonoBehaviour {
 		public int currEricAudioState;
 		public int currInvestorAudioState;
 
-		private Vector2 nextAllowedConvStates;
+		public Dictionary <string, int> keywordStates;
 
-		public Vector2 NextAllowedConvStates
-		{
-			set {
-				nextAllowedConvStates = value;
-			}
-		}
-
-		public ConversationState (int ericMenuState, int investorState, int audioStateEric, int audioStateInvestor, Vector2 alowedConvStates)
+		public ConversationState (int ericMenuState, int investorState, int audioStateEric, int audioStateInvestor, Dictionary <string, int> keywordsDict)
 		{
 			currEricMenuState = ericMenuState;
 			currInvestorState = investorState;
-			nextAllowedConvStates = alowedConvStates;
 			currEricAudioState = audioStateEric;
 			currInvestorAudioState = audioStateInvestor;
-		}
 
-		public bool IsNextConvStateAllowed (int nextConvStateIndex)
-		{
-			if (nextAllowedConvStates.x == nextConvStateIndex || nextAllowedConvStates.y == nextConvStateIndex)
-				return true;
-
-			return false;
-		}
-
-		public int ConvertToDirectionalState (int alowedStateDirection)
-		{
-			if (alowedStateDirection >= 0) {
-				return (int)nextAllowedConvStates.x;
-			} 
-			else {
-				return (int)nextAllowedConvStates.y;
-			}
+			keywordStates = keywordsDict;
 		}
 	}
 
@@ -63,30 +39,77 @@ public class SceneBehaviour : MonoBehaviour {
 
 	public Image textNavigationImage;
 
+	private float totalTimeTalking = 0;
+	private float scriptLookTime = 0;
+	private float investorFaceLookTime = 0;
+	private float investorDoesNotLookTime = 0;
+
+	private Vector3 finalResultsInvestorMarks = new Vector3 (70, 30, 0);
+	private Vector3 finalResultsInvestorVoice = new Vector3 (4, 5, 6);
+
+	public MicrophoneManager microphoneManager;
+
+	public GameObject results;
+	public Text eyeContactTxt;
+	public Text memorizationTxt;
+
+	private Text debugTxt;
+
 	//---------------------------------------------
+	void LateUpdate ()
+	{
+		//Check objects look time
+		if (investorObj.activeSelf) {
+			totalTimeTalking += Time.deltaTime;
+
+			if (HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("InvestorFace")) {
+				investorFaceLookTime += Time.deltaTime;
+			} else if (HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("TextToSay")) {
+				scriptLookTime += Time.deltaTime;
+			}
+
+			if (possibleConvStates [convStateIndex].currInvestorState >= 0 && !microphoneManager.IsUserTalking () && !HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("InvestorFace")) {
+				investorDoesNotLookTime += Time.deltaTime;
+			} else {
+				investorDoesNotLookTime = 0;
+			}
+
+			if (investorDoesNotLookTime >= 5.0f) {
+				investorDoesNotLookTime = 0;
+				GoState (17);	
+			}
+
+			debugTxt.text = "Eye contact = " + GetEyeContact();
+        }
+	}
+
 	void Start () {
+		debugTxt = GameObject.Find ("debug").GetComponent<Text> ();
+
 		//ToDo Create scenario FROM file loading mechanism
-		ConversationState newState0 = new ConversationState (0, -3, 0, -1, new Vector2(1, -1));
-		ConversationState newState1 = new ConversationState (1, -3, 1, -1, new Vector2(3, 2));
-		ConversationState newState2 = new ConversationState (1, -3, 2, -1, new Vector2(3, -1));
-		ConversationState newState3 = new ConversationState (2, -3, 3, -1, new Vector2(4, 1));
+		ConversationState newState0 = new ConversationState (0, -3, 0, -1, new Dictionary<string, int>() { {"hey eric", 16} });
+		ConversationState newState1 = new ConversationState (1, -3, 1, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"hi eric", 3} });
+		ConversationState newState2 = new ConversationState (1, -3, 2, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"hi eric", 3} });
+		ConversationState newState3 = new ConversationState (2, -3, 3, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"repeat", 1}, {"lets do it", 4} });
 
-		ConversationState newState4 = new ConversationState (-1, -3, 4, -1, new Vector2(5, -1));
+		ConversationState newState4 = new ConversationState (-1, -3, 4, -1, new Dictionary<string, int>() { {"hey eric", 16} });
 
-		ConversationState newState5 = new ConversationState (-1, -1, -1, 0, new Vector2(6, -1));
-		ConversationState newState6 = new ConversationState (-1, 0, -1, -1, new Vector2(7, -1));
-		ConversationState newState7 = new ConversationState (-1, 1, -1, 1, new Vector2(8, -1));
-		ConversationState newState8 = new ConversationState (-1, -1, -1, 2, new Vector2(9, -1));
-		ConversationState newState9 = new ConversationState (-1, 2, -1, -1, new Vector2(10, -1));
-		ConversationState newState10 = new ConversationState (-1, 3, -1, -1, new Vector2(11, -1));
-		ConversationState newState11 = new ConversationState (-1, 4, -1, -1, new Vector2(12, -1));
-		ConversationState newState12 = new ConversationState (-1, -1, -1, 3, new Vector2(13, -1));
-		ConversationState newState13 = new ConversationState (-1, 5, -1, -1, new Vector2(14, -1));
+		ConversationState newState5 = new ConversationState (-1, -1, -1, 0, new Dictionary<string, int>() { {"hey eric", 16} });
+		ConversationState newState6 = new ConversationState (-1, 0, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} });
+		ConversationState newState7 = new ConversationState (-1, 1, -1, 1, new Dictionary<string, int>() { {"hey eric", 16} });
+		ConversationState newState8 = new ConversationState (-1, -1, -1, 2, new Dictionary<string, int>() { {"hey eric", 16} });
+		ConversationState newState9 = new ConversationState (-1, 2, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} });
+		ConversationState newState10 = new ConversationState (-1, 3, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} });
+		ConversationState newState11 = new ConversationState (-1, 4, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} });
+		ConversationState newState12 = new ConversationState (-1, -1, -1, 3, new Dictionary<string, int>() { {"hey eric", 16} });
+		ConversationState newState13 = new ConversationState (-1, 5, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} });
 
-		ConversationState newState14 = new ConversationState (-1, -1, -1, 4, new Vector2(15, -1));
+		ConversationState newState14 = new ConversationState (-1, -1, -1, -2, new Dictionary<string, int>() { {"hey eric", 16} });
 
-		ConversationState newState15 = new ConversationState (3, -2, -1, -1, new Vector2(16, -1));
-		ConversationState newState16 = new ConversationState (4, -3, 5, -1, new Vector2(0, 15));
+		ConversationState newState15 = new ConversationState (3, -2, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} });
+		ConversationState newState16 = new ConversationState (4, -3, 5, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"practice again", 1}, {"result", 15} });
+
+		ConversationState newState17 = new ConversationState (-1, -1, -1, 7, new Dictionary<string, int>() { {"returnToStateAuto", -1} });
 
 		possibleConvStates.Add (newState0);
 		possibleConvStates.Add (newState1);
@@ -105,7 +128,36 @@ public class SceneBehaviour : MonoBehaviour {
 		possibleConvStates.Add (newState14);
 		possibleConvStates.Add (newState15);
 		possibleConvStates.Add (newState16);
+		possibleConvStates.Add (newState17);
 		//-----------------------------------------------
+	}
+
+	private int GetEyeContact ()
+	{
+		return (int)(investorFaceLookTime / totalTimeTalking * 100);
+	}
+
+	private int GetMemorization ()
+	{
+		return (int)((1 - scriptLookTime / totalTimeTalking) * 100);
+	}
+
+	private int GetFinalResultInvestorAudioIndex ()
+	{
+		if (GetEyeContact () >= finalResultsInvestorMarks.x) {
+			return (int)finalResultsInvestorVoice.x;
+		} else if (GetEyeContact () >= finalResultsInvestorMarks.y) {
+			return (int)finalResultsInvestorVoice.y;
+		} else {
+			return (int)finalResultsInvestorVoice.z;
+		}
+	}
+
+	public void OnKeywordSaid (string keyWord)
+	{
+		if (possibleConvStates [convStateIndex].keywordStates.ContainsKey (keyWord)) {
+			GoState (possibleConvStates [convStateIndex].keywordStates [keyWord]);
+		}
 	}
 
 	public int GetCurrDictationState()
@@ -115,42 +167,33 @@ public class SceneBehaviour : MonoBehaviour {
 
 	public void GoNextState ()
 	{
-		int prevState = convStateIndex;
 		convStateIndex++;
 
 		if (convStateIndex >= possibleConvStates.Count) {
 			convStateIndex = 0;
 		}
 
-		if (prevState == -1 && convStateIndex == 0 || possibleConvStates [prevState].IsNextConvStateAllowed (convStateIndex)) {
-			OnStateChanged ();
-		} else {
-			convStateIndex = prevState;
+		if (possibleConvStates [convStateIndex].keywordStates.ContainsKey ("returnToStateAuto")) {
+			GoNextState ();
+			return;
 		}
+
+		OnStateChanged ();
 	}
 
 	public void GoState (int stateIndex)
 	{
-		int prevState = convStateIndex;
-		convStateIndex = stateIndex;
-
-		if (prevState == -1 && convStateIndex == 0 || possibleConvStates [prevState].IsNextConvStateAllowed (convStateIndex)) {
-			OnStateChanged ();
-		} else {
-			convStateIndex = prevState;
+		if (possibleConvStates [stateIndex].keywordStates.ContainsKey ("returnToStateAuto")) {
+			possibleConvStates [stateIndex].keywordStates ["returnToStateAuto"] = convStateIndex;
 		}
+
+		convStateIndex = stateIndex;
+		OnStateChanged ();
 	}
 
-	public void GoDirectionalState (int alowedStateDirection)
+	private void ReturnToStateAuto ()
 	{
-		int prevState = convStateIndex;
-		convStateIndex = possibleConvStates [convStateIndex].ConvertToDirectionalState(alowedStateDirection);
-
-		if (prevState == -1 && convStateIndex == 0 || convStateIndex > -1 && possibleConvStates [prevState].IsNextConvStateAllowed (convStateIndex)) {
-			OnStateChanged ();
-		} else {
-			convStateIndex = prevState;
-		}
+		GoState(possibleConvStates [convStateIndex].keywordStates ["returnToStateAuto"]);
 	}
 
 	public void OnCurrSentenceSaid ()
@@ -164,7 +207,9 @@ public class SceneBehaviour : MonoBehaviour {
 	/// </summary>
 	public void OnSelectTransfered()
 	{
-		GoNextState ();
+		if (!possibleConvStates [convStateIndex].keywordStates.ContainsKey ("returnToStateAuto")) {
+			GoNextState ();
+		}
 	}
 
 	private bool IsNextStateSameEricText ()
@@ -204,9 +249,24 @@ public class SceneBehaviour : MonoBehaviour {
 
 			//Auto change state after voice COMPLETED - for INVESTOR TALKING states
 			if (possibleConvStates [convStateIndex].currInvestorState == -1) {
+				if (!possibleConvStates [convStateIndex].keywordStates.ContainsKey ("returnToStateAuto")) {
+					Invoke ("GoNextState", audioInvestor.clip.length);
+				} else {
+					Invoke ("ReturnToStateAuto", audioInvestor.clip.length);
+				}
+			}
+		}
+		//Play final results audio
+		else if (possibleConvStates [convStateIndex].currInvestorAudioState == -2) {
+			audioInvestor.clip = investorVoice [GetFinalResultInvestorAudioIndex()];
+			audioInvestor.Play ();
+
+			//Auto change state after voice COMPLETED - for INVESTOR TALKING states
+			if (possibleConvStates [convStateIndex].currInvestorState == -1) {
 				Invoke ("GoNextState", audioInvestor.clip.length);
 			}
 		}
+
 		//-------------------------------
 
 		//Set Eric Text
@@ -215,6 +275,14 @@ public class SceneBehaviour : MonoBehaviour {
 		} else {
 			textNavigationImage.sprite = ericTexts [possibleConvStates [convStateIndex].currEricMenuState];
 			textNavigationImage.gameObject.SetActive (true);
+
+			if (possibleConvStates [convStateIndex].currEricMenuState == 3) {
+				memorizationTxt.text = GetMemorization ().ToString () + "%";
+				eyeContactTxt.text = GetEyeContact ().ToString () + "%";
+				results.SetActive (true);
+			} else {
+				results.SetActive (false);
+			}
 		}
 
 		//Set Communicator Text
@@ -229,6 +297,13 @@ public class SceneBehaviour : MonoBehaviour {
 		if (!Application.isEditor) {
 			//Reset words offset for voice recognition system pronunciation check
 			communicatorScript.ResetCorrectWordsOffset ();
+
+			if (convStateIndex == 0) {
+				scriptLookTime = 0;
+				investorFaceLookTime = 0;
+				investorDoesNotLookTime = 0;
+				totalTimeTalking = 0;
+			}
 
 			if (possibleConvStates [convStateIndex].currInvestorState >= 0) {
 				communicatorScript.StartConversation ();

@@ -40,6 +40,8 @@ namespace HoloToolkit
         private KeywordRecognizer keywordRecognizer;
         private Dictionary<string, UnityEvent> responses;
 
+		public SceneBehaviour sceneBehaviour;
+
         void Start()
         {
             if (KeywordsAndResponses.Length > 0)
@@ -75,13 +77,15 @@ namespace HoloToolkit
 
         private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
         {
-            UnityEvent keywordResponse;
+            /*UnityEvent keywordResponse;
 
             // Check to make sure the recognized keyword exists in the methods dictionary, then invoke the corresponding method.
             if (responses.TryGetValue(args.text, out keywordResponse))
             {
                 keywordResponse.Invoke();
-            }
+            }*/
+
+			sceneBehaviour.OnKeywordSaid (args.text.ToLower());
         }
 
         /// <summary>

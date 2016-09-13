@@ -50,6 +50,11 @@ namespace HoloToolkit.Unity
         private float lastHitDistance = 15.0f;
         private GameObject focusedObject;
 
+		public bool IsFocusedObjectTag (string tag)
+		{
+			return focusedObject != null && focusedObject.tag.Equals (tag);
+		}
+
         private void Update()
         {
             gazeOrigin = Camera.main.transform.position;
