@@ -116,31 +116,33 @@ public class InvestorCommunicator : MonoBehaviour
 
 	public void SetAndVirefyTextSaid (StringBuilder currText, string additionalText)
 	{
-		saidSentenceToWords = ParseToWords (additionalText);
-		int wordToStart = correctWordsOffset;
+		if (!sceneScript.OnKeywordSaid (additionalText.ToLower ())) {
+			saidSentenceToWords = ParseToWords (additionalText);
+			int wordToStart = correctWordsOffset;
 
-		for (int i = wordToStart; i < initialSentencesToWords[sceneScript.GetCurrDictationState ()].Length; i++) {
-			if (saidSentenceToWords [i - wordToStart].Equals (initialSentencesToWords [sceneScript.GetCurrDictationState ()] [i])) {
-				if (currText.Length > 0) {
-					currText.Append (" ");
+			for (int i = wordToStart; i < initialSentencesToWords[sceneScript.GetCurrDictationState ()].Length; i++) {
+				if (saidSentenceToWords [i - wordToStart].Equals (initialSentencesToWords [sceneScript.GetCurrDictationState ()] [i])) {
+					if (currText.Length > 0) {
+						currText.Append (" ");
+					}
+
+					currText.Append (saidSentenceToWords [i - wordToStart]);
+					correctWordsOffset++;
+				} else {
+					break;
 				}
-
-				currText.Append (saidSentenceToWords [i - wordToStart]);
-				correctWordsOffset++;
-			} else {
-				break;
 			}
-		}
 
-		textSaidLabel.text = currText.ToString();
+			textSaidLabel.text = currText.ToString();
 
-		if (correctWordsOffset >= initialSentencesToWords [sceneScript.GetCurrDictationState ()].Length) 
-		{
-			sceneScript.OnCurrSentenceSaid ();
+			if (correctWordsOffset >= initialSentencesToWords [sceneScript.GetCurrDictationState ()].Length) 
+			{
+				sceneScript.OnCurrSentenceSaid ();
 
-			if (sceneScript.GetCurrDictationState() > 0) {
-				textToSayLabel.text = initialSentences [sceneScript.GetCurrDictationState()];
-				textSaidLabel.text = "";
+				if (sceneScript.GetCurrDictationState() > 0) {
+					textToSayLabel.text = initialSentences [sceneScript.GetCurrDictationState()];
+					textSaidLabel.text = "";
+				}
 			}
 		}
 	}
