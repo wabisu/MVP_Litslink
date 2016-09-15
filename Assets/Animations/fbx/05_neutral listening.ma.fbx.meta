@@ -456,16 +456,472 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'rig_bar:Spine1Part1_M' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'rig_bar:Spine1Part2_M'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_ChestEndEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_ChestOriginEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_HeadEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_LeftUpLeg
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_LeftUpLeg/inves_rig_Ctrl_LeftLeg
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_LeftUpLeg/inves_rig_Ctrl_LeftLeg/inves_rig_Ctrl_LeftFoot
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_LeftUpLeg/inves_rig_Ctrl_LeftLeg/inves_rig_Ctrl_LeftFoot/inves_rig_Ctrl_LeftToeBase
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_RightUpLeg
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_RightUpLeg/inves_rig_Ctrl_RightLeg
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_RightUpLeg/inves_rig_Ctrl_RightLeg/inves_rig_Ctrl_RightFoot
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_RightUpLeg/inves_rig_Ctrl_RightLeg/inves_rig_Ctrl_RightFoot/inves_rig_Ctrl_RightToeBase
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_Head
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandIndex1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandIndex1/inves_rig_Ctrl_LeftHandIndex2
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandIndex1/inves_rig_Ctrl_LeftHandIndex2/inves_rig_Ctrl_LeftHandIndex3
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandIndex1/inves_rig_Ctrl_LeftHandIndex2/inves_rig_Ctrl_LeftHandIndex3/inves_rig_Ctrl_LeftHandIndex4
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandMiddle1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandMiddle1/inves_rig_Ctrl_LeftHandMiddle2
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandMiddle1/inves_rig_Ctrl_LeftHandMiddle2/inves_rig_Ctrl_LeftHandMiddle3
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandMiddle1/inves_rig_Ctrl_LeftHandMiddle2/inves_rig_Ctrl_LeftHandMiddle3/inves_rig_Ctrl_LeftHandMiddle4
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandPinky1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandPinky1/inves_rig_Ctrl_LeftHandPinky2
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandPinky1/inves_rig_Ctrl_LeftHandPinky2/inves_rig_Ctrl_LeftHandPinky3
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandPinky1/inves_rig_Ctrl_LeftHandPinky2/inves_rig_Ctrl_LeftHandPinky3/inves_rig_Ctrl_LeftHandPinky4
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandRing1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandRing1/inves_rig_Ctrl_LeftHandRing2
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandRing1/inves_rig_Ctrl_LeftHandRing2/inves_rig_Ctrl_LeftHandRing3
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandRing1/inves_rig_Ctrl_LeftHandRing2/inves_rig_Ctrl_LeftHandRing3/inves_rig_Ctrl_LeftHandRing4
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandThumb1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandThumb1/inves_rig_Ctrl_LeftHandThumb2
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandThumb1/inves_rig_Ctrl_LeftHandThumb2/inves_rig_Ctrl_LeftHandThumb3
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandThumb1/inves_rig_Ctrl_LeftHandThumb2/inves_rig_Ctrl_LeftHandThumb3/inves_rig_Ctrl_LeftHandThumb4
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandIndex1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandIndex1/inves_rig_Ctrl_RightHandIndex2
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandIndex1/inves_rig_Ctrl_RightHandIndex2/inves_rig_Ctrl_RightHandIndex3
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandIndex1/inves_rig_Ctrl_RightHandIndex2/inves_rig_Ctrl_RightHandIndex3/inves_rig_Ctrl_RightHandIndex4
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandMiddle1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandMiddle1/inves_rig_Ctrl_RightHandMiddle2
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandMiddle1/inves_rig_Ctrl_RightHandMiddle2/inves_rig_Ctrl_RightHandMiddle3
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandMiddle1/inves_rig_Ctrl_RightHandMiddle2/inves_rig_Ctrl_RightHandMiddle3/inves_rig_Ctrl_RightHandMiddle4
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandPinky1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandPinky1/inves_rig_Ctrl_RightHandPinky2
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandPinky1/inves_rig_Ctrl_RightHandPinky2/inves_rig_Ctrl_RightHandPinky3
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandPinky1/inves_rig_Ctrl_RightHandPinky2/inves_rig_Ctrl_RightHandPinky3/inves_rig_Ctrl_RightHandPinky4
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandRing1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandRing1/inves_rig_Ctrl_RightHandRing2
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandRing1/inves_rig_Ctrl_RightHandRing2/inves_rig_Ctrl_RightHandRing3
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandRing1/inves_rig_Ctrl_RightHandRing2/inves_rig_Ctrl_RightHandRing3/inves_rig_Ctrl_RightHandRing4
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandThumb1
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandThumb1/inves_rig_Ctrl_RightHandThumb2
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandThumb1/inves_rig_Ctrl_RightHandThumb2/inves_rig_Ctrl_RightHandThumb3
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandThumb1/inves_rig_Ctrl_RightHandThumb2/inves_rig_Ctrl_RightHandThumb3/inves_rig_Ctrl_RightHandThumb4
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_HipsEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftAnkleEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftElbowEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftFootEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHandIndexEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHandMiddleEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHandPinkyEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHandRingEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHandThumbEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHipEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftKneeEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftShoulderEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftWristEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightAnkleEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightElbowEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightFootEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHandIndexEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHandMiddleEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHandPinkyEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHandRingEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHandThumbEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHipEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightKneeEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightShoulderEffector
+        weight: 0
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightWristEffector
+        weight: 0
+      - path: investor_all
+        weight: 1
+      - path: investor_all/rig_bar:Group
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_L/rig_bar:Knee_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_L/rig_bar:Knee_L/rig_bar:Ankle_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_L/rig_bar:Knee_L/rig_bar:Ankle_L/rig_bar:Toes_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_L/rig_bar:Knee_L/rig_bar:Ankle_L/rig_bar:Toes_L/rig_bar:ToesEnd_L
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_R/rig_bar:Knee_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_R/rig_bar:Knee_R/rig_bar:Ankle_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_R/rig_bar:Knee_R/rig_bar:Ankle_R/rig_bar:Toes_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_R/rig_bar:Knee_R/rig_bar:Ankle_R/rig_bar:Toes_R/rig_bar:ToesEnd_R
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl/eye_all_cntrl
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl/eye_all_cntrl/eye_L
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl/eye_all_cntrl/eye_R
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl/jaw_cntrl
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl/jaw_cntrl/teeth_cntrl
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Eye_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Eye_L/rig_bar:EyeEnd_L
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Eye_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Eye_R/rig_bar:EyeEnd_R
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:HeadEnd_M
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Jaw_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Jaw_M/rig_bar:JawEnd_M
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73/tong:tougne_CTRL_03
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73/tong:tougne_CTRL_03/tong:group72
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73/tong:tougne_CTRL_03/tong:group72/tong:tougne_CTRL_02
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73/tong:tougne_CTRL_03/tong:group72/tong:tougne_CTRL_02/tong:group71
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73/tong:tougne_CTRL_03/tong:group72/tong:tougne_CTRL_02/tong:group71/tong:tougne_CTRL_01
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:tougne_curve
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/transform1
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2/tong:tougne_JNT
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2/tong:tougne_JNT/tong:tougne_JNT1
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2/tong:tougne_JNT/tong:tougne_JNT1/tong:tougne_JNT2
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2/tong:tougne_JNT/tong:tougne_JNT1/tong:tougne_JNT2/tong:tougne_JNT3
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2/tong:tougne_JNT/tong:tougne_JNT1/tong:tougne_JNT2/tong:tougne_JNT3/tong:tougne_JNT4
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform3
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform3/joint1
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform4
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform4/joint2
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/uper_teeth
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:PinkyFinger1_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:PinkyFinger1_L/rig_bar:PinkyFinger2_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:PinkyFinger1_L/rig_bar:PinkyFinger2_L/rig_bar:PinkyFinger3_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:PinkyFinger1_L/rig_bar:PinkyFinger2_L/rig_bar:PinkyFinger3_L/rig_bar:PinkyFinger4_L
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:RingFinger1_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:RingFinger1_L/rig_bar:RingFinger2_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:RingFinger1_L/rig_bar:RingFinger2_L/rig_bar:RingFinger3_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:RingFinger1_L/rig_bar:RingFinger2_L/rig_bar:RingFinger3_L/rig_bar:RingFinger4_L
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:IndexFinger1_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:IndexFinger1_L/rig_bar:IndexFinger2_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:IndexFinger1_L/rig_bar:IndexFinger2_L/rig_bar:IndexFinger3_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:IndexFinger1_L/rig_bar:IndexFinger2_L/rig_bar:IndexFinger3_L/rig_bar:IndexFinger4_L
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:MiddleFinger1_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:MiddleFinger1_L/rig_bar:MiddleFinger2_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:MiddleFinger1_L/rig_bar:MiddleFinger2_L/rig_bar:MiddleFinger3_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:MiddleFinger1_L/rig_bar:MiddleFinger2_L/rig_bar:MiddleFinger3_L/rig_bar:MiddleFinger4_L
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:ThumbFinger1_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:ThumbFinger1_L/rig_bar:ThumbFinger2_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:ThumbFinger1_L/rig_bar:ThumbFinger2_L/rig_bar:ThumbFinger3_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:ThumbFinger1_L/rig_bar:ThumbFinger2_L/rig_bar:ThumbFinger3_L/rig_bar:ThumbFinger4_L
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:PinkyFinger1_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:PinkyFinger1_R/rig_bar:PinkyFinger2_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:PinkyFinger1_R/rig_bar:PinkyFinger2_R/rig_bar:PinkyFinger3_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:PinkyFinger1_R/rig_bar:PinkyFinger2_R/rig_bar:PinkyFinger3_R/rig_bar:PinkyFinger4_R
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:RingFinger1_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:RingFinger1_R/rig_bar:RingFinger2_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:RingFinger1_R/rig_bar:RingFinger2_R/rig_bar:RingFinger3_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:RingFinger1_R/rig_bar:RingFinger2_R/rig_bar:RingFinger3_R/rig_bar:RingFinger4_R
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:IndexFinger1_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:IndexFinger1_R/rig_bar:IndexFinger2_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:IndexFinger1_R/rig_bar:IndexFinger2_R/rig_bar:IndexFinger3_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:IndexFinger1_R/rig_bar:IndexFinger2_R/rig_bar:IndexFinger3_R/rig_bar:IndexFinger4_R
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:MiddleFinger1_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:MiddleFinger1_R/rig_bar:MiddleFinger2_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:MiddleFinger1_R/rig_bar:MiddleFinger2_R/rig_bar:MiddleFinger3_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:MiddleFinger1_R/rig_bar:MiddleFinger2_R/rig_bar:MiddleFinger3_R/rig_bar:MiddleFinger4_R
+        weight: 0
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:ThumbFinger1_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:ThumbFinger1_R/rig_bar:ThumbFinger2_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:ThumbFinger1_R/rig_bar:ThumbFinger2_R/rig_bar:ThumbFinger3_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:ThumbFinger1_R/rig_bar:ThumbFinger2_R/rig_bar:ThumbFinger3_R/rig_bar:ThumbFinger4_R
+        weight: 0
+      - path: investor_all/rig_bar:Heads
+        weight: 0
+      - path: investor_all/rig_bar:Heads/rig_bar:EyeL
+        weight: 0
+      - path: investor_all/rig_bar:Heads/rig_bar:EyeR
+        weight: 0
+      - path: investor_all/rig_bar:Heads/rig_bar:HeadD
+        weight: 0
+      - path: investor_all/rig_bar:Heads/rig_bar:SuitGEO01
+        weight: 0
+      - path: investor_all/rig_bar:Heads/teeth:teeth:lower_gum
+        weight: 0
+      - path: investor_all/rig_bar:Heads/teeth:teeth:upper_gum
+        weight: 0
+      - path: investor_all/rig_bar:Heads/tong:Geometry
+        weight: 0
+      - path: investor_all/rig_bar:Heads/tong:Geometry/tong:BOY_GEO_GRP
+        weight: 0
+      - path: investor_all/rig_bar:Heads/tong:Geometry/tong:BOY_GEO_GRP/tong:head_ALL_grp
+        weight: 0
+      - path: investor_all/rig_bar:Heads/tong:Geometry/tong:BOY_GEO_GRP/tong:head_ALL_grp/tong:teeth_grp
+        weight: 0
+      - path: investor_all/rig_bar:Heads/tong:Geometry/tong:BOY_GEO_GRP/tong:head_ALL_grp/tong:teeth_grp/tong:gougne_geo
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -489,10 +945,1521 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
-    human: []
-    skeleton: []
+    human:
+    - boneName: rig_bar:Root_M
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Hip_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Hip_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Knee_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Knee_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Ankle_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Ankle_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Spine1_M
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Chest_M
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Neck_M
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Head_M
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Scapula_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Scapula_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Shoulder_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Shoulder_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Elbow_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Elbow_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Wrist_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Wrist_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Toes_L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Toes_R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Eye_L
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Eye_R
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:Jaw_M
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:ThumbFinger1_L
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:ThumbFinger2_L
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:ThumbFinger3_L
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:IndexFinger1_L
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:IndexFinger2_L
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:IndexFinger3_L
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:MiddleFinger1_L
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:MiddleFinger2_L
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:MiddleFinger3_L
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:RingFinger1_L
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:RingFinger2_L
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:RingFinger3_L
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:PinkyFinger1_L
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:PinkyFinger2_L
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:PinkyFinger3_L
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:ThumbFinger1_R
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:ThumbFinger2_R
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:ThumbFinger3_R
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:IndexFinger1_R
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:IndexFinger2_R
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:IndexFinger3_R
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:MiddleFinger1_R
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:MiddleFinger2_R
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:MiddleFinger3_R
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:RingFinger1_R
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:RingFinger2_R
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:RingFinger3_R
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:PinkyFinger1_R
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:PinkyFinger2_R
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rig_bar:PinkyFinger3_R
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: 01_alright(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: camera1
+      position: {x: -0.273344, y: 1.5422608, z: 2.8552852}
+      rotation: {x: -0.007481804, y: -0.71443355, z: 0.007326724, w: 0.699625}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_Reference
+      position: {x: 0.24100868, y: 0, z: -7.865913}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_ChestEndEffector
+      position: {x: -0.2472398, y: 1.417893, z: 7.68228}
+      rotation: {x: -0.00023325127, y: 0.056281127, z: -0.02693986, w: 0.9980514}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_ChestOriginEffector
+      position: {x: -0.254502, y: 1.1124389, z: 7.709984}
+      rotation: {x: -0.00013342481, y: 0.008050875, z: 0.012130426, w: 0.999894}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_HeadEffector
+      position: {x: -0.2326556, y: 1.573682, z: 7.7364864}
+      rotation: {x: -0.0020985177, y: -0.0075939745, z: -0.007998462, w: 0.999937}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_Hips
+      position: {x: -0.2481265, y: 0.9414401, z: 7.703805}
+      rotation: {x: -0.0000001351585, y: 0.00000013969843, z: 0.018632693, w: 0.9998264}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftUpLeg
+      position: {x: -0.099872075, y: -0.020303573, z: -0.005194422}
+      rotation: {x: -0.11063688, y: -0.0409301, z: 0.023013212, w: 0.992751}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftLeg
+      position: {x: -0.050567187, y: -0.44674432, z: 0.006267763}
+      rotation: {x: 0.06911217, y: -0.032041587, z: -0.015822913, w: 0.9969687}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftFoot
+      position: {x: -0.040645257, y: -0.3861786, z: -0.09275942}
+      rotation: {x: 0.06227412, y: 0.014811751, z: -0.016308121, w: 0.9978159}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftToeBase
+      position: {x: -0.00949337, y: -0.07952216, z: 0.15228648}
+      rotation: {x: -0.03499278, y: 0.00000072577996, z: 0.00000022602977, w: 0.99938756}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightUpLeg
+      position: {x: 0.099872075, y: -0.020303573, z: -0.005194422}
+      rotation: {x: -0.058146436, y: 0.20117688, z: -0.063590616, w: 0.9757577}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightLeg
+      position: {x: 0.049855538, y: -0.44684732, z: -0.0043268157}
+      rotation: {x: 0.08215645, y: -0.112412654, z: -0.028808799, w: 0.98984027}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightFoot
+      position: {x: 0.041356906, y: -0.3905147, z: -0.07195908}
+      rotation: {x: -0.008125145, y: -0.08271197, z: 0.082556434, w: 0.9931149}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightToeBase
+      position: {x: 0.00949337, y: -0.07952217, z: 0.15228648}
+      rotation: {x: -0.017240452, y: -0.0000010346232, z: 0.000000017840025, w: 0.9998514}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_Spine
+      position: {x: 1.2486925e-16, y: 0.1711174, z: 0.006179578}
+      rotation: {x: 0.000016741296, y: 0.008051822, z: -0.006502399, w: 0.9999465}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_Spine1
+      position: {x: 2.1660666e-17, y: 0.045486297, z: -0.005053017}
+      rotation: {x: 0.00013370227, y: 0.016100366, z: -0.013007323, w: 0.9997858}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_Spine2
+      position: {x: 3.1822723e-17, y: 0.045486297, z: -0.005053016}
+      rotation: {x: 0.00026718064, y: 0.016094873, z: -0.013015453, w: 0.9997857}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_Spine3
+      position: {x: 9.3654296e-17, y: 0.045486297, z: -0.005053017}
+      rotation: {x: 0.00040019996, y: 0.01608568, z: -0.013029118, w: 0.99978566}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_Head
+      position: {x: -1.1848229e-17, y: 0.32540122, z: 0.04316375}
+      rotation: {x: -0.0012064495, y: -0.06391142, z: 0.018835405, w: 0.9977771}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftShoulder
+      position: {x: -0.07028957, y: 0.169244, z: -0.011938803}
+      rotation: {x: -0.000000023087017, y: 1.1514478e-15, z: -0.000000048371486, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftArm
+      position: {x: -0.11565491, y: -0.002601776, z: -0.011651742}
+      rotation: {x: -0.07044382, y: -0.0006247634, z: 0.714782, w: 0.6957902}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftForeArm
+      position: {x: -0.28590086, y: 0.008256836, z: -0.026751637}
+      rotation: {x: -0.00000029124806, y: 0.000001945541, z: 0.00000047174657, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHand
+      position: {x: -0.2527937, y: 0.0029689025, z: 0.023391446}
+      rotation: {x: 0.15767983, y: 0.01776026, z: -0.21469904, w: 0.9637043}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandIndex1
+      position: {x: -0.09190079, y: -0.017448884, z: 0.050400607}
+      rotation: {x: -0.050966725, y: 0.012034413, z: 0.08487062, w: 0.99501485}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandIndex2
+      position: {x: -0.0329718, y: -0.016303252, z: 0.021309454}
+      rotation: {x: 0.014750351, y: 0.016921014, z: 0.043332055, w: 0.9988085}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandIndex3
+      position: {x: -0.01475914, y: -0.016930846, z: 0.011635696}
+      rotation: {x: 0.0059260023, y: 0.016149512, z: 0.045667443, w: 0.99880856}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandIndex4
+      position: {x: -0.006868057, y: -0.018715972, z: 0.0075098705}
+      rotation: {x: -0.000000029301443, y: 5.023759e-15, z: -8.847088e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandMiddle1
+      position: {x: -0.100729294, y: -0.018384552, z: 0.031070761}
+      rotation: {x: 0.0000001604053, y: -0.000000014403507, z: -0.0000007013515, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandMiddle2
+      position: {x: -0.039610974, y: -0.024562988, z: 0.014904274}
+      rotation: {x: -0.000000029797855, y: 0.00000034473925, z: -0.00000024732208,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandMiddle3
+      position: {x: -0.014974518, y: -0.020925751, z: 0.008051599}
+      rotation: {x: 0.00000003886191, y: -0.00000009091756, z: -0.00000044548779,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandMiddle4
+      position: {x: -0.010578536, y: -0.0238414, z: 0.007575151}
+      rotation: {x: 0.000000036488604, y: 0.00000004585134, z: 0.0000000987042, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandPinky1
+      position: {x: -0.1010102, y: -0.03110855, z: -0.00792612}
+      rotation: {x: 0.023621548, y: -0.04566079, z: -0.049493417, w: 0.99745053}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandPinky2
+      position: {x: -0.027003326, y: -0.023519745, z: -0.00056457997}
+      rotation: {x: 0.00013405089, y: 0.00013095503, z: -0.028278878, w: 0.99960005}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandPinky3
+      position: {x: -0.013707656, y: -0.013375397, z: -0.00012683391}
+      rotation: {x: -0.0006936213, y: -0.0010002651, z: -0.0494267, w: 0.99877703}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandPinky4
+      position: {x: -0.009835281, y: -0.014184723, z: 0.00042512416}
+      rotation: {x: -0.0000000627409, y: 0.000000040876753, z: -0.00000003197749,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandRing1
+      position: {x: -0.10217399, y: -0.024671478, z: 0.011393714}
+      rotation: {x: 0.026909245, y: -0.025093306, z: -0.039409958, w: 0.9985455}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandRing2
+      position: {x: -0.03345291, y: -0.02681137, z: 0.0069226264}
+      rotation: {x: -0.0041966625, y: -0.004950347, z: -0.037462592, w: 0.999277}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandRing3
+      position: {x: -0.017028274, y: -0.020086974, z: 0.004561934}
+      rotation: {x: -0.0027679452, y: -0.0062152734, z: -0.037406627, w: 0.999277}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandRing4
+      position: {x: -0.010145035, y: -0.022780761, z: 0.004536052}
+      rotation: {x: 0.000000011205028, y: 0.00000012459533, z: 0.00000010040011, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandThumb1
+      position: {x: -0.021499787, y: -0.011629638, z: 0.030409936}
+      rotation: {x: 0.00000006050613, y: 0.00000022775771, z: -0.0000000901118, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandThumb2
+      position: {x: -0.017192611, y: -0.016343841, z: 0.03645684}
+      rotation: {x: 0.00000003479944, y: -0.00000017459367, z: 0.00000093450257, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandThumb3
+      position: {x: -0.01380104, y: -0.013475952, z: 0.02522899}
+      rotation: {x: -0.00000009183995, y: -0.00000007229571, z: -0.00000067171504,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandThumb4
+      position: {x: -0.012018737, y: -0.011735687, z: 0.021970786}
+      rotation: {x: 0.0000000148807295, y: 0.000000038934708, z: 0.000000015943401,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightShoulder
+      position: {x: 0.07028957, y: 0.169244, z: -0.011938803}
+      rotation: {x: 0.000000027379183, y: -0.000000029307525, z: 0.00000011893193,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightArm
+      position: {x: 0.11565491, y: -0.002601776, z: -0.011651742}
+      rotation: {x: -0.04667302, y: 0.004320137, z: -0.6764178, w: 0.7350251}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightForeArm
+      position: {x: 0.28598458, y: 0.009103851, z: -0.025555333}
+      rotation: {x: 0.0000005617083, y: -0.0000026959856, z: 0.0000009505617, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHand
+      position: {x: 0.25268313, y: 0.0037442015, z: 0.024451299}
+      rotation: {x: 0.07477297, y: -0.013420438, z: 0.108472265, w: 0.9911926}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandIndex1
+      position: {x: 0.09174034, y: -0.017143402, z: 0.05079622}
+      rotation: {x: -0.004100505, y: -0.005321875, z: -0.014239845, w: 0.9998761}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandIndex2
+      position: {x: 0.032930907, y: -0.016191712, z: 0.021457145}
+      rotation: {x: 0.003267917, y: -0.0037371928, z: -0.0095088035, w: 0.9999425}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandIndex3
+      position: {x: 0.014761123, y: -0.01687973, z: 0.011707337}
+      rotation: {x: 0.0013151636, y: -0.0035663317, z: -0.010030566, w: 0.9999425}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandIndex4
+      position: {x: 0.006892776, y: -0.018690947, z: 0.007549431}
+      rotation: {x: -4.996006e-16, y: 1.3530842e-15, z: 0.00000023437978, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandMiddle1
+      position: {x: 0.10065277, y: -0.0180632, z: 0.03150417}
+      rotation: {x: 0.0027918771, y: -0.002108126, z: 0.049615793, w: 0.99876225}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandMiddle2
+      position: {x: 0.03962181, y: -0.02443512, z: 0.015084668}
+      rotation: {x: 0.002791796, y: -0.002108104, z: 0.04961433, w: 0.9987623}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandMiddle3
+      position: {x: 0.015003585, y: -0.020876007, z: 0.008126479}
+      rotation: {x: 0.0027919046, y: -0.0021079823, z: 0.04961647, w: 0.99876225}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandMiddle4
+      position: {x: 0.010618363, y: -0.023805084, z: 0.0076332497}
+      rotation: {x: 0.002791839, y: -0.0021079925, z: 0.04961428, w: 0.9987623}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandPinky1
+      position: {x: 0.101135865, y: -0.030808257, z: -0.007483854}
+      rotation: {x: 0.006167777, y: -0.0046572736, z: 0.10961174, w: 0.99394447}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandPinky2
+      position: {x: 0.027076263, y: -0.02343872, z: -0.00043760298}
+      rotation: {x: 0.0063200197, y: -0.0039781313, z: 0.02820766, w: 0.9995742}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandPinky3
+      position: {x: 0.013748245, y: -0.013333892, z: -0.00006155014}
+      rotation: {x: 0.0062515, y: -0.004568635, z: 0.10960991, w: 0.9939445}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandPinky4
+      position: {x: 0.0098760985, y: -0.014154815, z: 0.0004746008}
+      rotation: {x: 0.006257317, y: -0.004574871, z: 0.10960977, w: 0.99394447}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandRing1
+      position: {x: 0.10219909, y: -0.024356995, z: 0.011836989}
+      rotation: {x: 0.005335561, y: -0.00402878, z: 0.094819665, w: 0.995472}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandRing2
+      position: {x: 0.033504102, y: -0.026706237, z: 0.007078521}
+      rotation: {x: 0.005335544, y: -0.0040287627, z: 0.09482283, w: 0.9954717}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandRing3
+      position: {x: 0.017069397, y: -0.020032959, z: 0.00464499}
+      rotation: {x: 0.0049478384, y: -0.004330475, z: 0.094832465, w: 0.99547154}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandRing4
+      position: {x: 0.010194473, y: -0.022747649, z: 0.004591744}
+      rotation: {x: 0.0048823627, y: -0.004217936, z: 0.094840385, w: 0.9954716}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandThumb1
+      position: {x: 0.021406783, y: -0.011547546, z: 0.030506667}
+      rotation: {x: -0.12189003, y: 0.114329934, z: -0.1427625, w: 0.9755462}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandThumb2
+      position: {x: 0.017088395, y: -0.016271515, z: 0.03653814}
+      rotation: {x: 0.007292162, y: 0.032774284, z: 0.013429667, w: 0.99934596}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandThumb3
+      position: {x: 0.0137354275, y: -0.013420105, z: 0.025294494}
+      rotation: {x: 0.007292086, y: 0.03277472, z: 0.013429434, w: 0.99934596}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandThumb4
+      position: {x: 0.011961593, y: -0.011686859, z: 0.022027835}
+      rotation: {x: 0.00000009601656, y: 0.0000003208295, z: -0.00000016131594, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_HipsEffector
+      position: {x: -0.24736999, y: 0.9211506, z: 7.69861}
+      rotation: {x: -0.0000001351585, y: 0.00000013969843, z: 0.018632693, w: 0.9998264}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftAnkleEffector
+      position: {x: -0.39712608, y: 0.094817996, z: 7.755232}
+      rotation: {x: 0.02291825, y: -0.05632493, z: 0.016984172, w: 0.9980049}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftElbowEffector
+      position: {x: -0.4477465, y: 1.1384369, z: 7.693751}
+      rotation: {x: -0.030259129, y: 0.040601872, z: 0.6986097, w: 0.7137089}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftFootEffector
+      position: {x: -0.4206549, y: 0.007870083, z: 7.901832}
+      rotation: {x: -0.012018785, y: -0.05688403, z: 0.015003046, w: 0.9981957}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandIndexEffector
+      position: {x: -0.41578978, y: 0.7448845, z: 7.839951}
+      rotation: {x: 0.035029214, y: 0.16861947, z: 0.6567568, w: 0.73417366}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandMiddleEffector
+      position: {x: -0.4319483, y: 0.70537, z: 7.8101864}
+      rotation: {x: 0.06225213, y: 0.1554642, z: 0.5130798, w: 0.841846}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandPinkyEffector
+      position: {x: -0.4654875, y: 0.7140207, z: 7.739637}
+      rotation: {x: 0.08705411, y: 0.13800904, z: 0.39457572, w: 0.90425944}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandRingEffector
+      position: {x: -0.44958788, y: 0.69711614, z: 7.7732596}
+      rotation: {x: 0.07931005, y: 0.14379472, z: 0.40751174, w: 0.8983135}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHandThumbEffector
+      position: {x: -0.40092158, y: 0.81386524, z: 7.848776}
+      rotation: {x: 0.06225234, y: 0.15546381, z: 0.5130812, w: 0.8418452}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftHipEffector
+      position: {x: -0.3703735, y: 0.92613953, z: 7.718131}
+      rotation: {x: -0.11076011, y: -0.04167619, z: 0.038763605, w: 0.99221605}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftKneeEffector
+      position: {x: -0.3909442, y: 0.4886993, z: 7.820112}
+      rotation: {x: -0.039948683, y: -0.072415546, z: 0.029375616, w: 0.99614114}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftShoulderEffector
+      position: {x: -0.4331856, y: 1.425329, z: 7.691598}
+      rotation: {x: -0.030257203, y: 0.040600564, z: 0.69860953, w: 0.71370924}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_LeftWristEffector
+      position: {x: -0.4555532, y: 0.8893733, z: 7.742401}
+      rotation: {x: 0.062252317, y: 0.15546383, z: 0.5130811, w: 0.84184533}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightAnkleEffector
+      position: {x: -0.1682469, y: 0.08746601, z: 7.6588125}
+      rotation: {x: 0.0000000111758744, y: -0.00000015634582, z: -0.0000000819564,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightElbowEffector
+      position: {x: -0.04933776, y: 1.118703, z: 7.6374598}
+      rotation: {x: -0.084708065, y: 0.046777222, z: -0.6922745, w: 0.71511716}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightFootEffector
+      position: {x: -0.15875359, y: 0.007943821, z: 7.811099}
+      rotation: {x: -0.017240444, y: -0.000001189533, z: -0.00000006679966, w: 0.9998514}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandIndexEffector
+      position: {x: -0.06082688, y: 0.7177168, z: 7.7764444}
+      rotation: {x: -0.04189248, y: -0.017352628, z: -0.6367974, w: 0.76969665}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandMiddleEffector
+      position: {x: -0.057941258, y: 0.6805808, z: 7.748292}
+      rotation: {x: -0.03243166, y: -0.010678639, z: -0.4865754, w: 0.8729711}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandPinkyEffector
+      position: {x: -0.05271317, y: 0.6919608, z: 7.6775045}
+      rotation: {x: -0.028351627, y: -0.018845554, z: -0.39755437, w: 0.9169469}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandRingEffector
+      position: {x: -0.052396167, y: 0.67417425, z: 7.7142653}
+      rotation: {x: -0.030203851, y: -0.015017637, z: -0.3634333, w: 0.9310094}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHandThumbEffector
+      position: {x: -0.05520036, y: 0.78849745, z: 7.788136}
+      rotation: {x: 0.0013869994, y: 0.18965936, z: -0.6996227, w: 0.6888799}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightHipEffector
+      position: {x: -0.1475673, y: 0.9248716, z: 7.69861}
+      rotation: {x: -0.061884947, y: 0.20005862, z: -0.045398597, w: 0.9767732}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightKneeEffector
+      position: {x: -0.13218899, y: 0.477188, z: 7.737597}
+      rotation: {x: 0.008125177, y: 0.08271181, z: -0.08255648, w: 0.9931149}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightShoulderEffector
+      position: {x: -0.06419198, y: 1.405321, z: 7.649824}
+      rotation: {x: -0.08470704, y: 0.04677969, z: -0.69227535, w: 0.7151163}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: inves_rig_Ctrl_RightWristEffector
+      position: {x: -0.031773116, y: 0.8679955, z: 7.673488}
+      rotation: {x: -0.034707177, y: -0.0058070137, z: -0.6109677, w: 0.79087305}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: investor_all
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig_bar:Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig_bar:Main
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig_bar:DeformationSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig_bar:Root_M
+      position: {x: -0.0071177855, y: 0.9414401, z: -0.16210818}
+      rotation: {x: 0.5089424, y: -0.4908947, z: -0.5089424, w: 0.4908947}
+      scale: {x: 1, y: 1.0000002, z: 1}
+      transformModified: 1
+    - name: rig_bar:Hip_R
+      position: {x: 0.02047784, y: -0.0044583026, z: -0.09987201}
+      rotation: {x: -0.014109955, y: 0.9982194, z: -0.017369958, w: -0.0552927}
+      scale: {x: 1.0000001, y: 0.99999964, z: 0.99999946}
+      transformModified: 1
+    - name: rig_bar:Knee_R
+      position: {x: -0.449641, y: -0.00000005971319, z: 0.000000097072935}
+      rotation: {x: -0.00000001967419, y: -0.000000055879354, z: 0.08574425, w: 0.9963172}
+      scale: {x: 1.0000006, y: 1.0000007, z: 1.0000007}
+      transformModified: 1
+    - name: rig_bar:Ankle_R
+      position: {x: -0.39923698, y: -0.000000044383327, z: -0.000000026268559}
+      rotation: {x: 0.009880859, y: -0.056748036, z: -0.0877693, w: 0.99447405}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000006}
+      transformModified: 1
+    - name: rig_bar:Toes_R
+      position: {x: -0.07952218, y: 0.1525821, z: 0.000000008134559}
+      rotation: {x: -0.038692866, y: 0.018472223, z: -0.682591, w: 0.7295418}
+      scale: {x: 0.99999994, y: 1.0000004, z: 0.9999997}
+      transformModified: 1
+    - name: rig_bar:ToesEnd_R
+      position: {x: -0.0608362, y: -1.576517e-16, z: -7.1054265e-17}
+      rotation: {x: -0, y: -0, z: -0.0000000058789738, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1}
+      transformModified: 1
+    - name: rig_bar:Spine1_M
+      position: {x: -0.1712289, y: 0.000000002255995, z: -0.00000004220476}
+      rotation: {x: 0.000000029802322, y: -0.000000029802322, z: 0.07330051, w: 0.9973099}
+      scale: {x: 1.0000023, y: 1.0000024, z: 1.000001}
+      transformModified: 1
+    - name: rig_bar:Spine1Part1_M
+      position: {x: -0.045766037, y: 0.00000000580633, z: 2.395921e-10}
+      rotation: {x: -0, y: -0, z: 8.881784e-16, w: 1}
+      scale: {x: 1.0000021, y: 1.0000019, z: 1.000001}
+      transformModified: 1
+    - name: rig_bar:Spine1Part2_M
+      position: {x: -0.04576602, y: -0.00000001898809, z: 0.000000001921151}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000023, y: 1.0000025, z: 1.0000012}
+      transformModified: 1
+    - name: rig_bar:Chest_M
+      position: {x: -0.045766, y: -0.000000002334408, z: 0.0000000031899139}
+      rotation: {x: -0.000000029753679, y: 0.000000029850888, z: -0.0716739, w: 0.9974282}
+      scale: {x: 1.0000011, y: 1.000001, z: 0.9999999}
+      transformModified: 1
+    - name: rig_bar:Scapula_R
+      position: {x: -0.168761, y: -0.017488629, z: -0.07028961}
+      rotation: {x: 0.05984659, y: 0.7160517, z: -0.009863373, w: -0.6954072}
+      scale: {x: 1.0000014, y: 0.9999992, z: 0.9999995}
+      transformModified: 1
+    - name: rig_bar:Shoulder_R
+      position: {x: -0.1162697, y: 0.00000006262044, z: -0.000000021115278}
+      rotation: {x: -0.033051766, y: -0.0065242914, z: -0.054549154, w: 0.9979426}
+      scale: {x: 1.0000017, y: 1.0000004, z: 0.99999905}
+      transformModified: 1
+    - name: rig_bar:Elbow_R
+      position: {x: -0.2872685, y: -0.000000021913118, z: 0.00000022333938}
+      rotation: {x: 0.0014208138, y: 0.01520949, z: -0.030288925, w: 0.9994245}
+      scale: {x: 1.0000001, y: 1.000001, z: 1.0000011}
+      transformModified: 1
+    - name: rig_bar:Wrist_R
+      position: {x: -0.253891, y: -0.000000142739, z: -0.000000049836697}
+      rotation: {x: 0.0018442261, y: -0.06045789, z: -0.090017594, w: 0.9941017}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.000001}
+      transformModified: 1
+    - name: rig_bar:MiddleFinger1_R
+      position: {x: -0.1069366, y: 0.003669405, z: -0.0009386574}
+      rotation: {x: 0.13617796, y: -0.08464007, z: -0.02257228, w: 0.986804}
+      scale: {x: 0.99999917, y: 0.9999996, z: 1.0000006}
+      transformModified: 1
+    - name: rig_bar:MiddleFinger2_R
+      position: {x: -0.048933737, y: -0.00000001337136, z: -0.00000010695809}
+      rotation: {x: 0.00031802044, y: -0.034122802, z: -0.000009948383, w: 0.99941766}
+      scale: {x: 1.0000004, y: 0.9999998, z: 1.0000004}
+      transformModified: 1
+    - name: rig_bar:MiddleFinger3_R
+      position: {x: -0.026962148, y: -0.0000000232563, z: 0.00000004010375}
+      rotation: {x: 0.0004644429, y: -0.03871731, z: -0.000020855046, w: 0.9992502}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.9999998}
+      transformModified: 1
+    - name: rig_bar:MiddleFinger4_R
+      position: {x: -0.02716056, y: 0.000000056221502, z: 0.0000000059768843}
+      rotation: {x: 0.0000000017171256, y: -0.000000029802315, z: -0.00000004702814,
+        w: 1}
+      scale: {x: 0.9999998, y: 1, z: 1.0000002}
+      transformModified: 1
+    - name: rig_bar:ThumbFinger1_R
+      position: {x: -0.03021334, y: 0.0241539, z: -0.0050988668}
+      rotation: {x: -0.39484596, y: 0.14755234, z: -0.37266678, w: 0.82670707}
+      scale: {x: 1.0000001, y: 1.0000021, z: 0.9999983}
+      transformModified: 1
+    - name: rig_bar:ThumbFinger2_R
+      position: {x: -0.043494966, y: 0.00000009733303, z: 0.0000000015124609}
+      rotation: {x: 0.00000005960463, y: -0.038139816, z: -0.000000039115537, w: 0.9992724}
+      scale: {x: 0.99999994, y: 0.99999946, z: 0.99999994}
+      transformModified: 1
+    - name: rig_bar:ThumbFinger3_R
+      position: {x: -0.031758018, y: -0.000000009338742, z: 0.00000001141074}
+      rotation: {x: -0.0000000049018207, y: -0.000000048428767, z: -0.000000128429,
+        w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1.0000001}
+      transformModified: 1
+    - name: rig_bar:ThumbFinger4_R
+      position: {x: -0.027656568, y: -0.00000008140123, z: 0.00000007872528}
+      rotation: {x: -0.000000027010046, y: 0.00000007450579, z: 0.00000007372696,
+        w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.99999964}
+      transformModified: 1
+    - name: rig_bar:IndexFinger1_R
+      position: {x: -0.103376195, y: 0.02455343, z: 0.00096971955}
+      rotation: {x: 0.096678965, y: -0.06027351, z: -0.0734222, w: 0.9907721}
+      scale: {x: 0.9999995, y: 0.9999998, z: 1.0000004}
+      transformModified: 1
+    - name: rig_bar:IndexFinger2_R
+      position: {x: -0.042509098, y: 0.00000003375085, z: 0.000000005219978}
+      rotation: {x: 0.00026939056, y: -0.03482536, z: 0.0000150678625, w: 0.9993934}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000013}
+      transformModified: 1
+    - name: rig_bar:IndexFinger3_R
+      position: {x: -0.02529581, y: -0.000000028028039, z: 0.00000009596452}
+      rotation: {x: -0.014127925, y: -0.034702905, z: 0.0006083795, w: 0.9992976}
+      scale: {x: 1.0000001, y: 1.0000005, z: 0.99999994}
+      transformModified: 1
+    - name: rig_bar:IndexFinger4_R
+      position: {x: -0.02130388, y: 0.00000002062678, z: -0.00000002974004}
+      rotation: {x: 0.000000021420414, y: 0.000000089406946, z: -0.000000010477376,
+        w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000002}
+      transformModified: 1
+    - name: rig_bar:Cup_R
+      position: {x: -0.01976245, y: -0.009779282, z: -0.000110616296}
+      rotation: {x: 0.00067455095, y: -0.02871269, z: -0.02347568, w: 0.99931175}
+      scale: {x: 1, y: 1.0000004, z: 1.0000001}
+      transformModified: 1
+    - name: rig_bar:RingFinger1_R
+      position: {x: -0.08450646, y: -0.009344875, z: -0.0041786}
+      rotation: {x: 0.156764, y: -0.04724106, z: 0.020677548, w: 0.9862889}
+      scale: {x: 0.9999993, y: 0.9999993, z: 1.0000004}
+      transformModified: 1
+    - name: rig_bar:RingFinger2_R
+      position: {x: -0.04342646, y: 0.000000006877858, z: 0.00000009731558}
+      rotation: {x: -0.002485304, y: -0.03887312, z: 0.00010244264, w: 0.9992411}
+      scale: {x: 0.9999999, y: 1.0000004, z: 0.99999994}
+      transformModified: 1
+    - name: rig_bar:RingFinger3_R
+      position: {x: -0.02672566, y: 0.00000001028406, z: -6.5860434e-10}
+      rotation: {x: 0.0049292576, y: -0.036583103, z: -0.00019888073, w: 0.9993184}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: rig_bar:RingFinger4_R
+      position: {x: -0.025346898, y: 0.000000007947888, z: 0.00000003337929}
+      rotation: {x: -0.00000004004686, y: -0.000000029802315, z: 0.000000025029289,
+        w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: rig_bar:PinkyFinger1_R
+      position: {x: -0.079114296, y: -0.02686096, z: -0.013131569}
+      rotation: {x: 0.15886424, y: -0.037081167, z: 0.037750203, w: 0.98588145}
+      scale: {x: 0.9999993, y: 0.9999995, z: 1.0000008}
+      transformModified: 1
+    - name: rig_bar:PinkyFinger2_R
+      position: {x: -0.03581467, y: 0.0000000142112295, z: -0.000000003947153}
+      rotation: {x: 0.0024103522, y: -0.02862747, z: -0.0010298267, w: 0.99958676}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999994}
+      transformModified: 1
+    - name: rig_bar:PinkyFinger3_R
+      position: {x: -0.01915229, y: -1.087085e-10, z: 0.00000004324709}
+      rotation: {x: 0.018680666, y: -0.038762163, z: -0.0006430898, w: 0.9990736}
+      scale: {x: 1.0000006, y: 1.0000013, z: 1.0000004}
+      transformModified: 1
+    - name: rig_bar:PinkyFinger4_R
+      position: {x: -0.01726619, y: -0.000000006827472, z: 0.00000002595832}
+      rotation: {x: -0.000000016763805, y: -0.0000000745058, z: -0.00000003399327,
+        w: 1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000005}
+      transformModified: 1
+    - name: rig_bar:Neck_M
+      position: {x: -0.23287229, y: 1.776357e-16, z: 2.649839e-16}
+      rotation: {x: 3.5527133e-15, y: 1.7763566e-15, z: 0.16584574, w: -0.9861517}
+      scale: {x: 0.9999996, y: 0.99999946, z: 1.0000004}
+      transformModified: 1
+    - name: rig_bar:Head_M
+      position: {x: -0.0992292, y: 0.000000019892891, z: 0.000000026498931}
+      rotation: {x: 1.4460936e-15, y: 3.349244e-15, z: 0.13336596, w: 0.99106693}
+      scale: {x: 1.0000013, y: 1.0000014, z: 1.0000013}
+      transformModified: 1
+    - name: face_cntrl
+      position: {x: 1.580737, y: 0.1391943, z: 1.144372e-15}
+      rotation: {x: 0.5240177, y: -0.47476888, z: -0.5240177, w: -0.47476888}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: eye_all_cntrl
+      position: {x: 0.002268612, y: 1.674785, z: 0.2600227}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: eye_L
+      position: {x: -0.031851683, y: 0.0044080634, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: eye_R
+      position: {x: 0.031707935, y: 0.0044080634, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: jaw_cntrl
+      position: {x: 7.0426316e-16, y: 1.5930732, z: 0.025575012}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: teeth_cntrl
+      position: {x: 0.00051123794, y: -0.009412539, z: 0.11144124}
+      rotation: {x: 0.15865499, y: -0, z: -0, w: 0.98733413}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong1
+      position: {x: 0.0049089706, y: 0.058991782, z: 0.0018320654}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:tougne_rig_grp
+      position: {x: -0.02551464, y: 0.15215525, z: 0.005257263}
+      rotation: {x: -0.4360672, y: 0.5480324, z: 0.4414816, w: 0.56089205}
+      scale: {x: 0.5514303, y: 0.5514302, z: 0.5514303}
+      transformModified: 1
+    - name: tong:group74
+      position: {x: 1.1445447, y: -0.9563294, z: -0.0025}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:tougne_CTRL_04
+      position: {x: -1.09844, y: 0.95281535, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:group73
+      position: {x: 1.09844, y: -0.95281535, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:tougne_CTRL_03
+      position: {x: -1.1179014, y: 0.9591787, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:group72
+      position: {x: 1.1179014, y: -0.9591787, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:tougne_CTRL_02
+      position: {x: -1.1417325, y: 0.9639916, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:group71
+      position: {x: 1.1417325, y: -0.9639916, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:tougne_CTRL_01
+      position: {x: -1.1681099, y: 0.9647071, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:tougne_curve
+      position: {x: -0.003986516, y: -0.0031539786, z: -0.0025}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform1
+      position: {x: 0.8516381, y: -0.21254848, z: 0.073067255}
+      rotation: {x: -0.4360672, y: 0.5480324, z: 0.4414816, w: 0.56089205}
+      scale: {x: 0.5514303, y: 0.5514302, z: 0.5514303}
+      transformModified: 1
+    - name: transform2
+      position: {x: 0.85654706, y: -0.15355669, z: 0.074899316}
+      rotation: {x: -0.4360672, y: 0.5480324, z: 0.4414816, w: 0.56089205}
+      scale: {x: 0.5514303, y: 0.5514302, z: 0.5514303}
+      transformModified: 1
+    - name: tong:tougne_JNT
+      position: {x: 0.1244574, y: 1.5923399, z: 0.01773003}
+      rotation: {x: 0.25718504, y: -0.6658541, z: 0.24888696, w: -0.6546368}
+      scale: {x: 0.9920701, y: 0.99207, z: 0.9920712}
+      transformModified: 1
+    - name: tong:tougne_JNT1
+      position: {x: -0.01600958, y: 2.220446e-18, z: 5.332262e-18}
+      rotation: {x: 0.000000029802322, y: 0.000000029802322, z: 0.14847964, w: 0.9889155}
+      scale: {x: 1.0000011, y: 1.0000001, z: 1.0000012}
+      transformModified: 1
+    - name: tong:tougne_JNT2
+      position: {x: -0.01514662, y: 1.415534e-17, z: 5.069317e-18}
+      rotation: {x: -0.00000007488069, y: 0.000000012774921, z: 0.0496059, w: 0.99876887}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000005}
+      transformModified: 1
+    - name: tong:tougne_JNT3
+      position: {x: -0.019593729, y: 1.104498e-16, z: 6.4385377e-18}
+      rotation: {x: 0.000000028443576, y: -0.0000000066369, z: 0.020109655, w: 0.99979776}
+      scale: {x: 1.0000011, y: 0.99999964, z: 1.0000012}
+      transformModified: 1
+    - name: tong:tougne_JNT4
+      position: {x: -0.018288208, y: 3.302913e-17, z: 5.947546e-18}
+      rotation: {x: -0.01273443, y: -0.70699215, z: -0.012734472, w: 0.70699215}
+      scale: {x: 0.9920701, y: 0.9920702, z: 0.9920702}
+      transformModified: 1
+    - name: transform3
+      position: {x: 1.580737, y: 0.1391943, z: -0.000000009536739}
+      rotation: {x: 0.5240177, y: -0.47476888, z: -0.5240177, w: -0.47476888}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: joint1
+      position: {x: -0.000545482, y: 1.586253, z: 0.11667229}
+      rotation: {x: -0.00000013411042, y: -0.000000014901158, z: -0.000000014901158,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: transform4
+      position: {x: 1.580737, y: 0.1391943, z: -0.000000009536739}
+      rotation: {x: 0.5240177, y: -0.47476888, z: -0.5240177, w: -0.47476888}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: joint2
+      position: {x: -0.00002692315, y: 1.597772, z: 0.1187604}
+      rotation: {x: -0.00000013411042, y: -0.000000014901158, z: -0.000000014901158,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: uper_teeth
+      position: {x: -0.022674102, y: 0.11745998, z: 0.000026913618}
+      rotation: {x: 0.5240177, y: -0.47476888, z: -0.5240177, w: -0.47476888}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig_bar:Eye_R
+      position: {x: -0.084539376, y: 0.06537024, z: -0.0317524}
+      rotation: {x: -0.0000000010512031, y: -2.4933978e-11, z: -0.67142457, w: 0.74107295}
+      scale: {x: 1.0000017, y: 1.000004, z: 1.0000015}
+      transformModified: 1
+    - name: rig_bar:EyeEnd_R
+      position: {x: -0.01658171, y: -2.5579542e-15, z: 3.153033e-16}
+      rotation: {x: -0.13868621, y: -0.0022723, z: 0.00015828019, w: -0.99033374}
+      scale: {x: 0.99999964, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: rig_bar:Jaw_M
+      position: {x: -0.007123991, y: 0.00792158, z: -9.931686e-17}
+      rotation: {x: -0.0000000074469453, y: -2.325709e-10, z: -0.8390631, w: 0.5440341}
+      scale: {x: 1.0000001, y: 1.0000007, z: 0.99999964}
+      transformModified: 1
+    - name: rig_bar:JawEnd_M
+      position: {x: -0.1119061, y: -1.4210851e-15, z: -2.1879289e-16}
+      rotation: {x: -0, y: -0, z: -1.7319427e-18, w: 1}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000005}
+      transformModified: 1
+    - name: rig_bar:HeadEnd_M
+      position: {x: -0.2112243, y: -1.776357e-17, z: -3.1963611e-16}
+      rotation: {x: -0, y: -0, z: -4.8433196e-30, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: rig_bar:Eye_L
+      position: {x: -0.084539376, y: 0.06537024, z: 0.0317524}
+      rotation: {x: 0.0000000010425365, y: 4.0454605e-11, z: -0.67142457, w: 0.74107295}
+      scale: {x: 1.0000021, y: 1.000004, z: 1.0000017}
+      transformModified: 1
+    - name: rig_bar:EyeEnd_L
+      position: {x: -0.01658171, y: -2.8421708e-15, z: -3.68594e-16}
+      rotation: {x: -0.13868617, y: -0.0022723149, z: -0.00015828019, w: 0.99033374}
+      scale: {x: 0.9999995, y: 0.9999999, z: 0.9999999}
+      transformModified: 1
+    - name: rig_bar:Scapula_L
+      position: {x: -0.168761, y: -0.01748864, z: 0.07028963}
+      rotation: {x: -0.71605176, y: 0.05984657, z: -0.69540715, w: 0.00986335}
+      scale: {x: 1.0000021, y: 1.0000012, z: 1.0000004}
+      transformModified: 1
+    - name: rig_bar:Shoulder_L
+      position: {x: 0.116269596, y: -0.000000022644869, z: 0.0000001440865}
+      rotation: {x: -0.033051625, y: -0.006523696, z: -0.05454875, w: 0.9979427}
+      scale: {x: 1.0000024, y: 1.0000005, z: 0.9999987}
+      transformModified: 1
+    - name: rig_bar:Elbow_L
+      position: {x: 0.2872686, y: -0.000000084796554, z: 0.00000008429302}
+      rotation: {x: 0.001420758, y: 0.015209114, z: -0.030289054, w: 0.99942446}
+      scale: {x: 1.0000001, y: 1.0000005, z: 0.99999976}
+      transformModified: 1
+    - name: rig_bar:Wrist_L
+      position: {x: 0.2538911, y: -0.000000015966819, z: 0.00000015010599}
+      rotation: {x: 0.001844279, y: -0.06045777, z: -0.090017654, w: 0.99410176}
+      scale: {x: 0.9999993, y: 1.0000001, z: 1.0000014}
+      transformModified: 1
+    - name: rig_bar:MiddleFinger1_L
+      position: {x: 0.1069365, y: -0.003669489, z: 0.0009387652}
+      rotation: {x: -0.13617799, y: 0.084639914, z: 0.022572568, w: -0.98680407}
+      scale: {x: 0.99999976, y: 1.0000004, z: 1.0000026}
+      transformModified: 1
+    - name: rig_bar:MiddleFinger2_L
+      position: {x: 0.04893366, y: -0.000000004691732, z: 0.00000008638017}
+      rotation: {x: 0.0003182886, y: -0.034120727, z: -0.000009400765, w: 0.99941766}
+      scale: {x: 1.0000004, y: 0.99999994, z: 0.99999964}
+      transformModified: 1
+    - name: rig_bar:MiddleFinger3_L
+      position: {x: 0.02696208, y: -0.00000001858254, z: -0.000000006076201}
+      rotation: {x: 0.00046446652, y: -0.03871969, z: -0.000022164706, w: 0.99925005}
+      scale: {x: 1, y: 1.0000007, z: 1.0000007}
+      transformModified: 1
+    - name: rig_bar:MiddleFinger4_L
+      position: {x: 0.027160658, y: -0.000000004031902, z: -0.00000005878925}
+      rotation: {x: -0.000000054016695, y: 0.00000012665984, z: -0.000000104584586,
+        w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
+      transformModified: 1
+    - name: rig_bar:ThumbFinger1_L
+      position: {x: 0.03021326, y: -0.024153931, z: 0.0050989627}
+      rotation: {x: 0.39484674, y: -0.1475503, z: 0.37266776, w: -0.8267065}
+      scale: {x: 0.9999994, y: 1.0000033, z: 1.0000001}
+      transformModified: 1
+    - name: rig_bar:ThumbFinger2_L
+      position: {x: 0.04349491, y: -0.000000039753182, z: -0.000000089343054}
+      rotation: {x: -0.000000059604638, y: -0.038139656, z: -0.00000017322598, w: 0.99927247}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000007}
+      transformModified: 1
+    - name: rig_bar:ThumbFinger3_L
+      position: {x: 0.03175803, y: 0.00000003969941, z: 0.0000000026650449}
+      rotation: {x: 0.000000150324, y: -0.000000029802319, z: 0.00000003154253, w: 1}
+      scale: {x: 0.99999934, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: rig_bar:ThumbFinger4_L
+      position: {x: 0.027656691, y: -0.000000004507384, z: 0.00000006146566}
+      rotation: {x: -0.00000023895547, y: -0.00000015273689, z: -0.000000009519672,
+        w: 1}
+      scale: {x: 1.000001, y: 1.0000008, z: 1.0000013}
+      transformModified: 1
+    - name: rig_bar:IndexFinger1_L
+      position: {x: 0.1033761, y: -0.024553511, z: -0.00096975616}
+      rotation: {x: -0.09667897, y: 0.060273916, z: 0.07342268, w: -0.9907721}
+      scale: {x: 1, y: 1.0000004, z: 1.0000019}
+      transformModified: 1
+    - name: rig_bar:IndexFinger2_L
+      position: {x: 0.042509206, y: 0.000000020868749, z: 0.000000005602069}
+      rotation: {x: 0.00026910746, y: -0.034825422, z: 0.000014200803, w: 0.99939346}
+      scale: {x: 1, y: 1.0000004, z: 1.0000004}
+      transformModified: 1
+    - name: rig_bar:IndexFinger3_L
+      position: {x: 0.02529578, y: -0.00000002624814, z: -0.00000003174882}
+      rotation: {x: -0.014127915, y: -0.034698755, z: 0.0006070907, w: 0.99929774}
+      scale: {x: 1.0000004, y: 1.0000012, z: 0.9999999}
+      transformModified: 1
+    - name: rig_bar:IndexFinger4_L
+      position: {x: 0.02130388, y: -0.00000001018441, z: 0.000000023810319}
+      rotation: {x: -0.000000049360086, y: 0.000000044703473, z: -0.000000024912874,
+        w: 1}
+      scale: {x: 0.99999976, y: 1.0000018, z: 1.0000012}
+      transformModified: 1
+    - name: rig_bar:Cup_L
+      position: {x: 0.01976245, y: 0.009779282, z: 0.000110616296}
+      rotation: {x: 0.00067451055, y: -0.028712604, z: -0.023475759, w: 0.9993118}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000011}
+      transformModified: 1
+    - name: rig_bar:RingFinger1_L
+      position: {x: 0.084506415, y: 0.009344816, z: 0.0041785077}
+      rotation: {x: -0.15676427, y: 0.04723936, z: -0.020677224, w: -0.9862889}
+      scale: {x: 1.0000002, y: 0.9999995, z: 1.0000024}
+      transformModified: 1
+    - name: rig_bar:RingFinger2_L
+      position: {x: 0.043426637, y: 0.000000009353951, z: 0.000000102685995}
+      rotation: {x: -0.0024851698, y: -0.038871054, z: 0.00010285056, w: 0.9992411}
+      scale: {x: 1, y: 1, z: 0.9999994}
+      transformModified: 1
+    - name: rig_bar:RingFinger3_L
+      position: {x: 0.0267256, y: -0.000000004516784, z: 0.000000014058659}
+      rotation: {x: 0.0049293214, y: -0.036588117, z: -0.00020145642, w: 0.9993183}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000017}
+      transformModified: 1
+    - name: rig_bar:RingFinger4_L
+      position: {x: 0.025346778, y: -0.00000003408833, z: -0.00000006839003}
+      rotation: {x: 0.000000048894425, y: -0, z: -0.000000050058578, w: 1}
+      scale: {x: 1, y: 1.0000004, z: 0.9999995}
+      transformModified: 1
+    - name: rig_bar:PinkyFinger1_L
+      position: {x: 0.079114296, y: 0.026860889, z: 0.01313163}
+      rotation: {x: 0.15886469, y: -0.037080605, z: 0.03774973, w: 0.9858814}
+      scale: {x: 1.0000008, y: 0.9999992, z: 1.0000015}
+      transformModified: 1
+    - name: rig_bar:PinkyFinger2_L
+      position: {x: 0.035814468, y: -0.00000001413871, z: -0.00000002229412}
+      rotation: {x: -0.0024103066, y: 0.028627342, z: 0.001029871, w: -0.9995867}
+      scale: {x: 1, y: 1.0000014, z: 1.0000014}
+      transformModified: 1
+    - name: rig_bar:PinkyFinger3_L
+      position: {x: 0.01915253, y: 0.000000001774474, z: 0.00000004663801}
+      rotation: {x: -0.018680701, y: 0.038759872, z: 0.000640817, w: -0.9990738}
+      scale: {x: 1.0000005, y: 1, z: 1}
+      transformModified: 1
+    - name: rig_bar:PinkyFinger4_L
+      position: {x: 0.017266098, y: -0.0000000094003445, z: -0.00000002833167}
+      rotation: {x: -0.00000002607702, y: -0.000000044703462, z: 0.000000015599646,
+        w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 0.9999993}
+      transformModified: 1
+    - name: rig_bar:Hip_L
+      position: {x: 0.020477818, y: -0.004458294, z: 0.09987201}
+      rotation: {x: 0.9979702, y: 0.025847152, z: 0.055927783, w: -0.01610899}
+      scale: {x: 0.99999994, y: 1.0000005, z: 1.0000002}
+      transformModified: 1
+    - name: rig_bar:Knee_L
+      position: {x: 0.4496414, y: -0.00000250608, z: 0.0000004797879}
+      rotation: {x: 0.000000054016702, y: -0.000000032887325, z: -0.12395352, w: -0.992288}
+      scale: {x: 1.0000007, y: 1.0000002, z: 0.99999994}
+      transformModified: 1
+    - name: rig_bar:Ankle_L
+      position: {x: 0.39923722, y: 0.00000007639124, z: -0.00000003016124}
+      rotation: {x: 0.008923768, y: -0.05748792, z: -0.11423422, w: 0.991749}
+      scale: {x: 0.9999994, y: 0.99999964, z: 1}
+      transformModified: 1
+    - name: rig_bar:Toes_L
+      position: {x: 0.079522215, y: -0.1525823, z: 0.00000001776415}
+      rotation: {x: 0.038692877, y: -0.01847223, z: 0.68259114, w: -0.7295416}
+      scale: {x: 1.0000002, y: 1.0000012, z: 1.0000006}
+      transformModified: 1
+    - name: rig_bar:ToesEnd_L
+      position: {x: 0.0608362, y: 1.471046e-16, z: -1.776357e-16}
+      rotation: {x: -0, y: -0, z: -0.000000005355105, w: 1}
+      scale: {x: 1.0000006, y: 1.0000011, z: 1.0000006}
+      transformModified: 1
+    - name: rig_bar:Heads
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig_bar:EyeL
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig_bar:EyeR
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig_bar:HeadD
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: rig_bar:SuitGEO01
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: teeth:teeth:lower_gum
+      position: {x: -0.0015039113, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: teeth:teeth:upper_gum
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:Geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:BOY_GEO_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:head_ALL_grp
+      position: {x: -0, y: 1.0173272, z: -0.080331296}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:teeth_grp
+      position: {x: -0, y: -0.058118556, z: 0.054639015}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: tong:gougne_geo
+      position: {x: -0, y: -0.95920867, z: 0.027336154}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -502,8 +2469,9 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: e9afa90ecce35534a91a072e1802103a,
+    type: 3}
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
