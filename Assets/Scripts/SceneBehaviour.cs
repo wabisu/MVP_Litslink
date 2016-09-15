@@ -10,6 +10,9 @@ public class SceneBehaviour : MonoBehaviour {
 	public List<AudioClip> investorVoice = new List<AudioClip> ();
 
 	private enum CharacterMovingState { MOVE_ERIC_TO_ERICPOS, MOVE_ERIC_TO_DAVIDPOS, MOVE_DAVID_TO_DAVIDPOS }
+	private enum CharacterName { ERIC, DAVID }
+
+	private const string IDLE_ANIMATION_NAME = "Idle";
 
 	private int convStateIndex = -1;
 
@@ -26,7 +29,9 @@ public class SceneBehaviour : MonoBehaviour {
 
 		public List<CharacterMovingState> characterMovingState;
 
-		public ConversationState (int ericMenuState, int investorState, int audioStateEric, int audioStateInvestor, Dictionary <string, int> keywordsDict, List<CharacterMovingState> moveTo)
+		public Dictionary<CharacterName, string> stateAnimations;
+
+		public ConversationState (int ericMenuState, int investorState, int audioStateEric, int audioStateInvestor, Dictionary <string, int> keywordsDict, List<CharacterMovingState> moveTo, Dictionary<CharacterName, string> animationsList)
 		{
 			currEricMenuState = ericMenuState;
 			currInvestorState = investorState;
@@ -36,10 +41,16 @@ public class SceneBehaviour : MonoBehaviour {
 			keywordStates = keywordsDict;
 
 			characterMovingState = moveTo;
+
+			stateAnimations = animationsList;
 		}
 
+		public ConversationState (int ericMenuState, int investorState, int audioStateEric, int audioStateInvestor, Dictionary <string, int> keywordsDict, Dictionary<CharacterName, string> animationsList)
+			: this (ericMenuState, investorState, audioStateEric, audioStateInvestor, keywordsDict, new List<CharacterMovingState>(), animationsList)
+		{}
+
 		public ConversationState (int ericMenuState, int investorState, int audioStateEric, int audioStateInvestor, Dictionary <string, int> keywordsDict)
-			: this (ericMenuState, investorState, audioStateEric, audioStateInvestor, keywordsDict, new List<CharacterMovingState>())
+			: this (ericMenuState, investorState, audioStateEric, audioStateInvestor, keywordsDict, new List<CharacterMovingState>(), new Dictionary<CharacterName, string>())
 		{}
 	}
 	//-----------------------------
@@ -68,7 +79,8 @@ public class SceneBehaviour : MonoBehaviour {
 
 	private Vector3 ERIC_POSITION = new Vector3 (-0.085f, 0f, 0.1225f);
 	private Vector3 DAVID_POSITION = new Vector3 (0f, 0f, -0.13f);
-	private const float MOVING_SPEED = 0.135f;
+	//private const float MOVING_SPEED = 0.135f;
+	private const float MOVING_SPEED = 0.054f;
 	private int currMovingIndex = 0;
 	private GameObject movingCharacter;
 	private Vector3 movingCharacterFinalPos;
@@ -92,6 +104,7 @@ public class SceneBehaviour : MonoBehaviour {
 				} 
 				//Finish movement
 				else {
+					movingCharacter.GetComponent<Animator> ().Play (IDLE_ANIMATION_NAME);
 					currMovingIndex = 0;
 					movingCharacter = null;
 				}
@@ -148,14 +161,14 @@ public class SceneBehaviour : MonoBehaviour {
 		debugTxt = GameObject.Find ("debug").GetComponent<Text> ();
 
 		//ToDo Create scenario FROM file loading mechanism
-		ConversationState newState0 = new ConversationState (0, -3, 0, -1, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_DAVIDPOS });
+		ConversationState newState0 = new ConversationState (0, -3, 0, -1, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "Ok"}, {CharacterName.ERIC, "SmallStep"} });
 		ConversationState newState1 = new ConversationState (1, -3, 1, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"hi eric", 3} });
 		ConversationState newState2 = new ConversationState (1, -3, 2, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"hi eric", 3} });
 		ConversationState newState3 = new ConversationState (2, -3, 3, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"repeat", 1}, {"lets do it", 4} });
 
-		ConversationState newState4 = new ConversationState (-1, -3, 4, -1, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS });
+		ConversationState newState4 = new ConversationState (-1, -3, 4, -1, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
 
-		ConversationState newState5 = new ConversationState (-1, -1, -1, 0, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS });
+		ConversationState newState5 = new ConversationState (-1, -1, -1, 0, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
 		ConversationState newState6 = new ConversationState (-1, 0, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} });
 		ConversationState newState7 = new ConversationState (-1, 1, -1, 1, new Dictionary<string, int>() { {"hey eric", 16} });
 		ConversationState newState8 = new ConversationState (-1, -1, -1, 2, new Dictionary<string, int>() { {"hey eric", 16} });
@@ -303,6 +316,7 @@ public class SceneBehaviour : MonoBehaviour {
 		//Perform Character movement
 		if (movingCharacter != null) {
 			InitMovement (possibleConvStates [convStateIndex].characterMovingState.Count - 1);
+			movingCharacter.GetComponent<Animator> ().Play (IDLE_ANIMATION_NAME);
 			movingCharacter.transform.localPosition = movingCharacterFinalPos;
 
 			currMovingIndex = 0;
@@ -312,6 +326,19 @@ public class SceneBehaviour : MonoBehaviour {
 
 	private void OnAfterStateChange ()
 	{
+		//----------Character Animations----------
+		if (possibleConvStates [convStateIndex].stateAnimations.Count > 0) {
+			if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.ERIC)) {
+				ericObj.GetComponent<Animator> ().Play (possibleConvStates [convStateIndex].stateAnimations[CharacterName.ERIC]);
+			} 
+
+			if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.DAVID)) {
+				string str = possibleConvStates [convStateIndex].stateAnimations [CharacterName.DAVID];
+				investorObj.GetComponent<Animator> ().SetTrigger (str);
+			}
+		}
+		//--------------------------------------
+
 		//----------Character Movement----------
 		if (possibleConvStates [convStateIndex].characterMovingState.Count > 0) {
 			InitMovement(currMovingIndex);
@@ -385,7 +412,7 @@ public class SceneBehaviour : MonoBehaviour {
 			investorObj.SetActive (true);
 		} else {
 			communicatorScript.gameObject.SetActive (false);
-			investorObj.SetActive (false);
+			//investorObj.SetActive (false);
 		}
 
 		//Conversation RESET

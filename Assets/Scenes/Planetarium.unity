@@ -933,7 +933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &322813661
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1030,10 +1030,10 @@ Animator:
   m_GameObject: {fileID: 322813660}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 70197d5c09fda5049a651401b9696b80, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2730e52b855e8fb428c88678691c9c0f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 31d5d07111be2224997e95c9d4891576, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -3255,7 +3255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &887064843
 Transform:
   m_ObjectHideFlags: 0
@@ -3282,11 +3282,11 @@ Animator:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 887064842}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: af22cbac8c2c1f64da73153b936a63fd, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2730e52b855e8fb428c88678691c9c0f, type: 2}
+  m_Avatar: {fileID: 9000000, guid: e9afa90ecce35534a91a072e1802103a, type: 3}
+  m_Controller: {fileID: 9100000, guid: 9818f7101d7651643a24ff7bd7dd8a53, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
