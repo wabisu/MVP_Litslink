@@ -4,26 +4,20 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using HoloToolkit.Unity;
 
 /// <summary>
 /// This keeps track of the various parts of the recording and text display process.
 /// </summary>
 
 [RequireComponent(typeof(AudioSource))]
-public class InvestorCommunicator : MonoBehaviour
+public class InvestorCommunicator : Singleton<InvestorCommunicator>
 {
-    [Tooltip("The sound to be played when the recording session starts.")]
-    public AudioClip StartListeningSound;
-    [Tooltip("The sound to be played when the recording session ends.")]
-    public AudioClip StopListeningSound;
-
 	public Text textToSayLabel;
 	public Text textSaidLabel;
 	public Text textInvestorLabel;
 
     private AudioSource dictationAudio;
-    private AudioSource startAudio;
-    private AudioSource stopAudio;
 
 	public SceneBehaviour sceneScript;
 	public MicrophoneManager microphoneManager;
@@ -36,7 +30,11 @@ public class InvestorCommunicator : MonoBehaviour
 
 	private string[] saidSentenceToWords;
 
-	private int correctWordsOffset = 0;
+	private StringBuilder userSaidStringBuilder = new StringBuilder();
+	private string richTextYellowOpen = "<color=#ffff00ff>";
+	private string richTextYellowClose = "</color>";		
+
+	private float lastSentenceCorrectPercent;
 
 	void Awake ()
 	{
@@ -48,13 +46,6 @@ public class InvestorCommunicator : MonoBehaviour
 		initialSentences.Add("We also incorporate API which can detect user's emotions based on the way he or she talks to have human holograms respond accordingly.");
 		initialSentences.Add("Yes, you are actually doing it right now.");
 
-		//userSentences.Add("One.");
-		//userSentences.Add("Two.");
-		//userSentences.Add("Three");
-		//userSentences.Add("four");
-		//userSentences.Add("Five");
-		//userSentences.Add("Six.");
-
 		foreach (string str in initialSentences)
 		{
 			initialSentencesToWords.Add (ParseToWords (str));
@@ -62,20 +53,6 @@ public class InvestorCommunicator : MonoBehaviour
 		//-------------------------------------------------
 
 		dictationAudio = gameObject.GetComponent<AudioSource>();
-
-		startAudio = gameObject.AddComponent<AudioSource>();
-		stopAudio = gameObject.AddComponent<AudioSource>();
-
-		startAudio.playOnAwake = false;
-		startAudio.clip = StartListeningSound;
-		stopAudio.playOnAwake = false;
-		stopAudio.clip = StopListeningSound;
-	}
-
-	public void ResetCorrectWordsOffset ()
-	{
-		correctWordsOffset = 0;
-		microphoneManager.ResetVerifiedText ();
 	}
 
 	private string FixSentenceToCompare (string strToFix)
@@ -114,36 +91,74 @@ public class InvestorCommunicator : MonoBehaviour
 		textSaidLabel.text = textWasSaid;
 	}
 
-	public void SetAndVirefyTextSaid (StringBuilder currText, string additionalText)
+	public void SetAndVirefyTextSaid (string textUserSaid)
 	{
-		if (!sceneScript.OnKeywordSaid (additionalText.ToLower ())) {
-			saidSentenceToWords = ParseToWords (additionalText);
-			int wordToStart = correctWordsOffset;
+		if (!sceneScript.OnKeywordSaid (textUserSaid.ToLower ())) 
+		{
+			userSaidStringBuilder.Remove (0, userSaidStringBuilder.Length);
+			saidSentenceToWords = ParseToWords (textUserSaid);
+			bool[] correctWordsIndexes = new bool[saidSentenceToWords.Length];
+			int correctWordsCount = 0;
 
-			for (int i = wordToStart; i < initialSentencesToWords[sceneScript.GetCurrDictationState ()].Length; i++) {
-				if (saidSentenceToWords [i - wordToStart].Equals (initialSentencesToWords [sceneScript.GetCurrDictationState ()] [i])) {
-					if (currText.Length > 0) {
-						currText.Append (" ");
+			for (int i = 0; i < saidSentenceToWords.Length; i++) {
+				for (int j = 0; j < initialSentencesToWords [sceneScript.GetCurrDictationState ()].Length; j++) {
+					if (initialSentencesToWords [sceneScript.GetCurrDictationState ()] [j].Equals (saidSentenceToWords [i]) && !correctWordsIndexes[i]) {
+						correctWordsIndexes [i] = true;
+						correctWordsCount++;
+						break;
 					}
-
-					currText.Append (saidSentenceToWords [i - wordToStart]);
-					correctWordsOffset++;
-				} else {
-					break;
 				}
+
+				if (!correctWordsIndexes [i])
+					userSaidStringBuilder.Append (richTextYellowOpen);
+				userSaidStringBuilder.Append (saidSentenceToWords[i]);
+				if (!correctWordsIndexes [i])
+					userSaidStringBuilder.Append (richTextYellowClose);
+				userSaidStringBuilder.Append (" ");
 			}
 
-			textSaidLabel.text = currText.ToString();
+			textSaidLabel.text = userSaidStringBuilder.ToString();
 
-			if (correctWordsOffset >= initialSentencesToWords [sceneScript.GetCurrDictationState ()].Length) 
+			lastSentenceCorrectPercent = (float)correctWordsCount / (float)initialSentencesToWords [sceneScript.GetCurrDictationState ()].Length;
+
+			if (lastSentenceCorrectPercent >= 0.6f) 
 			{
 				sceneScript.OnCurrSentenceSaid ();
 
 				if (sceneScript.GetCurrDictationState() > 0) {
 					textToSayLabel.text = initialSentences [sceneScript.GetCurrDictationState()];
-					textSaidLabel.text = "";
 				}
 			}
+		}
+	}
+
+	public string GetLastCorrectPronouncePercent ()
+	{
+		if (lastSentenceCorrectPercent > 0) {
+			return ", Pronunciation = " + (int)(lastSentenceCorrectPercent * 100) + "%";
+		}
+
+		return "";
+	}
+
+	public bool IsRecordedAudioPlaying ()
+	{
+		return dictationAudio.isPlaying;
+	}
+
+	public float PlayRecordedClipPressed ()
+	{
+		StopConversation ();
+		dictationAudio.Play ();
+		return dictationAudio.clip.length;
+	}
+
+	public void StopRecordedClipPressed ()
+	{
+		dictationAudio.Stop ();
+
+		if (sceneScript.GetCurrDictationState () >= 0) {
+			StartConversation ();
 		}
 	}
 
@@ -155,7 +170,10 @@ public class InvestorCommunicator : MonoBehaviour
 
 		// Turn the microphone on, which returns the recorded audio.
 		textToSayLabel.text = initialSentences [sceneScript.GetCurrDictationState()];
-		textSaidLabel.text = DICTATION_START_TXT;
+
+		if (textSaidLabel.text.Length == 0) {
+			textSaidLabel.text = DICTATION_START_TXT;
+		}
 
 		if (!microphoneManager.IsDictationRunning ()) {
 			dictationAudio.clip = microphoneManager.StartRecording ();

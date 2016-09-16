@@ -11,14 +11,12 @@ public class MicrophoneManager : MonoBehaviour
 
     // Use this string to cache the text currently displayed in the text box.
 	private StringBuilder textSaid;
-	private StringBuilder textVerified;
 
     // Using an empty string specifies the default microphone. 
     private static string deviceName = string.Empty;
     private int samplingRate;
-    private const int messageLength = 10;
+    private const int messageLength = 15;
 
-	public InvestorCommunicator communicator;
 	private KeywordManager keyWordManager;
 
 	private bool isUserTalking = false;
@@ -54,17 +52,11 @@ public class MicrophoneManager : MonoBehaviour
 
         // Use this string to cache the text currently displayed in the text box.
 		textSaid = new StringBuilder();
-		textVerified = new StringBuilder();
     }
 
 	public bool IsDictationRunning ()
 	{
 		return dictationRecognizer != null && dictationRecognizer.Status == SpeechSystemStatus.Running;
-	}
-
-	public void ResetVerifiedText ()
-	{
-		textVerified.Remove (0, textVerified.Length);
 	}
 
 	public bool IsUserTalking ()
@@ -85,7 +77,7 @@ public class MicrophoneManager : MonoBehaviour
         // 3.a: Start dictationRecognizer
         dictationRecognizer.Start();
 
-        // Start recording from the microphone for 10 seconds.
+		// Start recording from the microphone for messageLength seconds.
         return Microphone.Start(deviceName, false, messageLength, samplingRate);
     }
 
@@ -113,16 +105,12 @@ public class MicrophoneManager : MonoBehaviour
 
 		textSaid.Remove (0, textSaid.Length);
 
-		if (textVerified.Length > 0) {
-			textSaid.Append (" ");
-		}
-
 		textSaid.Append (text);
 		textSaid.Append ("...");
 
         // 3.a: Set DictationDisplay text to be textSoFar and new hypothesized text
         // We don't want to append to textSoFar yet, because the hypothesis may have changed on the next event
-		communicator.SetTextSaid(textVerified.ToString() + textSaid.ToString());
+		InvestorCommunicator.Instance.SetTextSaid(textSaid.ToString());
     }
 
     /// <summary>
@@ -133,7 +121,7 @@ public class MicrophoneManager : MonoBehaviour
     private void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence)
     {
 		// 3.a: Set DictationDisplay text to be textSoFar
-		communicator.SetAndVirefyTextSaid(textVerified, text);
+		InvestorCommunicator.Instance.SetAndVirefyTextSaid(text);
 		isUserTalking = false;
     }
 
@@ -148,7 +136,7 @@ public class MicrophoneManager : MonoBehaviour
         // With dictation, the default timeout after a recognition is 20 seconds.
         // The default timeout with initial silence is 5 seconds.
 		if (cause == DictationCompletionCause.TimeoutExceeded) {
-			communicator.ResetAfterTimeout ();
+			InvestorCommunicator.Instance.ResetAfterTimeout ();
 		}
     }
 
@@ -160,7 +148,7 @@ public class MicrophoneManager : MonoBehaviour
     private void DictationRecognizer_DictationError(string error, int hresult)
     {
         // 3.a: Set DictationDisplay text to be the error string
-		communicator.ResetAfterTimeout ();
+		InvestorCommunicator.Instance.ResetAfterTimeout ();
     }
 
 	private IEnumerator RestartSpeechSystem()

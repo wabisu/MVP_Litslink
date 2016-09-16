@@ -17,6 +17,8 @@ public class SceneBehaviour : MonoBehaviour {
 
 	private int convStateIndex = -1;
 
+	private Coroutine nextStateAfterAnimCoroutine;
+
 	//-----------------------------
 	private class ConversationState
 	{
@@ -76,7 +78,6 @@ public class SceneBehaviour : MonoBehaviour {
 
 	public GameObject investorObj;
 	public GameObject ericObj;
-	public InvestorCommunicator communicatorScript;
 
 	public Image textNavigationImage;
 
@@ -167,18 +168,20 @@ public class SceneBehaviour : MonoBehaviour {
 				scriptLookTime += Time.deltaTime;
 			}
 
-			if (possibleConvStates [convStateIndex].currInvestorState >= 0 && !microphoneManager.IsUserTalking () && !HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("InvestorFace")) {
+			if (possibleConvStates [convStateIndex].currInvestorState >= 0 && !microphoneManager.IsUserTalking () && !HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("InvestorFace") && !IsInvoking() && nextStateAfterAnimCoroutine == null && !InvestorCommunicator.Instance.IsRecordedAudioPlaying ()) {
 				investorDoesNotLookTime += Time.deltaTime;
 			} else {
 				investorDoesNotLookTime = 0;
 			}
 
-			if (investorDoesNotLookTime >= 5.0f) {
+			if (investorDoesNotLookTime >= 5.0f && !microphoneManager.IsUserTalking () && !IsInvoking() && nextStateAfterAnimCoroutine == null && !InvestorCommunicator.Instance.IsRecordedAudioPlaying ()) {
 				investorDoesNotLookTime = 0;
 				GoState (possibleConvStates.Count - 1);	
 			}
 
-			debugTxt.text = "Eye contact = " + GetEyeContact();
+			//**********DEBUG************
+			debugTxt.text = "Eyes = " + GetEyeContact() + InvestorCommunicator.Instance.GetLastCorrectPronouncePercent();
+			//***************************
         }
 	}
 
@@ -294,6 +297,7 @@ public class SceneBehaviour : MonoBehaviour {
 
 	public void GoNextState ()
 	{
+		nextStateAfterAnimCoroutine = null;
 		OnPreStateChange ();
 		convStateIndex++;
 
@@ -338,7 +342,7 @@ public class SceneBehaviour : MonoBehaviour {
 				audioInvestor.Play ();
 			}
 
-			StartCoroutine (GoNextStateAfterAnim ());
+			nextStateAfterAnimCoroutine = StartCoroutine (GoNextStateAfterAnim ());
 		} else {
 			GoNextState ();
 		}
@@ -363,6 +367,9 @@ public class SceneBehaviour : MonoBehaviour {
 	/// </summary>
 	public void OnSelectTransfered()
 	{
+		if (InvestorCommunicator.Instance.IsRecordedAudioPlaying ())
+			return;
+
 		if (!possibleConvStates [convStateIndex].keywordStates.ContainsKey ("returnToStateAuto") && possibleConvStates [convStateIndex].currEricMenuState != 0) {
 
 			if (possibleConvStates [convStateIndex].currInvestorState >= 0) {
@@ -481,18 +488,15 @@ public class SceneBehaviour : MonoBehaviour {
 
 		//Set Communicator Text
 		if (!possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.ERIC) && possibleConvStates [convStateIndex].currInvestorState >= -1) {
-			communicatorScript.gameObject.SetActive (true);
+			InvestorCommunicator.Instance.gameObject.SetActive (true);
 			investorObj.SetActive (true);
 		} else {
-			communicatorScript.gameObject.SetActive (false);
+			InvestorCommunicator.Instance.gameObject.SetActive (false);
 			investorObj.SetActive (false);
 		}
 
 		//Conversation RESET
 		if (!Application.isEditor) {
-			//Reset words offset for voice recognition system pronunciation check
-			communicatorScript.ResetCorrectWordsOffset ();
-
 			if (convStateIndex == 0) {
 				scriptLookTime = 0;
 				investorFaceLookTime = 0;
@@ -501,9 +505,9 @@ public class SceneBehaviour : MonoBehaviour {
 			}
 
 			if (possibleConvStates [convStateIndex].currInvestorState >= 0) {
-				communicatorScript.StartConversation ();
+				InvestorCommunicator.Instance.StartConversation ();
 			} else {
-				communicatorScript.StopConversation ();
+				InvestorCommunicator.Instance.StopConversation ();
 			}
 		}
 	}
