@@ -98,8 +98,7 @@ public class SceneBehaviour : MonoBehaviour {
 
 	private Vector3 ERIC_POSITION = new Vector3 (-0.0754f, 0f, -0.0353f);
 	private Vector3 DAVID_POSITION = new Vector3 (0f, 0f, -0.13f);
-	//private const float MOVING_SPEED = 0.135f;
-	private const float MOVING_SPEED = 0.054f;
+	private const float MOVING_SPEED = 0.065f;
 	private int currMovingIndex = 0;
 	private GameObject movingCharacter;
 	private Vector3 movingCharacterFinalPos;
@@ -198,7 +197,7 @@ public class SceneBehaviour : MonoBehaviour {
 		ConversationState newState2 = new ConversationState (1, -3, 2, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"hi eric", 3} });
 		ConversationState newState3 = new ConversationState (2, -3, 3, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"repeat", 1}, {"lets do it", 4} });
 
-		ConversationState newState4 = new ConversationState (true, -1, -3, 4, -1, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS }, new Dictionary<CharacterName, string>() /*{ {CharacterName.ERIC, "Back_SmallStep"} }*/);
+		ConversationState newState4 = new ConversationState (true, -1, -3, 4, -1, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "Back_SmallStep"} });
 		ConversationState newState5 = new ConversationState (true, -1, -1, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "SmallStep"} });
 
 		ConversationState newState6 = new ConversationState (-1, -1, -1, 0, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Alright"}});
@@ -391,6 +390,10 @@ public class SceneBehaviour : MonoBehaviour {
 	{
 		if (convStateIndex < 0) {
 			return;
+		}
+
+		if (convStateIndex == 0) {
+			investorObj.transform.position = new Vector3 (0, 0, 0);
 		}
 
 		CancelInvoke ();
