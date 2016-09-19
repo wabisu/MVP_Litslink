@@ -27,7 +27,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 		totalAttempts++;
 		Vector3 targetPosition;
 		Vector3 surfaceNormal;
-		bool canBePlaced = playgroundPrefab.GetComponent<Placeable>().ValidatePlacement(out targetPosition, out surfaceNormal, Camera.main.transform, 3.0f);
+		bool canBePlaced = playgroundPrefab.GetComponent<Placeable>().ValidatePlacement(out targetPosition, out surfaceNormal, Camera.main.transform, 2.5f);
 
 		if (canBePlaced) {
 			Quaternion rotation = Camera.main.transform.localRotation;
