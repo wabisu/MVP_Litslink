@@ -36,15 +36,13 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 
 	private float lastSentenceCorrectPercent;
 
-	private ReplayBtnBehaviour replayBtn;
-	private PlaySampleBehaviour playSampleBtn;
+	public ReplayBtnBehaviour replayBtn;
+	public PlaySampleBehaviour playSampleBtn;
 
 	public AudioClip[] samples = new AudioClip[6];
 
 	void Awake ()
 	{
-		playSampleBtn = GameObject.Find ("PlaySample").GetComponent<PlaySampleBehaviour> ();
-		replayBtn = GameObject.Find ("ReplayBtn").GetComponent<ReplayBtnBehaviour> ();
 		replayBtn.gameObject.SetActive (false);
 
 		//ToDo Create scenario FROM file loading mechanism

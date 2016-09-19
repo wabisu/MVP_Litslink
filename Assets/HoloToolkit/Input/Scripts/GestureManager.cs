@@ -53,12 +53,13 @@ namespace HoloToolkit.Unity
 
         private void GestureRecognizer_TappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
         {
-            if (focusedObject != null)
-            {
-                focusedObject.SendMessage("OnSelect");
-            }
+			if (focusedObject != null) {
+				focusedObject.SendMessage ("OnSelect");
 
-			if (!focusedObject.tag.Equals ("UI")) {
+				if (!focusedObject.tag.Equals ("UI")) {
+					playground.SendMessage ("OnSceneAirTap");
+				}
+			} else {
 				playground.SendMessage ("OnSceneAirTap");
 			}
         }
