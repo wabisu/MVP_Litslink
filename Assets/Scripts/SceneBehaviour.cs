@@ -393,7 +393,7 @@ public class SceneBehaviour : MonoBehaviour {
 		}
 
 		if (convStateIndex == 0) {
-			investorObj.transform.position = new Vector3 (0, 0, 0);
+			investorObj.transform.localPosition = new Vector3 (0, 0, 0);
 		}
 
 		CancelInvoke ();
@@ -434,7 +434,8 @@ public class SceneBehaviour : MonoBehaviour {
 			if (possibleConvStates [convStateIndex].autoSkipState) {
 				Invoke ("GoNextState", audioEric.clip.length);
 			}
-		} else if (audioInvestorIndex >= 0 && !possibleConvStates [convStateIndex].stateAnimations.ContainsKey(CharacterName.DAVID_END)) {
+		} 
+		else if (audioInvestorIndex >= 0 && !possibleConvStates [convStateIndex].stateAnimations.ContainsKey(CharacterName.DAVID_END)) {
 			audioInvestor.clip = investorVoice [audioInvestorIndex];
 			audioInvestor.Play ();
 
