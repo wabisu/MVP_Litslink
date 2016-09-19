@@ -14,6 +14,7 @@ public class SceneBehaviour : MonoBehaviour {
 	private enum CharacterName { ERIC, DAVID, DAVID_END, DAVID_FROM_METHOD1, DAVID_FROM_METHOD2, DAVID_FROM_METHOD3 }
 
 	private const string IDLE_ANIMATION_NAME = "Idle";
+	private const float IDLE_WAIT_TIME = 10;
 
 	private int convStateIndex = -1;
 
@@ -109,7 +110,7 @@ public class SceneBehaviour : MonoBehaviour {
 	void Update ()
 	{
 		if (Application.isEditor && Input.GetKeyDown ("space")) {
-			OnSelectTransfered ();
+			OnSceneAirTap ();
 		}
 
 		//Perform Character movement
@@ -168,19 +169,22 @@ public class SceneBehaviour : MonoBehaviour {
 				scriptLookTime += Time.deltaTime;
 			}
 
-			if (possibleConvStates [convStateIndex].currInvestorState >= 0 && !microphoneManager.IsUserTalking () && !HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("InvestorFace") && !IsInvoking() && nextStateAfterAnimCoroutine == null && !InvestorCommunicator.Instance.IsRecordedAudioPlaying ()) {
+			if (possibleConvStates [convStateIndex].currInvestorState >= 0 && !microphoneManager.IsUserTalking () && !HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("TextToSay") 
+				&& !HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("InvestorFace") && !IsInvoking() && nextStateAfterAnimCoroutine == null && !InvestorCommunicator.Instance.IsRecordedAudioPlaying () 
+				&& !HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("UI") )
+			{
 				investorDoesNotLookTime += Time.deltaTime;
 			} else {
 				investorDoesNotLookTime = 0;
 			}
 
-			if (investorDoesNotLookTime >= 5.0f && !microphoneManager.IsUserTalking () && !IsInvoking() && nextStateAfterAnimCoroutine == null && !InvestorCommunicator.Instance.IsRecordedAudioPlaying ()) {
+			if (investorDoesNotLookTime >= IDLE_WAIT_TIME && !microphoneManager.IsUserTalking () && !IsInvoking() && nextStateAfterAnimCoroutine == null && !InvestorCommunicator.Instance.IsRecordedAudioPlaying ()) {
 				investorDoesNotLookTime = 0;
 				GoState (possibleConvStates.Count - 1);	
 			}
 
 			//**********DEBUG************
-			debugTxt.text = "Eyes = " + GetEyeContact() + InvestorCommunicator.Instance.GetLastCorrectPronouncePercent();
+			debugTxt.text = "NotLookTime = " + investorDoesNotLookTime + InvestorCommunicator.Instance.GetLastCorrectPronouncePercent();
 			//***************************
         }
 	}
@@ -365,7 +369,7 @@ public class SceneBehaviour : MonoBehaviour {
 	/// Called when our object is selected.  Generally called by
 	/// a gesture management component.
 	/// </summary>
-	public void OnSelectTransfered()
+	public void OnSceneAirTap()
 	{
 		if (InvestorCommunicator.Instance.IsRecordedAudioPlaying ())
 			return;

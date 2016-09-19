@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayBtnBehaviour : MonoBehaviour {
+public class PlaySampleBehaviour : MonoBehaviour {
 	public Sprite playSpr;
 	public Sprite stopSpr;
 
@@ -20,16 +20,22 @@ public class PlayBtnBehaviour : MonoBehaviour {
 	{
 		if (sprRenderer.sprite.Equals (playSpr)) {
 			sprRenderer.sprite = stopSpr;
-			Invoke ("OnClipEnded", InvestorCommunicator.Instance.PlayRecordedClipPressed ());
+			Invoke ("OnClipEnded", InvestorCommunicator.Instance.PlaySamplePressed ());
 		} else {
 			OnClipEnded ();
 		}
 	}
 
+	public void OnExtraStop ()
+	{
+		CancelInvoke ();
+		sprRenderer.sprite = playSpr;
+	}
+
 	private void OnClipEnded ()
 	{
 		CancelInvoke ();
-		InvestorCommunicator.Instance.StopRecordedClipPressed ();
+		InvestorCommunicator.Instance.StopSamplePressed ();
 		sprRenderer.sprite = playSpr;
 	}
 }

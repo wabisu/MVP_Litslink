@@ -35,6 +35,12 @@ namespace HoloToolkit.Unity
 
             meshRenderer = this.gameObject.GetComponent<MeshRenderer>();
 
+			/*if (!meshRenderer.enabled) {
+				meshRenderer = null;
+				Debug.Log("Cursor renderer is currently disabled, so it won't render!");
+				return;
+			}*/
+
             if (meshRenderer == null)
             {
                 Debug.Log("This script requires that your cursor asset has a MeshRenderer component on it.");
@@ -56,7 +62,11 @@ namespace HoloToolkit.Unity
             }
 
             // Show or hide the Cursor based on if the user's gaze hit a hologram.
-            meshRenderer.enabled = GazeManager.Instance.Hit;
+			if (GazeManager.Instance.IsFocusedObjectTag ("UI")) {
+				meshRenderer.enabled = GazeManager.Instance.Hit;
+			} else {
+				meshRenderer.enabled = false;
+			}
 
             // Place the cursor at the calculated position.
             this.gameObject.transform.position = GazeManager.Instance.Position + GazeManager.Instance.Normal * DistanceFromCollision;

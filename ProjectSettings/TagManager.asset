@@ -6,6 +6,7 @@ TagManager:
   tags:
   - InvestorFace
   - TextToSay
+  - UI
   layers:
   - Default
   - TransparentFX

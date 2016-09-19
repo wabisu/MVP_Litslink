@@ -36,8 +36,17 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 
 	private float lastSentenceCorrectPercent;
 
+	private ReplayBtnBehaviour replayBtn;
+	private PlaySampleBehaviour playSampleBtn;
+
+	public AudioClip[] samples = new AudioClip[6];
+
 	void Awake ()
 	{
+		playSampleBtn = GameObject.Find ("PlaySample").GetComponent<PlaySampleBehaviour> ();
+		replayBtn = GameObject.Find ("ReplayBtn").GetComponent<ReplayBtnBehaviour> ();
+		replayBtn.gameObject.SetActive (false);
+
 		//ToDo Create scenario FROM file loading mechanism
 		initialSentences.Add("We build AR communication training tools.");
 		initialSentences.Add("Our holographic simulator helps you practice all forms of communication in different languages.");
@@ -121,13 +130,11 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 
 			lastSentenceCorrectPercent = (float)correctWordsCount / (float)initialSentencesToWords [sceneScript.GetCurrDictationState ()].Length;
 
-			if (lastSentenceCorrectPercent >= 0.6f) 
-			{
+			if (lastSentenceCorrectPercent >= 0.6f) {
 				sceneScript.OnCurrSentenceSaid ();
-
-				if (sceneScript.GetCurrDictationState() > 0) {
-					textToSayLabel.text = initialSentences [sceneScript.GetCurrDictationState()];
-				}
+				replayBtn.gameObject.SetActive (false);
+			} else {
+				replayBtn.gameObject.SetActive (true);
 			}
 		}
 	}
@@ -148,12 +155,39 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 
 	public float PlayRecordedClipPressed ()
 	{
+		if (IsRecordedAudioPlaying()) {
+			dictationAudio.Stop ();
+			playSampleBtn.OnExtraStop ();
+		}
+
 		StopConversation ();
 		dictationAudio.Play ();
 		return dictationAudio.clip.length;
 	}
 
 	public void StopRecordedClipPressed ()
+	{
+		dictationAudio.Stop ();
+
+		if (sceneScript.GetCurrDictationState () >= 0) {
+			StartConversation ();
+		}
+	}
+
+	public float PlaySamplePressed ()
+	{
+		if (IsRecordedAudioPlaying()) {
+			dictationAudio.Stop ();
+			replayBtn.OnExtraStop ();
+		}
+
+		StopConversation ();
+		dictationAudio.clip = samples [sceneScript.GetCurrDictationState ()];
+		dictationAudio.Play ();
+		return dictationAudio.clip.length;
+	}
+
+	public void StopSamplePressed ()
 	{
 		dictationAudio.Stop ();
 
@@ -170,10 +204,7 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 
 		// Turn the microphone on, which returns the recorded audio.
 		textToSayLabel.text = initialSentences [sceneScript.GetCurrDictationState()];
-
-		if (textSaidLabel.text.Length == 0) {
-			textSaidLabel.text = DICTATION_START_TXT;
-		}
+		textSaidLabel.text = "";
 
 		if (!microphoneManager.IsDictationRunning ()) {
 			dictationAudio.clip = microphoneManager.StartRecording ();

@@ -35,8 +35,12 @@ namespace HoloToolkit.Unity
         private GestureRecognizer gestureRecognizer;
         private GameObject focusedObject;
 
+		private GameObject playground;
+
         void Start()
         {
+			playground = GameObject.Find ("Playground");
+
             // Create a new GestureRecognizer. Sign up for tapped events.
             gestureRecognizer = new GestureRecognizer();
             gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
@@ -53,6 +57,10 @@ namespace HoloToolkit.Unity
             {
                 focusedObject.SendMessage("OnSelect");
             }
+
+			if (!focusedObject.tag.Equals ("UI")) {
+				playground.SendMessage ("OnSceneAirTap");
+			}
         }
 
         void LateUpdate()

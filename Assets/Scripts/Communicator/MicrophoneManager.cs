@@ -15,7 +15,7 @@ public class MicrophoneManager : MonoBehaviour
     // Using an empty string specifies the default microphone. 
     private static string deviceName = string.Empty;
     private int samplingRate;
-    private const int messageLength = 15;
+    private const int messageLength = 12;
 
 	private KeywordManager keyWordManager;
 
