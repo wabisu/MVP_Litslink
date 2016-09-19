@@ -96,7 +96,7 @@ public class SceneBehaviour : MonoBehaviour {
 	public Text eyeContactTxt;
 	public Text memorizationTxt;
 
-	private Vector3 ERIC_POSITION = new Vector3 (-0.1163f, 0f, 0.0191f);
+	private Vector3 ERIC_POSITION = new Vector3 (-0.0754f, 0f, -0.0353f);
 	private Vector3 DAVID_POSITION = new Vector3 (0f, 0f, -0.13f);
 	//private const float MOVING_SPEED = 0.135f;
 	private const float MOVING_SPEED = 0.054f;
