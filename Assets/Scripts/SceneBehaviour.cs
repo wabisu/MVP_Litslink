@@ -101,6 +101,9 @@ public class SceneBehaviour : MonoBehaviour {
 
 	private Text debug;
 
+	public ReplayBtnBehaviour replayBtn;
+	public PlaySampleBehaviour playSampleBtn;
+
 	//---------------------------------------------
 	void Update ()
 	{
@@ -160,7 +163,9 @@ public class SceneBehaviour : MonoBehaviour {
 
 			if (HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("InvestorFace")) {
 				investorFaceLookTime += Time.deltaTime;
-			} else if (HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("TextToSay")) {
+			} 
+			else if (!HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("UI"))
+			{
 				scriptLookTime += Time.deltaTime;
 			}
 
@@ -288,6 +293,16 @@ public class SceneBehaviour : MonoBehaviour {
 			}
 
 			GoState (possibleConvStates [convStateIndex].keywordStates [keyWord]);
+			return true;
+		}
+		else if (keyWord.Equals("sample"))
+		{
+			playSampleBtn.OnSelect ();
+			return true;
+		}
+		else if (keyWord.Equals("replay"))
+		{
+			replayBtn.OnSelect ();;
 			return true;
 		}
 

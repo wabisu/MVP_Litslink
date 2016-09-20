@@ -35,6 +35,8 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 
 	private Text debug;
 
+	public GameObject logoObj;
+
 	private void Awake ()
 	{
 		debug = GameObject.Find("debug").GetComponent<Text>();
@@ -125,6 +127,9 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
             // Pass in the lists of horizontal and vertical planes that we found earlier.
 			if (SpaceCollectionManager.Instance.GenerateItemsInWorld (horizontal)) {
 				// We have enough floors and walls to place our holograms on...
+
+				//Hide Logo
+				logoObj.SetActive (false);
 
 				// 3.a: Let's reduce our triangle count by removing triangles
 				// from SpatialMapping meshes that intersect with our active planes.
