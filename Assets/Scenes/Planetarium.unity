@@ -632,7 +632,7 @@ Prefab:
     - target: {fileID: 114000011684836174, guid: a5bfcc12f0da80a4ba738ad168f94dbc,
         type: 2}
       propertyPath: drawPlanesMask
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000011684836174, guid: a5bfcc12f0da80a4ba738ad168f94dbc,
         type: 2}
@@ -1100,7 +1100,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scanning your room...
+  m_Text: 
 --- !u!222 &1040579394
 CanvasRenderer:
   m_ObjectHideFlags: 0

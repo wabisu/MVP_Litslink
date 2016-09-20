@@ -17,6 +17,18 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 
 	private int totalAttempts = 0;
 
+	private Text debug;
+
+	public int GetTotalScanAttempt ()
+	{
+		return totalAttempts;
+	}
+
+	private void Awake ()
+	{
+		debug = GameObject.Find("debug").GetComponent<Text>();
+	}
+
     /// <summary>
     /// Generates a collection of Placeable objects in the world and sets them on planes that match their affinity.
     /// </summary>
@@ -76,7 +88,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
            return Vector3.Distance(leftSpot, headPosition).CompareTo(Vector3.Distance(rightSpot, headPosition));
        	});
 
-		GameObject.Find ("debug").GetComponent<Text> ().text = Mathf.Abs (minAngle).ToString ();
+		debug.text = "" + (int)minAngle;
 
 		// If we can't find a good plane we will put the object floating in space.
 		Vector3 position = Camera.main.transform.position + Camera.main.transform.forward * 2.0f + Camera.main.transform.right * (Random.value - 1.0f) * 2.0f;
@@ -101,7 +113,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 
 				if (Mathf.Abs (angle) < minAngle) {
 					minAngle = Mathf.Abs (angle);
-					GameObject.Find ("debug").GetComponent<Text> ().text = minAngle.ToString ();
+					debug.text = "" + (int)minAngle;
 				}
 
 				float angleDelta = 15;
@@ -123,7 +135,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 					playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
 					playgroundPrefab.GetComponent<SceneBehaviour> ().GoState (0);
 
-					GameObject.Find ("debug").GetComponent<Text> ().text = "angle placed = " + minAngle.ToString ();
+					debug.text = "angle placed = " + (int)minAngle;
 
 					return true;
 				}
@@ -136,7 +148,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 					playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
 					playgroundPrefab.GetComponent<SceneBehaviour> ().GoState (0);
 
-					GameObject.Find ("debug").GetComponent<Text> ().text = "placed in the air";
+					debug.text = "placed in the air";
 
 					return true;
 				}
@@ -152,7 +164,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 			playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
 			playgroundPrefab.GetComponent<SceneBehaviour> ().GoState (0);
 
-			GameObject.Find ("debug").GetComponent<Text> ().text = "placed in the air";
+			debug.text = "placed in the air";
 
 			return true;
 		}

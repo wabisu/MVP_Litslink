@@ -33,6 +33,13 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
     /// </summary>
     private bool meshesProcessed = false;
 
+	private Text debug;
+
+	private void Awake ()
+	{
+		debug = GameObject.Find("debug").GetComponent<Text>();
+	}
+
     /// <summary>
     /// GameObject initialization.
     /// </summary>
@@ -63,6 +70,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
             {
                 // If we have a limited scanning time, then we should wait until
                 // enough time has passed before processing the mesh.
+				debug.text = "Room scan " + (int)(scanTime - ( Time.time - SpatialMappingManager.Instance.StartTime )) + " seconds";
             }
             else
             {
@@ -141,7 +149,6 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
         // 3.a: Re-process spatial data after scanning completes by
         // re-setting meshesProcessed to false.
         meshesProcessed = false;
-		GameObject.Find ("debug").GetComponent<Text> ().text = "Scanning your room... " + SpaceCollectionManager.minAngle;
     }
 
     /// <summary>
