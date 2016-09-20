@@ -51,10 +51,6 @@ public class SceneBehaviour : MonoBehaviour {
 			stateAnimations = animationsList;
 
 			autoSkipState = autoSkip;
-
-			if (Application.isEditor) {
-				autoSkipState = true;
-			}
 		}
 
 		public ConversationState (bool autoSkip, int ericMenuState, int investorState, int audioStateEric, int audioStateInvestor, Dictionary <string, int> keywordsDict)
@@ -184,6 +180,7 @@ public class SceneBehaviour : MonoBehaviour {
 
 			//**********DEBUG************
 			debugTxt.text = "Memorization " + GetMemorization () + " " + "Contact " + GetEyeContact ();
+			//debugTxt.text = "";
 			//***************************
         }
 	}
@@ -192,30 +189,32 @@ public class SceneBehaviour : MonoBehaviour {
 		debugTxt = GameObject.Find ("debug").GetComponent<Text> ();
 
 		//ToDo Create scenario FROM file loading mechanism
-		ConversationState newState0 = new ConversationState (true, 0, -3, 0, -1, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
-		ConversationState newState1 = new ConversationState (true, 1, -3, 1, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"hi eric", 3} });
-		ConversationState newState2 = new ConversationState (1, -3, 2, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"hi eric", 3} });
-		ConversationState newState3 = new ConversationState (2, -3, 3, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"repeat", 1}, {"lets do it", 4} });
+		ConversationState newState0 = new ConversationState (true, 0, -3, 0, -1, new Dictionary<string, int>(), new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
+		ConversationState newState1 = new ConversationState (1, -3, -1, -1, new Dictionary<string, int>() { {"hi eric", 2} });
+		ConversationState newState2 = new ConversationState (true, -1, -3, 1, -1, new Dictionary<string, int>());
+		ConversationState newState3 = new ConversationState (true, -1, -3, 2, -1, new Dictionary<string, int>());
+		ConversationState newState4 = new ConversationState (true, -1, -3, 3, -1, new Dictionary<string, int>());
+		ConversationState newState5 = new ConversationState (2, -3, -1, -1, new Dictionary<string, int>() { {"repeat", 2}, {"lets do it", 6} });
 
-		ConversationState newState4 = new ConversationState (true, -1, -3, 4, -1, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "Back_SmallStep"} });
-		ConversationState newState5 = new ConversationState (true, -1, -1, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "SmallStep"} });
+		ConversationState newState6 = new ConversationState (true, -1, -3, 4, -1, new Dictionary<string, int>(), new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "Back_SmallStep"} });
+		ConversationState newState7 = new ConversationState (true, -1, -1, -1, -1, new Dictionary<string, int>(), new List<CharacterMovingState>() { CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "SmallStep"} });
 
-		ConversationState newState6 = new ConversationState (-1, -1, -1, 0, new Dictionary<string, int>() { {"hey eric", 16} }, new List<CharacterMovingState>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Alright"}});
-		ConversationState newState7 = new ConversationState (-1, 0, -1, 1, new Dictionary<string, int>() { {"hey eric", 16} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Ok"}});
-		ConversationState newState8 = new ConversationState (-1, 1, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} },  new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1CuriousNod"}});
-		ConversationState newState9 = new ConversationState (-1, -1, -1, 2, new Dictionary<string, int>() { {"hey eric", 16} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Interesting"}});
-		ConversationState newState10 = new ConversationState (-1, 2, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} });
-		ConversationState newState11 = new ConversationState (-1, 3, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} });
-		ConversationState newState12 = new ConversationState (-1, 4, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} });
-		ConversationState newState13 = new ConversationState (-1, -1, -1, 3, new Dictionary<string, int>() { {"hey eric", 16} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1AProductToDemo"}});
-		ConversationState newState14 = new ConversationState (-1, 5, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Surprised"}});
+		ConversationState newState8 = new ConversationState (-1, -1, -1, 0, new Dictionary<string, int>(), new List<CharacterMovingState>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Alright"}});
+		ConversationState newState9 = new ConversationState (-1, 0, -1, 1, new Dictionary<string, int>() { {"hey eric", 19} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Ok"}});
+		ConversationState newState10 = new ConversationState (-1, 1, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} },  new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1CuriousNod"}});
+		ConversationState newState11 = new ConversationState (-1, -1, -1, 2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Interesting"}});
+		ConversationState newState12 = new ConversationState (-1, 2, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
+		ConversationState newState13 = new ConversationState (-1, 3, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
+		ConversationState newState14 = new ConversationState (-1, 4, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
+		ConversationState newState15 = new ConversationState (-1, -1, -1, 3, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1AProductToDemo"}});
+		ConversationState newState16 = new ConversationState (-1, 5, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Surprised"}});
 
-		ConversationState newState15 = new ConversationState (-1, -1, -1, -2, new Dictionary<string, int>() { {"hey eric", 16} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_FROM_METHOD1, "1Excellent"}, {CharacterName.DAVID_FROM_METHOD2, "1NotBad"}, {CharacterName.DAVID_FROM_METHOD3, "1PoorPerformance"}});
+		ConversationState newState17 = new ConversationState (-1, -1, -1, -2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID_FROM_METHOD1, "1Excellent"}, {CharacterName.DAVID_FROM_METHOD2, "1NotBad"}, {CharacterName.DAVID_FROM_METHOD3, "1PoorPerformance"}});
 
-		ConversationState newState16 = new ConversationState (3, -2, -1, -1, new Dictionary<string, int>() { {"hey eric", 16} });
-		ConversationState newState17 = new ConversationState (4, -3, 5, -1, new Dictionary<string, int>() { {"hey eric", 16}, {"practice again", 1}, {"result", 15} });
+		ConversationState newState18 = new ConversationState (3, -2, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
+		ConversationState newState19 = new ConversationState (4, -3, 5, -1, new Dictionary<string, int>() { {"practice again", 8}, {"result", 18} });
 
-		ConversationState newState18 = new ConversationState (-1, -1, -1, 7, new Dictionary<string, int>() { {"returnToStateAuto", -1} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1IWillLeave"}});
+		ConversationState newState20 = new ConversationState (-1, -1, -1, 7, new Dictionary<string, int>() { {"returnToStateAuto", -1} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1IWillLeave"}});
 
 		possibleConvStates.Add (newState0);
 		possibleConvStates.Add (newState1);
@@ -236,6 +235,8 @@ public class SceneBehaviour : MonoBehaviour {
 		possibleConvStates.Add (newState16);
 		possibleConvStates.Add (newState17);
 		possibleConvStates.Add (newState18);
+		possibleConvStates.Add (newState19);
+		possibleConvStates.Add (newState20);
 		//-----------------------------------------------
 
 		if (Application.isEditor) {
@@ -243,11 +244,6 @@ public class SceneBehaviour : MonoBehaviour {
 			GetComponent<Placeable> ().ResetInitialPos ();
 			GoState (0);
 		}
-	}
-
-	private void GoState0 ()
-	{
-		GoState (0);
 	}
 
 	private int GetEyeContact ()
@@ -304,7 +300,12 @@ public class SceneBehaviour : MonoBehaviour {
 		convStateIndex++;
 
 		if (convStateIndex >= possibleConvStates.Count) {
-			convStateIndex = 0;
+			convStateIndex = 8;
+
+			scriptLookTime = 0;
+			investorFaceLookTime = 0;
+			investorDoesNotLookTime = 0;
+			totalTimeTalking = 0;
 		}
 
 		if (possibleConvStates [convStateIndex].keywordStates.ContainsKey ("returnToStateAuto")) {
@@ -367,16 +368,25 @@ public class SceneBehaviour : MonoBehaviour {
 		GoNextState ();
 	}
 
+	private bool OnAirTapSkipAllowed ()
+	{
+		if (possibleConvStates [convStateIndex].currInvestorState >= 0 || possibleConvStates [convStateIndex].keywordStates.Count > 0 || Application.isEditor) {
+			return true;
+		}
+
+		return false;
+	}
+
 	/// <summary>
 	/// Called when our object is selected.  Generally called by
 	/// a gesture management component.
 	/// </summary>
 	public void OnSceneAirTap()
 	{
-		if (InvestorCommunicator.Instance.IsRecordedAudioPlaying ())
+		if (InvestorCommunicator.Instance.IsRecordedAudioPlaying () || !OnAirTapSkipAllowed())
 			return;
 
-		if (!possibleConvStates [convStateIndex].keywordStates.ContainsKey ("returnToStateAuto") && possibleConvStates [convStateIndex].currEricMenuState != 0) {
+		if (!possibleConvStates [convStateIndex].keywordStates.ContainsKey ("returnToStateAuto")) {
 
 			if (possibleConvStates [convStateIndex].currInvestorState >= 0) {
 				OnCurrSentenceSaid ();
@@ -418,6 +428,15 @@ public class SceneBehaviour : MonoBehaviour {
 
 	private void OnAfterStateChange ()
 	{
+		//Set Communicator Text
+		if (!possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.ERIC) && possibleConvStates [convStateIndex].currInvestorState >= -1) {
+			InvestorCommunicator.Instance.gameObject.SetActive (true);
+			investorObj.SetActive (true);
+		} else {
+			InvestorCommunicator.Instance.gameObject.SetActive (false);
+			investorObj.SetActive (false);
+		}
+
 		//----------Audio part-----------
 		AudioSource audioEric = ericObj.GetComponent<AudioSource> ();
 		AudioSource audioInvestor = investorObj.GetComponent<AudioSource> ();
@@ -476,24 +495,8 @@ public class SceneBehaviour : MonoBehaviour {
 			}
 		}
 
-		//Set Communicator Text
-		if (!possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.ERIC) && possibleConvStates [convStateIndex].currInvestorState >= -1) {
-			InvestorCommunicator.Instance.gameObject.SetActive (true);
-			investorObj.SetActive (true);
-		} else {
-			InvestorCommunicator.Instance.gameObject.SetActive (false);
-			investorObj.SetActive (false);
-		}
-
 		//Conversation RESET
 		if (!Application.isEditor) {
-			if (convStateIndex == 0) {
-				scriptLookTime = 0;
-				investorFaceLookTime = 0;
-				investorDoesNotLookTime = 0;
-				totalTimeTalking = 0;
-			}
-
 			if (possibleConvStates [convStateIndex].currInvestorState >= 0) {
 				InvestorCommunicator.Instance.StartConversation ();
 			} else {
