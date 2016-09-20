@@ -397,16 +397,16 @@ public class SceneBehaviour : MonoBehaviour {
 
 	private void OnPreStateChange ()
 	{
-		if (convStateIndex == 0) {
-			debug.text = "";
-		}
-
 		if (convStateIndex < 0) {
 			return;
 		}
 
 		if (convStateIndex == 0) {
 			investorObj.transform.localPosition = new Vector3 (0, 0, 0);
+		}
+
+		if (convStateIndex == 1) {
+			debug.text = "";
 		}
 
 		CancelInvoke ();
