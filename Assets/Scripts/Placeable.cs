@@ -366,7 +366,7 @@ public class Placeable : MonoBehaviour
             return;
         }
 
-		GameObject.Find ("debug").GetComponent<Text> ().text = "manually placed";
+		debug.text = "manually placed";
  
         // The object is allowed to be placed.
         // We are placing at a small buffer away from the surface.

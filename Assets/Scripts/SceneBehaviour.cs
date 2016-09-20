@@ -99,7 +99,7 @@ public class SceneBehaviour : MonoBehaviour {
 	private GameObject movingCharacter;
 	private Vector3 movingCharacterFinalPos;
 
-	private Text debugTxt;
+	private Text debug;
 
 	//---------------------------------------------
 	void Update ()
@@ -179,14 +179,13 @@ public class SceneBehaviour : MonoBehaviour {
 			}
 
 			//**********DEBUG************
-			debugTxt.text = "Memorization " + GetMemorization () + " " + "Contact " + GetEyeContact ();
-			//debugTxt.text = "";
+			//debug.text = "Memorization " + GetMemorization () + " " + "Contact " + GetEyeContact ();
 			//***************************
         }
 	}
 
 	void Start () {
-		debugTxt = GameObject.Find ("debug").GetComponent<Text> ();
+		debug = GameObject.Find ("debug").GetComponent<Text> ();
 
 		//ToDo Create scenario FROM file loading mechanism
 		ConversationState newState0 = new ConversationState (true, 0, -3, 0, -1, new Dictionary<string, int>(), new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
@@ -398,6 +397,10 @@ public class SceneBehaviour : MonoBehaviour {
 
 	private void OnPreStateChange ()
 	{
+		if (convStateIndex == 0) {
+			debug.text = "";
+		}
+
 		if (convStateIndex < 0) {
 			return;
 		}
