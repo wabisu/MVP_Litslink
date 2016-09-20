@@ -211,7 +211,7 @@ public class SceneBehaviour : MonoBehaviour {
 		ConversationState newState17 = new ConversationState (-1, -1, -1, -2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID_FROM_METHOD1, "1Excellent"}, {CharacterName.DAVID_FROM_METHOD2, "1NotBad"}, {CharacterName.DAVID_FROM_METHOD3, "1PoorPerformance"}});
 
 		ConversationState newState18 = new ConversationState (3, -2, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
-		ConversationState newState19 = new ConversationState (4, -3, 5, -1, new Dictionary<string, int>() { {"practice again", 8}, {"result", 18} });
+		ConversationState newState19 = new ConversationState (4, -2, 5, -1, new Dictionary<string, int>() { {"practice again", 8}, {"result", 18} });
 
 		ConversationState newState20 = new ConversationState (-1, -1, -1, 7, new Dictionary<string, int>() { {"returnToStateAuto", -1} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1IWillLeave"}});
 
@@ -280,6 +280,13 @@ public class SceneBehaviour : MonoBehaviour {
 	public bool OnKeywordSaid (string keyWord)
 	{
 		if (possibleConvStates [convStateIndex].keywordStates.ContainsKey (keyWord)) {
+			if (keyWord.Equals ("practice again")) {
+				scriptLookTime = 0;
+				investorFaceLookTime = 0;
+				investorDoesNotLookTime = 0;
+				totalTimeTalking = 0;
+			}
+
 			GoState (possibleConvStates [convStateIndex].keywordStates [keyWord]);
 			return true;
 		}
