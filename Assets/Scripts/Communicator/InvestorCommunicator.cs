@@ -46,11 +46,11 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 		replayBtn.gameObject.SetActive (false);
 
 		//ToDo Create scenario FROM file loading mechanism
-		initialSentences.Add("We build AR communication training tools.");
+		initialSentences.Add("We build AR communication coaching tools.");
 		initialSentences.Add("Our holographic simulator helps you practice all forms of communication in different languages.");
-		initialSentences.Add("Yes, so for example");
-		initialSentences.Add("A Japanese business-woman can have couple scary-looking hardcore American clients popping up in front of her to practice English presentation as a challenge.");
-		initialSentences.Add("We also incorporate API which can detect user's emotions based on the way he or she talks to have human holograms respond accordingly.");
+		initialSentences.Add("Sure, for example,");
+		initialSentences.Add("a Japanese businessman can use it to practice English presentations to evaluate his ability to maintain good eye contact.");
+		initialSentences.Add("Our software can also detect user's emotions which\u00a0allows\u00a0the human holograms to respond dynamically.");
 		initialSentences.Add("Yes, you are actually doing it right now.");
 
 		foreach (string str in initialSentences)
