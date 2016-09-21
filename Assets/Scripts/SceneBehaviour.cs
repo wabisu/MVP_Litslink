@@ -290,6 +290,7 @@ public class SceneBehaviour : MonoBehaviour {
 				investorFaceLookTime = 0;
 				investorDoesNotLookTime = 0;
 				totalTimeTalking = 0;
+				replayBtn.gameObject.SetActive (false);
 			}
 
 			GoState (possibleConvStates [convStateIndex].keywordStates [keyWord]);
@@ -327,6 +328,7 @@ public class SceneBehaviour : MonoBehaviour {
 			investorFaceLookTime = 0;
 			investorDoesNotLookTime = 0;
 			totalTimeTalking = 0;
+			replayBtn.gameObject.SetActive (false);
 		}
 
 		if (possibleConvStates [convStateIndex].keywordStates.ContainsKey ("returnToStateAuto")) {
