@@ -41,6 +41,11 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 
 	public AudioClip[] samples = new AudioClip[6];
 
+	public AudioSource repeatAgain;
+	public AudioClip firstTime;
+	public AudioClip secondTime;
+	private int failCalc;
+
 	void Awake ()
 	{
 		replayBtn.gameObject.SetActive (false);
@@ -131,8 +136,18 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 			if (lastSentenceCorrectPercent >= 0.6f) {
 				sceneScript.OnCurrSentenceSaid ();
 				replayBtn.gameObject.SetActive (false);
+				failCalc = 0;
 			} else {
 				replayBtn.gameObject.SetActive (true);
+				failCalc++;
+
+				if (failCalc == 1) {
+					repeatAgain.clip = firstTime;
+				} else {
+					repeatAgain.clip = secondTime;
+				}
+
+				repeatAgain.Play ();
 			}
 		}
 	}
@@ -217,6 +232,7 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 		}
 
 		if (sceneScript.GetCurrDictationState() == -2) {
+			failCalc = 0;
 			microphoneManager.StartCoroutine ("RestartSpeechSystem");
 		} else if (sceneScript.GetCurrDictationState() == -1) {
 			textInvestorLabel.text = INVESTOR_TALKING_TXT;
@@ -231,10 +247,5 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 	{
 		microphoneManager.StopRecording();
 		dictationAudio.clip = microphoneManager.StartRecording();
-	}
-
-	public void RestartSpeechSystem ()
-	{
-		microphoneManager.StartCoroutine ("RestartSpeechSystem");	
 	}
 }
