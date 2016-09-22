@@ -79,6 +79,7 @@ public class SceneBehaviour : MonoBehaviour {
 	public Image textNavigationImage;
 
 	private float totalTimeTalking = 0;
+	private float totalTimeUserTalking = 0;
 	private float scriptLookTime = 0;
 	private float investorFaceLookTime = 0;
 	private float investorDoesNotLookTime = 0;
@@ -161,10 +162,16 @@ public class SceneBehaviour : MonoBehaviour {
 		if (convStateIndex >= 0 && investorObj.activeSelf && possibleConvStates [convStateIndex].currInvestorAudioState != -2) {
 			totalTimeTalking += Time.deltaTime;
 
+			if (possibleConvStates [convStateIndex].currInvestorState >= 0)
+			{
+				totalTimeUserTalking += Time.deltaTime;
+			}
+
 			if (HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("InvestorFace")) {
 				investorFaceLookTime += Time.deltaTime;
 			} 
-			else if (!HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("UI"))
+
+			if (HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("TextToSay"))
 			{
 				scriptLookTime += Time.deltaTime;
 			}
@@ -184,7 +191,7 @@ public class SceneBehaviour : MonoBehaviour {
 			}
 
 			//**********DEBUG************
-			//debug.text = "Memorization " + GetMemorization () + " " + "Contact " + GetEyeContact ();
+			debug.text = "Memorization " + GetMemorization () + " " + "Contact " + GetEyeContact ();
 			//***************************
         }
 	}
@@ -257,7 +264,11 @@ public class SceneBehaviour : MonoBehaviour {
 
 	private int GetMemorization ()
 	{
-		return (int)((1 - scriptLookTime / totalTimeTalking) * 100);
+		if (totalTimeUserTalking == 0) {
+			return 0;
+		}
+
+		return (int)((1 - scriptLookTime / totalTimeUserTalking) * 100);
 	}
 
 	private int GetFinalResultInvestorAudioIndex ()
@@ -290,6 +301,7 @@ public class SceneBehaviour : MonoBehaviour {
 				investorFaceLookTime = 0;
 				investorDoesNotLookTime = 0;
 				totalTimeTalking = 0;
+				totalTimeUserTalking = 0;
 				replayBtn.gameObject.SetActive (false);
 			}
 
@@ -328,6 +340,7 @@ public class SceneBehaviour : MonoBehaviour {
 			investorFaceLookTime = 0;
 			investorDoesNotLookTime = 0;
 			totalTimeTalking = 0;
+			totalTimeUserTalking = 0;
 			replayBtn.gameObject.SetActive (false);
 		}
 
