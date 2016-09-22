@@ -12,6 +12,6 @@ public class FacingCamera : MonoBehaviour {
 	void FixedUpdate () {
 		Vector3 lookPos = transform.position - Camera.main.transform.position;
 		lookPos.y = 0;
-		transform.rotation = Quaternion.LookRotation(lookPos);
+		transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.LookRotation(lookPos) * Quaternion.Euler(0, 180, 0), Time.deltaTime * 15);
 	}
 }

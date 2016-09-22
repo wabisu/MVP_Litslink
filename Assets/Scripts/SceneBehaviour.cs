@@ -117,9 +117,18 @@ public class SceneBehaviour : MonoBehaviour {
 			Vector3 prevCharacterPos = movingCharacter.transform.position;
 			movingCharacter.transform.localPosition = Vector3.MoveTowards (movingCharacter.transform.localPosition, movingCharacterFinalPos, MOVING_SPEED * Time.deltaTime);
 
-			Vector3 distanceDelta = prevCharacterPos - movingCharacter.transform.position;
+			Vector3 distanceDelta = movingCharacterFinalPos - movingCharacter.transform.localPosition;
+			float magnitude = distanceDelta.magnitude;
+
+			// rotate moving character to the moving direction
+			if (magnitude > 0.06f) {
+				Vector3 rotationVec = transform.localPosition - prevCharacterPos;
+				rotationVec.y = 0;
+				movingCharacter.transform.rotation = Quaternion.Lerp (movingCharacter.transform.rotation, Quaternion.LookRotation (rotationVec) * Quaternion.Euler (0, 180, 0), Time.deltaTime * 15);
+			}
+
 			//Check if movement is finished
-			if (distanceDelta.magnitude < MOVING_SPEED * Time.deltaTime) {
+			if (magnitude < MOVING_SPEED * Time.deltaTime) {
 				//Check more movement
 				if (currMovingIndex < possibleConvStates [convStateIndex].characterMovingState.Count - 1) {
 					InitMovement (currMovingIndex++);	
@@ -128,6 +137,7 @@ public class SceneBehaviour : MonoBehaviour {
 				else {
 					movingCharacter.GetComponent<Animator> ().SetTrigger (IDLE_ANIMATION_NAME);
 					currMovingIndex = 0;
+					movingCharacter.GetComponent<FacingCamera> ().enabled = true;
 					movingCharacter = null;
 
 					if (possibleConvStates [convStateIndex].autoSkipState && possibleConvStates [convStateIndex].currEricAudioState < 0 && possibleConvStates [convStateIndex].currInvestorAudioState < 0) {
@@ -154,6 +164,8 @@ public class SceneBehaviour : MonoBehaviour {
 			movingCharacterFinalPos = DAVID_POSITION;
 			break;
 		}
+
+		movingCharacter.GetComponent<FacingCamera> ().enabled = false;
 	}
 
 	void LateUpdate ()
@@ -165,16 +177,16 @@ public class SceneBehaviour : MonoBehaviour {
 			if (possibleConvStates [convStateIndex].currInvestorState >= 0)
 			{
 				totalTimeUserTalking += Time.deltaTime;
+
+				if (HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("TextToSay"))
+				{
+					scriptLookTime += Time.deltaTime;
+				}
 			}
 
 			if (HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("InvestorFace")) {
 				investorFaceLookTime += Time.deltaTime;
 			} 
-
-			if (HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("TextToSay"))
-			{
-				scriptLookTime += Time.deltaTime;
-			}
 
 			if (possibleConvStates [convStateIndex].currInvestorState >= 0 && !microphoneManager.IsUserTalking () && !HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("TextToSay") 
 				&& !HoloToolkit.Unity.GazeManager.Instance.IsFocusedObjectTag ("InvestorFace") && !IsInvoking() && nextStateAfterAnimCoroutine == null && !InvestorCommunicator.Instance.IsRecordedAudioPlaying () 
@@ -249,6 +261,11 @@ public class SceneBehaviour : MonoBehaviour {
 		possibleConvStates.Add (newState19);
 		possibleConvStates.Add (newState20);
 		//-----------------------------------------------
+
+		Vector3 lookPos = investorObj.transform.position - Camera.main.transform.position;
+		lookPos.y = 0;
+		investorObj.transform.rotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
+		ericObj.transform.rotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
 
 		if (Application.isEditor) {
 			transform.position = new Vector3 (0, 0, 0);
@@ -454,6 +471,7 @@ public class SceneBehaviour : MonoBehaviour {
 			InitMovement (possibleConvStates [convStateIndex].characterMovingState.Count - 1);
 			movingCharacter.transform.localPosition = movingCharacterFinalPos;
 			currMovingIndex = 0;
+			movingCharacter.GetComponent<FacingCamera> ().enabled = true;
 			movingCharacter = null;
 
 			if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.ERIC)) {

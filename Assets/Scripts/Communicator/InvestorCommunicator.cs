@@ -143,11 +143,12 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 
 				if (failCalc == 1) {
 					repeatAgain.clip = firstTime;
-				} else {
+					repeatAgain.Play ();
+				} else if (failCalc == 2)
+				{
 					repeatAgain.clip = secondTime;
+					repeatAgain.Play ();
 				}
-
-				repeatAgain.Play ();
 			}
 		}
 	}

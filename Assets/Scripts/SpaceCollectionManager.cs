@@ -29,6 +29,13 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 		debug = GameObject.Find("debug").GetComponent<Text>();
 	}
 
+	private void RotatePlaygroundToCamera ()
+	{
+		Vector3 lookPos = playgroundPrefab.transform.position - Camera.main.transform.position;
+		lookPos.y = 0;
+		playgroundPrefab.transform.rotation = Quaternion.LookRotation(lookPos);
+	}
+
     /// <summary>
     /// Generates a collection of Placeable objects in the world and sets them on planes that match their affinity.
     /// </summary>
@@ -42,18 +49,11 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 		bool canBePlaced = playgroundPrefab.GetComponent<Placeable>().ValidatePlacement(out targetPosition, out surfaceNormal, Camera.main.transform, 2.65f);
 
 		if (canBePlaced) {
-			Quaternion rotation = Camera.main.transform.localRotation;
-
-			// Horizontal objects should face the user.
-			rotation = Quaternion.LookRotation (Camera.main.transform.position);
-			rotation.x = 0f;
-			rotation.z = 0f;
-
 			playgroundPrefab.transform.position = targetPosition;
-			playgroundPrefab.transform.rotation = rotation;
 			playgroundPrefab.transform.parent = gameObject.transform;
 			playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
 			playgroundPrefab.GetComponent<SceneBehaviour> ().GoState (0);
+			RotatePlaygroundToCamera ();
 
 			return true;
 		}
@@ -134,6 +134,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 					playgroundPrefab.transform.parent = gameObject.transform;
 					playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
 					playgroundPrefab.GetComponent<SceneBehaviour> ().GoState (0);
+					RotatePlaygroundToCamera ();
 
 					debug.text = "angle placed = " + (int)minAngle;
 
@@ -147,6 +148,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 					playgroundPrefab.transform.parent = gameObject.transform;
 					playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
 					playgroundPrefab.GetComponent<SceneBehaviour> ().GoState (0);
+					RotatePlaygroundToCamera ();
 
 					debug.text = "placed in the air";
 
@@ -163,6 +165,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 			playgroundPrefab.transform.parent = gameObject.transform;
 			playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
 			playgroundPrefab.GetComponent<SceneBehaviour> ().GoState (0);
+			RotatePlaygroundToCamera ();
 
 			debug.text = "placed in the air";
 
