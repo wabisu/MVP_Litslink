@@ -150,9 +150,9 @@ public class SceneBehaviour : MonoBehaviour {
 				distanceDelta.y = 0;
 
 				if (!IsBackwardWalk(currChar))
-					currChar.transform.rotation = Quaternion.Lerp (currChar.transform.rotation, Quaternion.LookRotation (distanceDelta), Time.deltaTime * 30);
+					currChar.transform.localRotation = Quaternion.Lerp (currChar.transform.localRotation, Quaternion.LookRotation (distanceDelta), Time.deltaTime * 30);
 				else
-					currChar.transform.rotation = Quaternion.Lerp (currChar.transform.rotation, Quaternion.LookRotation (distanceDelta) * Quaternion.Euler(0, 180, 0), Time.deltaTime * 30);
+					currChar.transform.localRotation = Quaternion.Lerp (currChar.transform.localRotation, Quaternion.LookRotation (distanceDelta) * Quaternion.Euler(0, 180, 0), Time.deltaTime * 30);
 			}
 
 			//Check if movement is finished
@@ -297,8 +297,8 @@ public class SceneBehaviour : MonoBehaviour {
 
 		Vector3 lookPos = davidObj.transform.position - Camera.main.transform.position;
 		lookPos.y = 0;
-		davidObj.transform.rotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
-		ericObj.transform.rotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
+		davidObj.transform.localRotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
+		ericObj.transform.localRotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
 
 		if (Application.isEditor) {
 			transform.position = INITIAL_POSITION;
@@ -504,9 +504,6 @@ public class SceneBehaviour : MonoBehaviour {
 			movingCharacters [i].transform.localPosition = movingCharactersFinalPos [i];
 			movingCharacters [i].GetComponent<FacingCamera> ().enabled = true;
 
-			movingCharacters.Clear ();
-			movingCharactersFinalPos.Clear ();
-
 			if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.ERIC)) {
 				ericObj.GetComponent<Animator> ().SetTrigger (IDLE_ANIMATION_NAME);
 			}
@@ -515,6 +512,9 @@ public class SceneBehaviour : MonoBehaviour {
 				davidObj.GetComponent<Animator> ().SetTrigger (IDLE_ANIMATION_NAME);
 			}
 		}
+
+		movingCharacters.Clear ();
+		movingCharactersFinalPos.Clear ();
 	}
 
 	private void OnAfterStateChange ()
