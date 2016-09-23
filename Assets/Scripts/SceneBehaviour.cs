@@ -10,7 +10,7 @@ public class SceneBehaviour : MonoBehaviour {
 	public List<AudioClip> ericVoice = new List<AudioClip> ();
 	public List<AudioClip> investorVoice = new List<AudioClip> ();
 
-	private enum CharacterMovingState { MOVE_ERIC_TO_ERICPOS, MOVE_ERIC_TO_DAVIDPOS, MOVE_DAVID_TO_DAVIDPOS }
+	private enum CharacterMovingState { MOVE_ERIC_TO_ERICPOS, MOVE_ERIC_TO_DAVIDPOS, MOVE_DAVID_TO_DAVIDPOS, MOVE_ERIC_HEY_ERIC_POS, MOVE_DAVID_HEY_ERIC_POS }
 	private enum CharacterName { ERIC, DAVID, DAVID_END, DAVID_FROM_METHOD1, DAVID_FROM_METHOD2, DAVID_FROM_METHOD3 }
 
 	private const string IDLE_ANIMATION_NAME = "Idle";
@@ -68,12 +68,16 @@ public class SceneBehaviour : MonoBehaviour {
 		public ConversationState (int ericMenuState, int investorState, int audioStateEric, int audioStateInvestor, Dictionary <string, int> keywordsDict, List<CharacterMovingState> moveTo, Dictionary<CharacterName, string> animationsList)
 			: this (false, ericMenuState, investorState, audioStateEric, audioStateInvestor, keywordsDict, moveTo, animationsList)
 		{}
+
+		public ConversationState (bool autoSkip, int ericMenuState, int investorState, int audioStateEric, int audioStateInvestor, List<CharacterMovingState> moveTo, Dictionary<CharacterName, string> animationsList)
+			: this (autoSkip, ericMenuState, investorState, audioStateEric, audioStateInvestor, new Dictionary <string, int>(), moveTo, animationsList)
+		{}
 	}
 	//-----------------------------
 
 	private List<ConversationState> possibleConvStates = new List<ConversationState>();
 
-	public GameObject investorObj;
+	public GameObject davidObj;
 	public GameObject ericObj;
 
 	public Image textNavigationImage;
@@ -93,12 +97,14 @@ public class SceneBehaviour : MonoBehaviour {
 	public Text eyeContactTxt;
 	public Text memorizationTxt;
 
+	private Vector3 INITIAL_POSITION = new Vector3 (0f, 0f, 0f);
 	private Vector3 ERIC_POSITION = new Vector3 (-0.0754f, 0f, -0.0353f);
+	private Vector3 HEY_ERIC_POSITION = new Vector3 (-0.0754f, 0f, -0.13f);
 	private Vector3 DAVID_POSITION = new Vector3 (0f, 0f, -0.13f);
+
 	private const float MOVING_SPEED = 0.065f;
-	private int currMovingIndex = 0;
-	private GameObject movingCharacter;
-	private Vector3 movingCharacterFinalPos;
+	private List<GameObject> movingCharacters = new List<GameObject>();
+	private List<Vector3> movingCharactersFinalPos = new List<Vector3>();
 
 	private Text debug;
 
@@ -106,6 +112,20 @@ public class SceneBehaviour : MonoBehaviour {
 	public PlaySampleBehaviour playSampleBtn;
 
 	//---------------------------------------------
+	private bool IsBackwardWalk (GameObject currChar)
+	{
+		if (currChar.Equals (davidObj)) {
+			if (possibleConvStates [convStateIndex].stateAnimations [CharacterName.DAVID].Contains ("Back"))
+				return true;
+		} 
+		else {
+			if (possibleConvStates [convStateIndex].stateAnimations [CharacterName.ERIC].Contains ("Back"))
+				return true;			
+		}
+
+		return false;
+	}
+
 	void Update ()
 	{
 		if (Application.isEditor && Input.GetKeyDown ("space")) {
@@ -113,65 +133,80 @@ public class SceneBehaviour : MonoBehaviour {
 		}
 
 		//Perform Character movement
-		if (movingCharacter != null) {
-			Vector3 prevCharacterPos = movingCharacter.transform.position;
-			movingCharacter.transform.localPosition = Vector3.MoveTowards (movingCharacter.transform.localPosition, movingCharacterFinalPos, MOVING_SPEED * Time.deltaTime);
+		int i = 0;
+		while (i < movingCharacters.Count) 
+		{
+			GameObject currChar = movingCharacters [i];
+			Vector3 currCharEndPos = movingCharactersFinalPos [i];
 
-			Vector3 distanceDelta = movingCharacterFinalPos - movingCharacter.transform.localPosition;
-			float magnitude = distanceDelta.magnitude;
+			Vector3 prevCharacterPos = currChar.transform.localPosition;
+			currChar.transform.localPosition = Vector3.MoveTowards (currChar.transform.localPosition, currCharEndPos, MOVING_SPEED * Time.deltaTime);
+
+			Vector3 distanceDelta = currCharEndPos - currChar.transform.localPosition;
+			float currCharDist = distanceDelta.magnitude;
 
 			// rotate moving character to the moving direction
-			if (magnitude > 0.06f) {
-				Vector3 rotationVec = transform.localPosition - prevCharacterPos;
-				rotationVec.y = 0;
-				movingCharacter.transform.rotation = Quaternion.Lerp (movingCharacter.transform.rotation, Quaternion.LookRotation (rotationVec) * Quaternion.Euler (0, 180, 0), Time.deltaTime * 15);
+			if (currCharDist > 0.01f) {
+				distanceDelta.y = 0;
+
+				if (!IsBackwardWalk(currChar))
+					currChar.transform.rotation = Quaternion.Lerp (currChar.transform.rotation, Quaternion.LookRotation (distanceDelta), Time.deltaTime * 30);
+				else
+					currChar.transform.rotation = Quaternion.Lerp (currChar.transform.rotation, Quaternion.LookRotation (distanceDelta) * Quaternion.Euler(0, 180, 0), Time.deltaTime * 30);
 			}
 
 			//Check if movement is finished
-			if (magnitude < MOVING_SPEED * Time.deltaTime) {
-				//Check more movement
-				if (currMovingIndex < possibleConvStates [convStateIndex].characterMovingState.Count - 1) {
-					InitMovement (currMovingIndex++);	
-				} 
+			if (currCharDist < MOVING_SPEED * Time.deltaTime) {
 				//Finish movement
-				else {
-					movingCharacter.GetComponent<Animator> ().SetTrigger (IDLE_ANIMATION_NAME);
-					currMovingIndex = 0;
-					movingCharacter.GetComponent<FacingCamera> ().enabled = true;
-					movingCharacter = null;
+				currChar.GetComponent<Animator> ().SetTrigger (IDLE_ANIMATION_NAME);
+				currChar.GetComponent<FacingCamera> ().enabled = true;
+				movingCharacters.Remove (currChar);
+				movingCharactersFinalPos.Remove (currCharEndPos);
 
-					if (possibleConvStates [convStateIndex].autoSkipState && possibleConvStates [convStateIndex].currEricAudioState < 0 && possibleConvStates [convStateIndex].currInvestorAudioState < 0) {
-						GoNextState ();
-					}
+				if (possibleConvStates [convStateIndex].autoSkipState && possibleConvStates [convStateIndex].currEricAudioState < 0 && possibleConvStates [convStateIndex].currInvestorAudioState < 0) {
+					GoNextState ();
 				}
+			} else {
+				i++;
 			}
 		}
 	}
 
-	private void InitMovement (int movIndex)
+	private void InitMovement ()
 	{
-		switch (possibleConvStates [convStateIndex].characterMovingState [movIndex]) {
-		case CharacterMovingState.MOVE_ERIC_TO_DAVIDPOS:
-			movingCharacter = ericObj;
-			movingCharacterFinalPos = DAVID_POSITION;
-			break;
-		case CharacterMovingState.MOVE_ERIC_TO_ERICPOS:
-			movingCharacter = ericObj;
-			movingCharacterFinalPos = ERIC_POSITION;
-			break;
-		case CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS:
-			movingCharacter = investorObj;
-			movingCharacterFinalPos = DAVID_POSITION;
-			break;
-		}
+		foreach (CharacterMovingState charMoveState in possibleConvStates [convStateIndex].characterMovingState)
+		{
+			switch (charMoveState) {
+			case CharacterMovingState.MOVE_ERIC_TO_DAVIDPOS:
+				movingCharacters.Add (ericObj);
+				movingCharactersFinalPos.Add (DAVID_POSITION);
+				break;
+			case CharacterMovingState.MOVE_ERIC_TO_ERICPOS:
+				movingCharacters.Add (ericObj);
+				movingCharactersFinalPos.Add (ERIC_POSITION);
+				break;
+			case CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS:
+				movingCharacters.Add (davidObj);
+				movingCharactersFinalPos.Add (DAVID_POSITION);
+				break;
+			case CharacterMovingState.MOVE_ERIC_HEY_ERIC_POS:
+				movingCharacters.Add (ericObj);
+				movingCharactersFinalPos.Add (HEY_ERIC_POSITION);
+				break;
+			case CharacterMovingState.MOVE_DAVID_HEY_ERIC_POS:
+				movingCharacters.Add (davidObj);
+				movingCharactersFinalPos.Add (INITIAL_POSITION);
+				break;
+			}
 
-		movingCharacter.GetComponent<FacingCamera> ().enabled = false;
+			movingCharacters[movingCharacters.Count - 1].GetComponent<FacingCamera> ().enabled = false;
+		}
 	}
 
 	void LateUpdate ()
 	{
 		//Check objects look time
-		if (convStateIndex >= 0 && investorObj.activeSelf && possibleConvStates [convStateIndex].currInvestorAudioState != -2) {
+		if (convStateIndex >= 0 && possibleConvStates [convStateIndex].currInvestorState >= -1 && possibleConvStates [convStateIndex].currInvestorAudioState != -2) {
 			totalTimeTalking += Time.deltaTime;
 
 			if (possibleConvStates [convStateIndex].currInvestorState >= 0)
@@ -203,7 +238,7 @@ public class SceneBehaviour : MonoBehaviour {
 			}
 
 			//**********DEBUG************
-			debug.text = "Memorization " + GetMemorization () + " " + "Contact " + GetEyeContact ();
+			//debug.text = "Memorization " + GetMemorization () + " " + "Contact " + GetEyeContact ();
 			//***************************
         }
 	}
@@ -219,25 +254,24 @@ public class SceneBehaviour : MonoBehaviour {
 		ConversationState newState4 = new ConversationState (true, -1, -3, 3, -1, new Dictionary<string, int>());
 		ConversationState newState5 = new ConversationState (2, -3, -1, -1, new Dictionary<string, int>() { {"repeat", 2}, {"lets do it", 6} });
 
-		ConversationState newState6 = new ConversationState (true, -1, -3, 4, -1, new Dictionary<string, int>(), new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "Back_SmallStep"} });
-		ConversationState newState7 = new ConversationState (true, -1, -1, -1, -1, new Dictionary<string, int>(), new List<CharacterMovingState>() { CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "SmallStep"} });
+		ConversationState newState6 = new ConversationState (true, -1, -1, 4, -1, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS, CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "Back_SmallStep"}, {CharacterName.DAVID, "SmallStep"} });
 
-		ConversationState newState8 = new ConversationState (-1, -1, -1, 0, new Dictionary<string, int>(), new List<CharacterMovingState>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Alright"}});
-		ConversationState newState9 = new ConversationState (-1, 0, -1, 1, new Dictionary<string, int>() { {"hey eric", 19} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Ok"}});
-		ConversationState newState10 = new ConversationState (-1, 1, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} },  new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1CuriousNod"}});
-		ConversationState newState11 = new ConversationState (-1, -1, -1, 2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Interesting"}});
-		ConversationState newState12 = new ConversationState (-1, 2, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
-		ConversationState newState13 = new ConversationState (-1, 3, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
-		ConversationState newState14 = new ConversationState (-1, 4, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
-		ConversationState newState15 = new ConversationState (-1, -1, -1, 3, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1AProductToDemo"}});
-		ConversationState newState16 = new ConversationState (-1, 5, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Surprised"}});
+		ConversationState newState7 = new ConversationState (-1, -1, -1, 0, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Alright"}});
+		ConversationState newState8 = new ConversationState (-1, 0, -1, 1, new Dictionary<string, int>() { {"hey eric", 19} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Ok"}});
+		ConversationState newState9 = new ConversationState (-1, 1, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} },  new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1CuriousNod"}});
+		ConversationState newState10 = new ConversationState (-1, -1, -1, 2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Interesting"}});
+		ConversationState newState11 = new ConversationState (-1, 2, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
+		ConversationState newState12 = new ConversationState (-1, 3, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
+		ConversationState newState13 = new ConversationState (-1, 4, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
+		ConversationState newState14 = new ConversationState (-1, -1, -1, 3, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1AProductToDemo"}});
+		ConversationState newState15 = new ConversationState (-1, 5, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Surprised"}});
 
-		ConversationState newState17 = new ConversationState (-1, -1, -1, -2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID_FROM_METHOD1, "1Excellent"}, {CharacterName.DAVID_FROM_METHOD2, "1NotBad"}, {CharacterName.DAVID_FROM_METHOD3, "1PoorPerformance"}});
+		ConversationState newState16 = new ConversationState (-1, -1, -1, -2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID_FROM_METHOD1, "1Excellent"}, {CharacterName.DAVID_FROM_METHOD2, "1NotBad"}, {CharacterName.DAVID_FROM_METHOD3, "1PoorPerformance"}});
 
-		ConversationState newState18 = new ConversationState (3, -2, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
-		ConversationState newState19 = new ConversationState (4, -2, 5, -1, new Dictionary<string, int>() { {"practice again", 8}, {"result", 18} });
+		ConversationState newState17 = new ConversationState (3, -2, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
+		ConversationState newState18 = new ConversationState (4, -2, 5, -1, new Dictionary<string, int>() { {"practice again", 8}, {"result", 18} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_HEY_ERIC_POS, CharacterMovingState.MOVE_DAVID_HEY_ERIC_POS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"}, {CharacterName.DAVID, "Back_SmallStep"} });
 
-		ConversationState newState20 = new ConversationState (-1, -1, -1, 7, new Dictionary<string, int>() { {"returnToStateAuto", -1} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1IWillLeave"}});
+		ConversationState newState19 = new ConversationState (-1, -1, -1, 7, new Dictionary<string, int>() { {"returnToStateAuto", -1} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1IWillLeave"}});
 
 		possibleConvStates.Add (newState0);
 		possibleConvStates.Add (newState1);
@@ -259,16 +293,15 @@ public class SceneBehaviour : MonoBehaviour {
 		possibleConvStates.Add (newState17);
 		possibleConvStates.Add (newState18);
 		possibleConvStates.Add (newState19);
-		possibleConvStates.Add (newState20);
 		//-----------------------------------------------
 
-		Vector3 lookPos = investorObj.transform.position - Camera.main.transform.position;
+		Vector3 lookPos = davidObj.transform.position - Camera.main.transform.position;
 		lookPos.y = 0;
-		investorObj.transform.rotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
+		davidObj.transform.rotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
 		ericObj.transform.rotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
 
 		if (Application.isEditor) {
-			transform.position = new Vector3 (0, 0, 0);
+			transform.position = INITIAL_POSITION;
 			GetComponent<Placeable> ().ResetInitialPos ();
 			GoState (0);
 		}
@@ -351,7 +384,7 @@ public class SceneBehaviour : MonoBehaviour {
 		convStateIndex++;
 
 		if (convStateIndex >= possibleConvStates.Count) {
-			convStateIndex = 8;
+			convStateIndex = 6;
 
 			scriptLookTime = 0;
 			investorFaceLookTime = 0;
@@ -393,7 +426,7 @@ public class SceneBehaviour : MonoBehaviour {
 
 			int audioInvestorIndex = possibleConvStates [convStateIndex].currInvestorAudioState;
 			if (audioInvestorIndex >= 0) {
-				AudioSource audioInvestor = investorObj.GetComponent<AudioSource> ();
+				AudioSource audioInvestor = davidObj.GetComponent<AudioSource> ();
 				audioInvestor.clip = investorVoice [audioInvestorIndex];
 				audioInvestor.Play ();
 
@@ -410,7 +443,7 @@ public class SceneBehaviour : MonoBehaviour {
 
 	IEnumerator GoNextStateAfterAnim()
 	{
-		Animator animator = investorObj.GetComponent<Animator> ();
+		Animator animator = davidObj.GetComponent<Animator> ();
 		do
 		{
 			//"Waiting for transition"
@@ -456,7 +489,7 @@ public class SceneBehaviour : MonoBehaviour {
 		}
 
 		if (convStateIndex == 0) {
-			investorObj.transform.localPosition = new Vector3 (0, 0, 0);
+			davidObj.transform.localPosition = INITIAL_POSITION;
 		}
 
 		if (convStateIndex == 1) {
@@ -467,19 +500,19 @@ public class SceneBehaviour : MonoBehaviour {
 		StopAllCoroutines ();
 
 		//Fast finish character movement
-		if (movingCharacter != null) {
-			InitMovement (possibleConvStates [convStateIndex].characterMovingState.Count - 1);
-			movingCharacter.transform.localPosition = movingCharacterFinalPos;
-			currMovingIndex = 0;
-			movingCharacter.GetComponent<FacingCamera> ().enabled = true;
-			movingCharacter = null;
+		for (int i = 0; i < movingCharacters.Count; i++) {
+			movingCharacters [i].transform.localPosition = movingCharactersFinalPos [i];
+			movingCharacters [i].GetComponent<FacingCamera> ().enabled = true;
+
+			movingCharacters.Clear ();
+			movingCharactersFinalPos.Clear ();
 
 			if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.ERIC)) {
 				ericObj.GetComponent<Animator> ().SetTrigger (IDLE_ANIMATION_NAME);
 			}
 
 			if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.DAVID) || possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.DAVID_END)) {
-				investorObj.GetComponent<Animator> ().SetTrigger (IDLE_ANIMATION_NAME);
+				davidObj.GetComponent<Animator> ().SetTrigger (IDLE_ANIMATION_NAME);
 			}
 		}
 	}
@@ -487,17 +520,22 @@ public class SceneBehaviour : MonoBehaviour {
 	private void OnAfterStateChange ()
 	{
 		//Set Communicator Text
-		if (!possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.ERIC) && possibleConvStates [convStateIndex].currInvestorState >= -1) {
-			InvestorCommunicator.Instance.gameObject.SetActive (true);
-			investorObj.SetActive (true);
+		if (possibleConvStates [convStateIndex].currInvestorState >= -1)
+		{
+			davidObj.SetActive (true);
+
+			if (!possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.ERIC)) {
+				InvestorCommunicator.Instance.gameObject.SetActive (true);
+			} else {
+				InvestorCommunicator.Instance.gameObject.SetActive (false);
+			}
 		} else {
 			InvestorCommunicator.Instance.gameObject.SetActive (false);
-			investorObj.SetActive (false);
 		}
 
 		//----------Audio part-----------
 		AudioSource audioEric = ericObj.GetComponent<AudioSource> ();
-		AudioSource audioInvestor = investorObj.GetComponent<AudioSource> ();
+		AudioSource audioInvestor = davidObj.GetComponent<AudioSource> ();
 		audioInvestor.Stop ();
 		audioEric.Stop ();
 
@@ -568,17 +606,17 @@ public class SceneBehaviour : MonoBehaviour {
 		} 
 
 		if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.DAVID)) {
-			investorObj.GetComponent<Animator> ().SetTrigger (possibleConvStates [convStateIndex].stateAnimations [CharacterName.DAVID]);
+			davidObj.GetComponent<Animator> ().SetTrigger (possibleConvStates [convStateIndex].stateAnimations [CharacterName.DAVID]);
 		}
 
 		if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.DAVID_FROM_METHOD1)) {
-			investorObj.GetComponent<Animator> ().SetTrigger (possibleConvStates [convStateIndex].stateAnimations [GetFinalResultAnimKey()]);
+			davidObj.GetComponent<Animator> ().SetTrigger (possibleConvStates [convStateIndex].stateAnimations [GetFinalResultAnimKey()]);
 		}
 		//--------------------------------------
 
 		//----------Character Movement----------
 		if (possibleConvStates [convStateIndex].characterMovingState.Count > 0) {
-			InitMovement(currMovingIndex);
+			InitMovement();
 		}
 		//--------------------------------------
 	}

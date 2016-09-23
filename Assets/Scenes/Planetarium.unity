@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45134634, g: 0.50128204, b: 0.5749701, a: 1}
+  m_IndirectSpecularColor: {r: 0.45134664, g: 0.5012824, b: 0.57497054, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1410,7 +1410,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: eab81f522c64c6047a055a36d151f250, type: 3}
   - {fileID: 8300000, guid: 86e13577581050d4d9c492fd17897809, type: 3}
   - {fileID: 8300000, guid: 975bbdab14de8b14892bdeb9512cbf1c, type: 3}
-  investorObj: {fileID: 2046376138}
+  davidObj: {fileID: 2046376138}
   ericObj: {fileID: 1209567864}
   textNavigationImage: {fileID: 1539313114}
   microphoneManager: {fileID: 1150329398}
@@ -3076,11 +3076,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.7126997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.22
       objectReference: {fileID: 0}
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3092,7 +3092,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.38268343
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_LocalRotation.z
@@ -3100,7 +3100,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.92387956
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_RootOrder
@@ -3112,7 +3112,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -45
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b84b73491ac53a34095000876132a211, type: 2}
