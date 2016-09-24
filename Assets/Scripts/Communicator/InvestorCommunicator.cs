@@ -133,7 +133,7 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 
 			lastSentenceCorrectPercent = (float)correctWordsCount / (float)initialSentencesToWords [sceneScript.GetCurrDictationState ()].Length;
 
-			if (lastSentenceCorrectPercent >= 0.2f) {
+			if (lastSentenceCorrectPercent >= 0.4f) {
 				sceneScript.OnCurrSentenceSaid ();
 				replayBtn.gameObject.SetActive (false);
 				failCalc = 0;
