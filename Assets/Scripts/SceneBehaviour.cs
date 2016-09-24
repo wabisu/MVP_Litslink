@@ -257,19 +257,19 @@ public class SceneBehaviour : MonoBehaviour {
 		ConversationState newState6 = new ConversationState (true, -1, -1, 4, -1, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS, CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "Back_SmallStep"}, {CharacterName.DAVID, "SmallStep"} });
 
 		ConversationState newState7 = new ConversationState (-1, -1, -1, 0, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Alright"}});
-		ConversationState newState8 = new ConversationState (-1, 0, -1, 1, new Dictionary<string, int>() { {"hey eric", 19} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Ok"}});
-		ConversationState newState9 = new ConversationState (-1, 1, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} },  new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1CuriousNod"}});
+		ConversationState newState8 = new ConversationState (-1, 0, -1, 1, new Dictionary<string, int>() { {"hey eric", 18} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Ok"}});
+		ConversationState newState9 = new ConversationState (-1, 1, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} },  new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1CuriousNod"}});
 		ConversationState newState10 = new ConversationState (-1, -1, -1, 2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Interesting"}});
-		ConversationState newState11 = new ConversationState (-1, 2, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
-		ConversationState newState12 = new ConversationState (-1, 3, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
-		ConversationState newState13 = new ConversationState (-1, 4, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
+		ConversationState newState11 = new ConversationState (-1, 2, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} });
+		ConversationState newState12 = new ConversationState (-1, 3, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} });
+		ConversationState newState13 = new ConversationState (-1, 4, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} });
 		ConversationState newState14 = new ConversationState (-1, -1, -1, 3, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1AProductToDemo"}});
-		ConversationState newState15 = new ConversationState (-1, 5, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Surprised"}});
+		ConversationState newState15 = new ConversationState (-1, 5, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Surprised"}});
 
 		ConversationState newState16 = new ConversationState (-1, -1, -1, -2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID_FROM_METHOD1, "1Excellent"}, {CharacterName.DAVID_FROM_METHOD2, "1NotBad"}, {CharacterName.DAVID_FROM_METHOD3, "1PoorPerformance"}});
 
-		ConversationState newState17 = new ConversationState (3, -2, -1, -1, new Dictionary<string, int>() { {"hey eric", 19} });
-		ConversationState newState18 = new ConversationState (4, -2, 5, -1, new Dictionary<string, int>() { {"practice again", 8}, {"result", 18} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_HEY_ERIC_POS, CharacterMovingState.MOVE_DAVID_HEY_ERIC_POS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"}, {CharacterName.DAVID, "Back_SmallStep"} });
+		ConversationState newState17 = new ConversationState (3, -2, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} });
+		ConversationState newState18 = new ConversationState (4, -2, 5, -1, new Dictionary<string, int>() { {"practice again", 7}, {"result", 17} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_HEY_ERIC_POS, CharacterMovingState.MOVE_DAVID_HEY_ERIC_POS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"}, {CharacterName.DAVID, "Back_SmallStep"} });
 
 		ConversationState newState19 = new ConversationState (-1, -1, -1, 7, new Dictionary<string, int>() { {"returnToStateAuto", -1} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1IWillLeave"}});
 
