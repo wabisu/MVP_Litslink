@@ -79,6 +79,7 @@ public class SceneBehaviour : MonoBehaviour {
 
 	public GameObject davidObj;
 	public GameObject ericObj;
+	private GameObject startBtn;
 
 	public Image textNavigationImage;
 
@@ -245,6 +246,8 @@ public class SceneBehaviour : MonoBehaviour {
 
 	void Start () {
 		debug = GameObject.Find ("debug").GetComponent<Text> ();
+		startBtn = GameObject.Find ("StartBtn");
+		startBtn.SetActive (false);
 
 		//ToDo Create scenario FROM file loading mechanism
 		ConversationState newState0 = new ConversationState (true, 0, -3, 0, -1, new Dictionary<string, int>(), new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
@@ -303,7 +306,9 @@ public class SceneBehaviour : MonoBehaviour {
 		if (Application.isEditor) {
 			transform.position = INITIAL_POSITION;
 			GetComponent<Placeable> ().ResetInitialPos ();
-			GoState (0);
+			//ericObj.SetActive (true);
+			//GoState (0);
+			ShowStartBtn ();
 		}
 	}
 
@@ -463,21 +468,33 @@ public class SceneBehaviour : MonoBehaviour {
 		return false;
 	}
 
+	public void ShowStartBtn ()
+	{
+		startBtn.SetActive(true);
+		ericObj.SetActive (false);
+	}
+
 	/// <summary>
 	/// Called when our object is selected.  Generally called by
 	/// a gesture management component.
 	/// </summary>
 	public void OnSceneAirTap()
 	{
-		if (InvestorCommunicator.Instance.IsRecordedAudioPlaying () || !OnAirTapSkipAllowed())
-			return;
+		if (convStateIndex <= 0) {
+			startBtn.SetActive (false);
+			ericObj.SetActive (true);
+			GoState (0);
+		} else {
+			if (InvestorCommunicator.Instance.IsRecordedAudioPlaying () || !OnAirTapSkipAllowed ())
+				return;
 
-		if (!possibleConvStates [convStateIndex].keywordStates.ContainsKey ("returnToStateAuto")) {
+			if (!possibleConvStates [convStateIndex].keywordStates.ContainsKey ("returnToStateAuto")) {
 
-			if (possibleConvStates [convStateIndex].currInvestorState >= 0) {
-				OnCurrSentenceSaid ();
-			} else {
-				GoNextState ();
+				if (possibleConvStates [convStateIndex].currInvestorState >= 0) {
+					OnCurrSentenceSaid ();
+				} else {
+					GoNextState ();
+				}
 			}
 		}
 	}

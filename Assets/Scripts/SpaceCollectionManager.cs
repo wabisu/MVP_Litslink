@@ -49,18 +49,22 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 		bool canBePlaced = playgroundPrefab.GetComponent<Placeable>().ValidatePlacement(out targetPosition, out surfaceNormal, Camera.main.transform, 2.65f);
 
 		if (canBePlaced) {
-			playgroundPrefab.transform.position = targetPosition;
-			playgroundPrefab.transform.parent = gameObject.transform;
-			playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
-			playgroundPrefab.GetComponent<SceneBehaviour> ().GoState (0);
-			RotatePlaygroundToCamera ();
-
+			PlacePlayground (targetPosition);
 			return true;
 		}
 
 		minAngle = 360;
 		return CreateSpaceObjects(playgroundPrefab, horizontalSurfaces, PlacementSurfaces.Horizontal);
     }
+
+	private void PlacePlayground (Vector3 targetPosition)
+	{
+		playgroundPrefab.transform.position = targetPosition;
+		playgroundPrefab.transform.parent = gameObject.transform;
+		playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
+		RotatePlaygroundToCamera ();
+		playgroundPrefab.GetComponent<SceneBehaviour> ().ShowStartBtn ();
+	}
 
     /// <summary>
     /// Creates and positions a collection of Placeable space objects on SurfacePlanes in the environment.
@@ -92,7 +96,6 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 
 		// If we can't find a good plane we will put the object floating in space.
 		Vector3 position = Camera.main.transform.position + Camera.main.transform.forward * 2.0f + Camera.main.transform.right * (Random.value - 1.0f) * 2.0f;
-		Quaternion rotation = Quaternion.identity;
 
 		while (UsedPlanes.Count < surfaces.Count) {
 			int index = -1;
@@ -122,36 +125,16 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 				}
 
 				if (Mathf.Abs (angle) <= angleDelta) {
-					rotation = Camera.main.transform.localRotation;
-
 					// Horizontal objects should face the user.
-					rotation = Quaternion.LookRotation (Camera.main.transform.position);
-					rotation.x = 0f;
-					rotation.z = 0f;
-
-					playgroundPrefab.transform.position = position;
-					playgroundPrefab.transform.rotation = rotation;
-					playgroundPrefab.transform.parent = gameObject.transform;
-					playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
-					playgroundPrefab.GetComponent<SceneBehaviour> ().GoState (0);
-					RotatePlaygroundToCamera ();
-
+					PlacePlayground (position);
 					debug.text = "angle placed = " + (int)minAngle;
-
 					return true;
 				}
 				//
 			} else {
 				if (totalAttempts >= 3) {
-					playgroundPrefab.transform.position = position;
-					playgroundPrefab.transform.rotation = rotation;
-					playgroundPrefab.transform.parent = gameObject.transform;
-					playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
-					playgroundPrefab.GetComponent<SceneBehaviour> ().GoState (0);
-					RotatePlaygroundToCamera ();
-
+					PlacePlayground (position);
 					debug.text = "placed in the air";
-
 					return true;
 				}
 
@@ -160,15 +143,8 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 		}
 
 		if (totalAttempts >= 3) {
-			playgroundPrefab.transform.position = position;
-			playgroundPrefab.transform.rotation = rotation;
-			playgroundPrefab.transform.parent = gameObject.transform;
-			playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
-			playgroundPrefab.GetComponent<SceneBehaviour> ().GoState (0);
-			RotatePlaygroundToCamera ();
-
+			PlacePlayground (position);
 			debug.text = "placed in the air";
-
 			return true;
 		}
 
