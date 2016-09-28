@@ -306,9 +306,9 @@ public class SceneBehaviour : MonoBehaviour {
 		if (Application.isEditor) {
 			transform.position = INITIAL_POSITION;
 			GetComponent<Placeable> ().ResetInitialPos ();
-			//ericObj.SetActive (true);
-			//GoState (0);
-			ShowStartBtn ();
+			ericObj.SetActive (true);
+			GoState (0);
+			//ShowStartBtn ();
 		}
 	}
 
@@ -480,7 +480,7 @@ public class SceneBehaviour : MonoBehaviour {
 	/// </summary>
 	public void OnSceneAirTap()
 	{
-		if (convStateIndex <= 0) {
+		if (convStateIndex < 0) {
 			startBtn.SetActive (false);
 			ericObj.SetActive (true);
 			GoState (0);
