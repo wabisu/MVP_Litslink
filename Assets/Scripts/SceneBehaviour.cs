@@ -426,6 +426,9 @@ public class SceneBehaviour : MonoBehaviour {
 
 	public void OnCurrSentenceSaid ()
 	{
+		if (IsInvoking ())
+			return;
+
 		if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.DAVID_END)) {
 			//string clipName = possibleConvStates [convStateIndex].stateAnimations [CharacterName.DAVID_END];
 			//investorObj.GetComponent<Animator> ().SetTrigger (clipName);
