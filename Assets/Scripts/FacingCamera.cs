@@ -3,6 +3,8 @@ using System.Collections;
 
 public class FacingCamera : MonoBehaviour {
 
+	public float angleOffset = 0;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -12,6 +14,6 @@ public class FacingCamera : MonoBehaviour {
 	void FixedUpdate () {
 		Vector3 lookPos = transform.position - Camera.main.transform.position;
 		lookPos.y = 0;
-		transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.LookRotation(lookPos) * Quaternion.Euler(0, 180, 0), Time.deltaTime * 15);
+		transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.LookRotation(lookPos) * Quaternion.Euler(0, 180 + angleOffset, 0), Time.deltaTime * 15);
 	}
 }

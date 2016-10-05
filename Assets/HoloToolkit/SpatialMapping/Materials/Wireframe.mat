@@ -133,4 +133,4 @@ Material:
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _WireColor
-      second: {r: 0, g: 0.41911763, b: 0.33240354, a: 1}
+      second: {r: 0.91369176, g: 0.9264706, b: 0, a: 1}
