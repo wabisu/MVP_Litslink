@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Linq;
+using DG.Tweening;
 
 public class SceneBehaviour : MonoBehaviour {
 	public List<Sprite> ericTexts = new List<Sprite>();
@@ -192,6 +193,8 @@ public class SceneBehaviour : MonoBehaviour {
 				movingCharactersFinalPos.Add (DAVID_POSITION);
 				break;
 			case CharacterMovingState.MOVE_ERIC_HEY_ERIC_POS:
+				DavidFade (new Color (0.4f, 0.4f, 0.4f), false);
+
 				movingCharacters.Add (ericObj);
 				movingCharactersFinalPos.Add (HEY_ERIC_POSITION);
 				break;
@@ -258,24 +261,24 @@ public class SceneBehaviour : MonoBehaviour {
 		ConversationState newState4 = new ConversationState (true, -1, -3, 3, -1, new Dictionary<string, int>());
 		ConversationState newState5 = new ConversationState (2, -3, -1, -1, new Dictionary<string, int>() { {"repeat", 2}, {"lets do it", 6} });
 
-		ConversationState newState6 = new ConversationState (true, -1, -1, 4, -1, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS, CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "Back_SmallStep"}, {CharacterName.DAVID, "SmallStep"} });
+		ConversationState newState6 = new ConversationState (true, -1, -1, 4, -1, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "Back_SmallStep"} });
 
-		ConversationState newState7 = new ConversationState (-1, -1, -1, 0, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Alright"}});
-		ConversationState newState8 = new ConversationState (-1, 0, -1, 1, new Dictionary<string, int>() { {"hey eric", 18} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Ok"}});
-		ConversationState newState9 = new ConversationState (-1, 1, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} },  new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1CuriousNod"}});
-		ConversationState newState10 = new ConversationState (-1, -1, -1, 2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1Interesting"}});
+		ConversationState newState7 = new ConversationState (-1, -1, -1, 0, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "Alright"}});
+		ConversationState newState8 = new ConversationState (-1, 0, -1, 1, new Dictionary<string, int>() { {"hey eric", 18} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "Ok"}});
+		ConversationState newState9 = new ConversationState (-1, 1, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} },  new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "CuriousNod"}});
+		ConversationState newState10 = new ConversationState (-1, -1, -1, 2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "Interesting"}});
 		ConversationState newState11 = new ConversationState (-1, 2, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} });
 		ConversationState newState12 = new ConversationState (-1, 3, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} });
 		ConversationState newState13 = new ConversationState (-1, 4, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} });
-		ConversationState newState14 = new ConversationState (-1, -1, -1, 3, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1AProductToDemo"}});
-		ConversationState newState15 = new ConversationState (-1, 5, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "1Surprised"}});
+		ConversationState newState14 = new ConversationState (-1, -1, -1, 3, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "AProductToDemo"}});
+		ConversationState newState15 = new ConversationState (-1, 5, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID_END, "Surprised"}});
 
-		ConversationState newState16 = new ConversationState (-1, -1, -1, -2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID_FROM_METHOD1, "1Excellent"}, {CharacterName.DAVID_FROM_METHOD2, "1NotBad"}, {CharacterName.DAVID_FROM_METHOD3, "1PoorPerformance"}});
+		ConversationState newState16 = new ConversationState (-1, -1, -1, -2, new Dictionary<string, int>(), new Dictionary<CharacterName, string>() { {CharacterName.DAVID_FROM_METHOD1, "Excellent"}, {CharacterName.DAVID_FROM_METHOD2, "NotBad"}, {CharacterName.DAVID_FROM_METHOD3, "PoorPerformance"}});
 
 		ConversationState newState17 = new ConversationState (3, -2, -1, -1, new Dictionary<string, int>() { {"hey eric", 18} });
-		ConversationState newState18 = new ConversationState (4, -2, 5, -1, new Dictionary<string, int>() { {"practice again", 6}, {"result", 17} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_HEY_ERIC_POS, CharacterMovingState.MOVE_DAVID_HEY_ERIC_POS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"}, {CharacterName.DAVID, "Back_SmallStep"} });
+		ConversationState newState18 = new ConversationState (4, -2, 5, -1, new Dictionary<string, int>() { {"practice again", 6}, {"result", 17} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_HEY_ERIC_POS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
 
-		ConversationState newState19 = new ConversationState (-1, -1, -1, 7, new Dictionary<string, int>() { {"returnToStateAuto", -1} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "1IWillLeave"}});
+		ConversationState newState19 = new ConversationState (-1, -1, -1, 7, new Dictionary<string, int>() { {"returnToStateAuto", -1} }, new Dictionary<CharacterName, string>() { {CharacterName.DAVID, "IWillLeave"}});
 
 		possibleConvStates.Add (newState0);
 		possibleConvStates.Add (newState1);
@@ -301,7 +304,8 @@ public class SceneBehaviour : MonoBehaviour {
 
 		Vector3 lookPos = davidObj.transform.position - Camera.main.transform.position;
 		lookPos.y = 0;
-		davidObj.transform.localRotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
+		davidObj.transform.localRotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180 + davidObj.GetComponent<FacingCamera>().angleOffset, 0);
+		tempAngleOffset = davidObj.GetComponent<FacingCamera> ().angleOffset;
 		ericObj.transform.localRotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
 
 		if (Application.isEditor) {
@@ -430,21 +434,17 @@ public class SceneBehaviour : MonoBehaviour {
 			return;
 
 		if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.DAVID_END)) {
-			//string clipName = possibleConvStates [convStateIndex].stateAnimations [CharacterName.DAVID_END];
-			//investorObj.GetComponent<Animator> ().SetTrigger (clipName);
+			string clipName = possibleConvStates [convStateIndex].stateAnimations [CharacterName.DAVID_END];
+			davidObj.GetComponent<Animator> ().SetTrigger (clipName);
 
 			int audioInvestorIndex = possibleConvStates [convStateIndex].currInvestorAudioState;
 			if (audioInvestorIndex >= 0) {
 				AudioSource audioInvestor = davidObj.GetComponent<AudioSource> ();
 				audioInvestor.clip = investorVoice [audioInvestorIndex];
 				audioInvestor.Play ();
-
-				Invoke ("GoNextState", audioInvestor.clip.length);
-				return;
 			}
 
-			//nextStateAfterAnimCoroutine = StartCoroutine (GoNextStateAfterAnim ());
-			GoNextState ();
+			nextStateAfterAnimCoroutine = StartCoroutine (GoNextStateAfterAnim ());
 		} else {
 			GoNextState ();
 		}
@@ -502,6 +502,8 @@ public class SceneBehaviour : MonoBehaviour {
 					movingCharacters [i].transform.localPosition = movingCharactersFinalPos [i];
 				}
 
+				davidObj.GetComponent<Animator> ().Play (IDLE_ANIMATION_NAME);
+
 				if (movingCharacters.Count == 0 && possibleConvStates [convStateIndex].currInvestorState >= 0) {
 					OnCurrSentenceSaid ();
 				} else if (movingCharacters.Count == 0)
@@ -518,9 +520,9 @@ public class SceneBehaviour : MonoBehaviour {
 			return;
 		}
 
-		if (convStateIndex == 0) {
+		/*if (convStateIndex == 0) {
 			davidObj.transform.localPosition = INITIAL_POSITION;
-		}
+		}*/
 
 		if (convStateIndex == 1) {
 			debug.text = "";
@@ -530,13 +532,38 @@ public class SceneBehaviour : MonoBehaviour {
 		StopAllCoroutines ();
 	}
 
+	private void DavidFade (Color color, bool fromTransparency)
+	{
+		float delay = 0;
+		SkinnedMeshRenderer[] davidRenderers = davidObj.GetComponentsInChildren<SkinnedMeshRenderer> ();
+
+		foreach (SkinnedMeshRenderer renderer in davidRenderers) {
+			if (!renderer.gameObject.name.StartsWith ("teeth")) {
+				if (fromTransparency) {
+					renderer.sharedMaterial.color = Color.black;
+					delay = 1;
+				}
+
+				renderer.sharedMaterial.DOColor (color, 1).SetDelay (0);	
+			}
+		}
+	}
+
+	private float tempAngleOffset = 0;
 	private void OnAfterStateChange ()
 	{
 		//Set Communicator Text
+		if (possibleConvStates [convStateIndex].currInvestorState == -1) {
+			if (!davidObj.activeSelf)
+				DavidFade (Color.white, true);
+			else
+				DavidFade (Color.white, false);
+			
+			davidObj.SetActive (true);
+		}
+
 		if (possibleConvStates [convStateIndex].currInvestorState >= -1)
 		{
-			davidObj.SetActive (true);
-
 			if (!possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.ERIC)) {
 				InvestorCommunicator.Instance.gameObject.SetActive (true);
 			} else {
@@ -619,7 +646,17 @@ public class SceneBehaviour : MonoBehaviour {
 		} 
 
 		if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.DAVID)) {
+			//ToDo - Remove this workaround after normal rotated animations implemented
+			if (possibleConvStates [convStateIndex].stateAnimations [CharacterName.DAVID].Equals ("Alright")) {
+				davidObj.GetComponent<FacingCamera> ().angleOffset = 0;
+			} else {
+				davidObj.GetComponent<FacingCamera> ().angleOffset = tempAngleOffset;
+			}
+			//-------------------------------------------------------------------------
+
 			davidObj.GetComponent<Animator> ().SetTrigger (possibleConvStates [convStateIndex].stateAnimations [CharacterName.DAVID]);
+		} else {
+			davidObj.GetComponent<FacingCamera> ().angleOffset = tempAngleOffset;
 		}
 
 		if (possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.DAVID_FROM_METHOD1)) {

@@ -2441,7 +2441,2435 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 91
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: inves_rig_Ctrl_Reference
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_ChestEndEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_ChestOriginEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_HeadEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_LeftUpLeg
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_LeftUpLeg/inves_rig_Ctrl_LeftLeg
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_LeftUpLeg/inves_rig_Ctrl_LeftLeg/inves_rig_Ctrl_LeftFoot
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_LeftUpLeg/inves_rig_Ctrl_LeftLeg/inves_rig_Ctrl_LeftFoot/inves_rig_Ctrl_LeftToeBase
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_RightUpLeg
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_RightUpLeg/inves_rig_Ctrl_RightLeg
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_RightUpLeg/inves_rig_Ctrl_RightLeg/inves_rig_Ctrl_RightFoot
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_RightUpLeg/inves_rig_Ctrl_RightLeg/inves_rig_Ctrl_RightFoot/inves_rig_Ctrl_RightToeBase
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_Head
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandIndex1
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandIndex1/inves_rig_Ctrl_LeftHandIndex2
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandIndex1/inves_rig_Ctrl_LeftHandIndex2/inves_rig_Ctrl_LeftHandIndex3
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandIndex1/inves_rig_Ctrl_LeftHandIndex2/inves_rig_Ctrl_LeftHandIndex3/inves_rig_Ctrl_LeftHandIndex4
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandMiddle1
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandMiddle1/inves_rig_Ctrl_LeftHandMiddle2
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandMiddle1/inves_rig_Ctrl_LeftHandMiddle2/inves_rig_Ctrl_LeftHandMiddle3
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandMiddle1/inves_rig_Ctrl_LeftHandMiddle2/inves_rig_Ctrl_LeftHandMiddle3/inves_rig_Ctrl_LeftHandMiddle4
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandPinky1
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandPinky1/inves_rig_Ctrl_LeftHandPinky2
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandPinky1/inves_rig_Ctrl_LeftHandPinky2/inves_rig_Ctrl_LeftHandPinky3
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandPinky1/inves_rig_Ctrl_LeftHandPinky2/inves_rig_Ctrl_LeftHandPinky3/inves_rig_Ctrl_LeftHandPinky4
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandRing1
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandRing1/inves_rig_Ctrl_LeftHandRing2
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandRing1/inves_rig_Ctrl_LeftHandRing2/inves_rig_Ctrl_LeftHandRing3
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandRing1/inves_rig_Ctrl_LeftHandRing2/inves_rig_Ctrl_LeftHandRing3/inves_rig_Ctrl_LeftHandRing4
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandThumb1
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandThumb1/inves_rig_Ctrl_LeftHandThumb2
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandThumb1/inves_rig_Ctrl_LeftHandThumb2/inves_rig_Ctrl_LeftHandThumb3
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_LeftShoulder/inves_rig_Ctrl_LeftArm/inves_rig_Ctrl_LeftForeArm/inves_rig_Ctrl_LeftHand/inves_rig_Ctrl_LeftHandThumb1/inves_rig_Ctrl_LeftHandThumb2/inves_rig_Ctrl_LeftHandThumb3/inves_rig_Ctrl_LeftHandThumb4
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandIndex1
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandIndex1/inves_rig_Ctrl_RightHandIndex2
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandIndex1/inves_rig_Ctrl_RightHandIndex2/inves_rig_Ctrl_RightHandIndex3
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandIndex1/inves_rig_Ctrl_RightHandIndex2/inves_rig_Ctrl_RightHandIndex3/inves_rig_Ctrl_RightHandIndex4
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandMiddle1
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandMiddle1/inves_rig_Ctrl_RightHandMiddle2
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandMiddle1/inves_rig_Ctrl_RightHandMiddle2/inves_rig_Ctrl_RightHandMiddle3
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandMiddle1/inves_rig_Ctrl_RightHandMiddle2/inves_rig_Ctrl_RightHandMiddle3/inves_rig_Ctrl_RightHandMiddle4
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandPinky1
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandPinky1/inves_rig_Ctrl_RightHandPinky2
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandPinky1/inves_rig_Ctrl_RightHandPinky2/inves_rig_Ctrl_RightHandPinky3
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandPinky1/inves_rig_Ctrl_RightHandPinky2/inves_rig_Ctrl_RightHandPinky3/inves_rig_Ctrl_RightHandPinky4
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandRing1
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandRing1/inves_rig_Ctrl_RightHandRing2
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandRing1/inves_rig_Ctrl_RightHandRing2/inves_rig_Ctrl_RightHandRing3
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandRing1/inves_rig_Ctrl_RightHandRing2/inves_rig_Ctrl_RightHandRing3/inves_rig_Ctrl_RightHandRing4
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandThumb1
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandThumb1/inves_rig_Ctrl_RightHandThumb2
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandThumb1/inves_rig_Ctrl_RightHandThumb2/inves_rig_Ctrl_RightHandThumb3
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_Hips/inves_rig_Ctrl_Spine/inves_rig_Ctrl_Spine1/inves_rig_Ctrl_Spine2/inves_rig_Ctrl_Spine3/inves_rig_Ctrl_RightShoulder/inves_rig_Ctrl_RightArm/inves_rig_Ctrl_RightForeArm/inves_rig_Ctrl_RightHand/inves_rig_Ctrl_RightHandThumb1/inves_rig_Ctrl_RightHandThumb2/inves_rig_Ctrl_RightHandThumb3/inves_rig_Ctrl_RightHandThumb4
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_HipsEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftAnkleEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftElbowEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftFootEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHandIndexEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHandMiddleEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHandPinkyEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHandRingEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHandThumbEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftHipEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftKneeEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftShoulderEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_LeftWristEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightAnkleEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightElbowEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightFootEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHandIndexEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHandMiddleEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHandPinkyEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHandRingEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHandThumbEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightHipEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightKneeEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightShoulderEffector
+        weight: 1
+      - path: inves_rig_Ctrl_Reference/inves_rig_Ctrl_RightWristEffector
+        weight: 1
+      - path: investor_all
+        weight: 1
+      - path: investor_all/rig_bar:Group
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_L/rig_bar:Knee_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_L/rig_bar:Knee_L/rig_bar:Ankle_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_L/rig_bar:Knee_L/rig_bar:Ankle_L/rig_bar:Toes_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_L/rig_bar:Knee_L/rig_bar:Ankle_L/rig_bar:Toes_L/rig_bar:ToesEnd_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_R/rig_bar:Knee_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_R/rig_bar:Knee_R/rig_bar:Ankle_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_R/rig_bar:Knee_R/rig_bar:Ankle_R/rig_bar:Toes_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Hip_R/rig_bar:Knee_R/rig_bar:Ankle_R/rig_bar:Toes_R/rig_bar:ToesEnd_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl/eye_all_cntrl
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl/eye_all_cntrl/eye_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl/eye_all_cntrl/eye_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl/jaw_cntrl
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/face_cntrl/jaw_cntrl/teeth_cntrl
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Eye_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Eye_L/rig_bar:EyeEnd_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Eye_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Eye_R/rig_bar:EyeEnd_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:HeadEnd_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Jaw_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/rig_bar:Jaw_M/rig_bar:JawEnd_M
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73/tong:tougne_CTRL_03
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73/tong:tougne_CTRL_03/tong:group72
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73/tong:tougne_CTRL_03/tong:group72/tong:tougne_CTRL_02
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73/tong:tougne_CTRL_03/tong:group72/tong:tougne_CTRL_02/tong:group71
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:group74/tong:tougne_CTRL_04/tong:group73/tong:tougne_CTRL_03/tong:group72/tong:tougne_CTRL_02/tong:group71/tong:tougne_CTRL_01
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/tong:tougne_rig_grp/tong:tougne_curve
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/tong1/transform1
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2/tong:tougne_JNT
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2/tong:tougne_JNT/tong:tougne_JNT1
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2/tong:tougne_JNT/tong:tougne_JNT1/tong:tougne_JNT2
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2/tong:tougne_JNT/tong:tougne_JNT1/tong:tougne_JNT2/tong:tougne_JNT3
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform2/tong:tougne_JNT/tong:tougne_JNT1/tong:tougne_JNT2/tong:tougne_JNT3/tong:tougne_JNT4
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform3
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform3/joint1
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform4
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/transform4/joint2
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Neck_M/rig_bar:Head_M/uper_teeth
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:PinkyFinger1_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:PinkyFinger1_L/rig_bar:PinkyFinger2_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:PinkyFinger1_L/rig_bar:PinkyFinger2_L/rig_bar:PinkyFinger3_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:PinkyFinger1_L/rig_bar:PinkyFinger2_L/rig_bar:PinkyFinger3_L/rig_bar:PinkyFinger4_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:RingFinger1_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:RingFinger1_L/rig_bar:RingFinger2_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:RingFinger1_L/rig_bar:RingFinger2_L/rig_bar:RingFinger3_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:Cup_L/rig_bar:RingFinger1_L/rig_bar:RingFinger2_L/rig_bar:RingFinger3_L/rig_bar:RingFinger4_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:IndexFinger1_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:IndexFinger1_L/rig_bar:IndexFinger2_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:IndexFinger1_L/rig_bar:IndexFinger2_L/rig_bar:IndexFinger3_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:IndexFinger1_L/rig_bar:IndexFinger2_L/rig_bar:IndexFinger3_L/rig_bar:IndexFinger4_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:MiddleFinger1_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:MiddleFinger1_L/rig_bar:MiddleFinger2_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:MiddleFinger1_L/rig_bar:MiddleFinger2_L/rig_bar:MiddleFinger3_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:MiddleFinger1_L/rig_bar:MiddleFinger2_L/rig_bar:MiddleFinger3_L/rig_bar:MiddleFinger4_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:ThumbFinger1_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:ThumbFinger1_L/rig_bar:ThumbFinger2_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:ThumbFinger1_L/rig_bar:ThumbFinger2_L/rig_bar:ThumbFinger3_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_L/rig_bar:Shoulder_L/rig_bar:Elbow_L/rig_bar:Wrist_L/rig_bar:ThumbFinger1_L/rig_bar:ThumbFinger2_L/rig_bar:ThumbFinger3_L/rig_bar:ThumbFinger4_L
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:PinkyFinger1_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:PinkyFinger1_R/rig_bar:PinkyFinger2_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:PinkyFinger1_R/rig_bar:PinkyFinger2_R/rig_bar:PinkyFinger3_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:PinkyFinger1_R/rig_bar:PinkyFinger2_R/rig_bar:PinkyFinger3_R/rig_bar:PinkyFinger4_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:RingFinger1_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:RingFinger1_R/rig_bar:RingFinger2_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:RingFinger1_R/rig_bar:RingFinger2_R/rig_bar:RingFinger3_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:Cup_R/rig_bar:RingFinger1_R/rig_bar:RingFinger2_R/rig_bar:RingFinger3_R/rig_bar:RingFinger4_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:IndexFinger1_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:IndexFinger1_R/rig_bar:IndexFinger2_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:IndexFinger1_R/rig_bar:IndexFinger2_R/rig_bar:IndexFinger3_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:IndexFinger1_R/rig_bar:IndexFinger2_R/rig_bar:IndexFinger3_R/rig_bar:IndexFinger4_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:MiddleFinger1_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:MiddleFinger1_R/rig_bar:MiddleFinger2_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:MiddleFinger1_R/rig_bar:MiddleFinger2_R/rig_bar:MiddleFinger3_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:MiddleFinger1_R/rig_bar:MiddleFinger2_R/rig_bar:MiddleFinger3_R/rig_bar:MiddleFinger4_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:ThumbFinger1_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:ThumbFinger1_R/rig_bar:ThumbFinger2_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:ThumbFinger1_R/rig_bar:ThumbFinger2_R/rig_bar:ThumbFinger3_R
+        weight: 1
+      - path: investor_all/rig_bar:Group/rig_bar:Main/rig_bar:DeformationSystem/rig_bar:Root_M/rig_bar:Spine1_M/rig_bar:Spine1Part1_M/rig_bar:Spine1Part2_M/rig_bar:Chest_M/rig_bar:Scapula_R/rig_bar:Shoulder_R/rig_bar:Elbow_R/rig_bar:Wrist_R/rig_bar:ThumbFinger1_R/rig_bar:ThumbFinger2_R/rig_bar:ThumbFinger3_R/rig_bar:ThumbFinger4_R
+        weight: 1
+      - path: investor_all/rig_bar:Heads
+        weight: 1
+      - path: investor_all/rig_bar:Heads/rig_bar:EyeL
+        weight: 1
+      - path: investor_all/rig_bar:Heads/rig_bar:EyeR
+        weight: 1
+      - path: investor_all/rig_bar:Heads/rig_bar:HeadD
+        weight: 1
+      - path: investor_all/rig_bar:Heads/rig_bar:SuitGEO01
+        weight: 1
+      - path: investor_all/rig_bar:Heads/teeth:teeth:lower_gum
+        weight: 1
+      - path: investor_all/rig_bar:Heads/teeth:teeth:upper_gum
+        weight: 1
+      - path: investor_all/rig_bar:Heads/tong:Geometry
+        weight: 1
+      - path: investor_all/rig_bar:Heads/tong:Geometry/tong:BOY_GEO_GRP
+        weight: 1
+      - path: investor_all/rig_bar:Heads/tong:Geometry/tong:BOY_GEO_GRP/tong:head_ALL_grp
+        weight: 1
+      - path: investor_all/rig_bar:Heads/tong:Geometry/tong:BOY_GEO_GRP/tong:head_ALL_grp/tong:teeth_grp
+        weight: 1
+      - path: investor_all/rig_bar:Heads/tong:Geometry/tong:BOY_GEO_GRP/tong:head_ALL_grp/tong:teeth_grp/tong:gougne_geo
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_0
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_1
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_2
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_3
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_4
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_5
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_6
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_7
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_8
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_9
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_10
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_11
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_12
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_13
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_14
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_15
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_16
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_17
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_18
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_19
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_20
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_21
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_22
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_23
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_24
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_25
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_26
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_27
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_28
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_29
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_30
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_31
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_32
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_33
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_34
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_35
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_36
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_37
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_38
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_39
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_40
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_41
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_42
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_43
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_44
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_45
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_46
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_47
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_48
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_49
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_50
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_51
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_52
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_53
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_54
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_55
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_56
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_57
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_58
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_59
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_60
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_61
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_62
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_63
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_64
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_65
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_66
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_67
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_68
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_69
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_70
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_71
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_72
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_73
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_74
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_75
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_76
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_77
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_78
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_79
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_80
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_81
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_82
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_83
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_84
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_85
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_86
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_87
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_88
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_89
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_90
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_91
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_92
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_93
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_94
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_95
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_96
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_97
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_98
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_99
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_100
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_101
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_102
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_103
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_104
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_105
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_106
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_107
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_108
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_109
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_110
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_111
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_112
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_113
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_114
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_115
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_116
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_117
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_118
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_119
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_120
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_121
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_122
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_123
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_124
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_125
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_126
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_127
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_128
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_129
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_130
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_131
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_132
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_133
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_134
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_135
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_136
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_137
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_138
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_139
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_140
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_141
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_142
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_143
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_144
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_145
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_146
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_147
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_148
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_149
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_150
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_151
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_152
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_153
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_154
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_155
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_156
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_157
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_158
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_159
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_160
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_161
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_162
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_163
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_164
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_165
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_166
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_167
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_168
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_169
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_170
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_171
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_172
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_173
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_174
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_175
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_176
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_177
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_178
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_179
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_180
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_181
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_182
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_183
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_184
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_185
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_186
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_187
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_188
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_189
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_190
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_191
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_192
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_193
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_194
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_195
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_196
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_197
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_198
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_199
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_200
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_201
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_202
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_203
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_204
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_205
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_206
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_207
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_208
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_209
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_210
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_211
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_212
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_213
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_214
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_215
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_216
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_217
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_218
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_219
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_220
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_221
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_222
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_223
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_224
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_225
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_226
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_227
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_228
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_229
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_230
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_231
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_232
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_233
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_234
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_235
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_236
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_237
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_238
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_239
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_240
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_241
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_242
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_243
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_244
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_245
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_246
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_247
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_248
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_249
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_250
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_251
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_252
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_253
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_254
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_255
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_256
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_257
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_258
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_259
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_260
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_261
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_262
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_263
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_264
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_265
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_266
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_267
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_268
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_269
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_270
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_271
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_272
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_273
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_274
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_275
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_276
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_277
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_278
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_279
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_280
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_281
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_282
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_283
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_284
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_285
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_286
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_287
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_288
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_289
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_290
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_291
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_292
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_293
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_294
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_295
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_296
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_297
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_298
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_299
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_300
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_301
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_302
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_303
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_304
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_305
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_306
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_307
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_308
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_309
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_310
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_311
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_312
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_313
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_314
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_315
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_316
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_317
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_318
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_319
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_320
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_321
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_322
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_323
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_324
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_325
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_326
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_327
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_328
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_329
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_330
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_331
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_332
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_333
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_334
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_335
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_336
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_337
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_338
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_339
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_340
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_341
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_342
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_343
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_344
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_345
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_346
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_347
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_348
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_349
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_350
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_351
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_352
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_353
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_354
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_355
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_356
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_357
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_358
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_359
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_360
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_361
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_362
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_363
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_364
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_365
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_366
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_367
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_368
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_369
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_370
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_371
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_372
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_373
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_374
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_375
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_376
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_377
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_378
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_379
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_380
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_381
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_382
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_383
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_384
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_385
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_386
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_387
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_388
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_389
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_390
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_391
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_392
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_393
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_394
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_395
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_396
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_397
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_398
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_399
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_400
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_401
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_402
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_403
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_404
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_405
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_406
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_407
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_408
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_409
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_410
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_411
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_412
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_413
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_414
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_415
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_416
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_417
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_418
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_419
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_420
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_421
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_422
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_423
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_424
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_425
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_426
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_427
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_428
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_429
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_430
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_431
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_432
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_433
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_434
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_435
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_436
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_437
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_438
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_439
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_440
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_441
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_442
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_443
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_444
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_445
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_446
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_447
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_448
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_449
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_450
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_451
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_452
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_453
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_454
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_455
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_456
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_457
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_458
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_459
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_460
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_461
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_462
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_463
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_464
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_465
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_466
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_467
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_468
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_469
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_470
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_471
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_472
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_473
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_474
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_475
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_476
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_477
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_478
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_479
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_480
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_481
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_482
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_483
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_484
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_485
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_486
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_487
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_488
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_489
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_490
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_491
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_492
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_493
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_494
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_495
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_496
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_497
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_498
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_499
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_500
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_501
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_502
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_503
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_504
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_505
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_506
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_507
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_508
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_509
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_510
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_511
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_512
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_513
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_514
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_515
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_516
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_517
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_518
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_519
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_520
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_521
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_522
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_523
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_524
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_525
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_526
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_527
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_528
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_529
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_530
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_531
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_532
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_533
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_534
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_535
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_536
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_537
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_538
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_539
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_540
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_541
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_542
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_543
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_544
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_545
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_546
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_547
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_548
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_549
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_550
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_551
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_552
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_553
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_554
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_555
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_556
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_557
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_558
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_559
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_560
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_561
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_562
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_563
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_564
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_565
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_566
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_567
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_568
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_569
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_570
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_571
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_572
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_573
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_574
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_575
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_576
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_577
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_578
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_579
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_580
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_581
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_582
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_583
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_584
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_585
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_586
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_587
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_588
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_589
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_590
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_591
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_592
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_593
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_594
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_595
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_596
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_597
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_598
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_599
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_600
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_601
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_602
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_603
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_604
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_605
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_606
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_607
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_608
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_609
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_610
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_611
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_612
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_613
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_614
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_615
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_616
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_617
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_618
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_619
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_620
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_621
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_622
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_623
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_624
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_625
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_626
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_627
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_628
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_629
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_630
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_631
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_632
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_633
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_634
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_635
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_636
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_637
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_638
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_639
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_640
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_641
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_642
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_643
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_644
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_645
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_646
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_647
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_648
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_649
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_650
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_651
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_652
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_653
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_654
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_655
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_656
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_657
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_658
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_659
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_660
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_661
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_662
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_663
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_664
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_665
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_666
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_667
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_668
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_669
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_670
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_671
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_672
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_673
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_674
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_675
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_676
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_677
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_678
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_679
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_680
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_681
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_682
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_683
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_684
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_685
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_686
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_687
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_688
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_689
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_690
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_691
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_692
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_693
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_694
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_695
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_696
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_697
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_698
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_699
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_700
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_701
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_702
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_703
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_704
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_705
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_706
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_707
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_708
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_709
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_710
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_711
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_712
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_713
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_714
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_715
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_716
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_717
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_718
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_719
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_720
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_721
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_722
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_723
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_724
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_725
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_726
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_727
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_728
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_729
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_730
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_731
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_732
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_733
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_734
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_735
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_736
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_737
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_738
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_739
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_740
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_741
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_742
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_743
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_744
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_745
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_746
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_747
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_748
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_749
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_750
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_751
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_752
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_753
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_754
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_755
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_756
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_757
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_758
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_759
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_760
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_761
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_762
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_763
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_764
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_765
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_766
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_767
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_768
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_769
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_770
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_771
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_772
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_773
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_774
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_775
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_776
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_777
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_778
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_779
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_780
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_781
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_782
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_783
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_784
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_785
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_786
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_787
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_788
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_789
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_790
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_791
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_792
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_793
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_794
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_795
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_796
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_797
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_798
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_799
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_800
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_801
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_802
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_803
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_804
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_805
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_806
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_807
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_808
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_809
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_810
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_811
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_812
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_813
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_814
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_815
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_816
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_817
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_818
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_819
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_820
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_821
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_822
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_823
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_824
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_825
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_826
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_827
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_828
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_829
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_830
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_831
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_832
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_833
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_834
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_835
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_836
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_837
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_838
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_839
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_840
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_841
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_842
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_843
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_844
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_845
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_846
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_847
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_848
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_849
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_850
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_851
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_852
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_853
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_854
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_855
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_856
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_857
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_858
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_859
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_860
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_861
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_862
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_863
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_864
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_865
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_866
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_867
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_868
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_869
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_870
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_871
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_872
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_873
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_874
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_875
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_876
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_877
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_878
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_879
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_880
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_881
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_882
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_883
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_884
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_885
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_886
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_887
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_888
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_889
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_890
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_891
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_892
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_893
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_894
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_895
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_896
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_897
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_898
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_899
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_900
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_901
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_902
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_903
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_904
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_905
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_906
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_907
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_908
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_909
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_910
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_911
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_912
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_913
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_914
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_915
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_916
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_917
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_918
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_919
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_920
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_921
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_922
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_923
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_924
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_925
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_926
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_927
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_928
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_929
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_930
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_931
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_932
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_933
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_934
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_935
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_936
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_937
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_938
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_939
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_940
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_941
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_942
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_943
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_944
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_945
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_946
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_947
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_948
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_949
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_950
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_951
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_952
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_953
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_954
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_955
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_956
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_957
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_958
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_959
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_960
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_961
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_962
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_963
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_964
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_965
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_966
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_967
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_968
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_969
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_970
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_971
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_972
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_973
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_974
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_975
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_976
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_977
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_978
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_979
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_980
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_981
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_982
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_983
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_984
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_985
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_986
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_987
+        weight: 1
+      - path: Locator_rig_bar_HeadD_vtx_988
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
