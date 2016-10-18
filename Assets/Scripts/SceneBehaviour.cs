@@ -10,7 +10,6 @@ public class SceneBehaviour : MonoBehaviour {
 
 	public List<AudioClip> ericVoice = new List<AudioClip> ();
 	public List<AudioClip> investorVoice = new List<AudioClip> ();
-	public List<float> investorAngleOffset = new List<float> ();
 
 	private enum CharacterMovingState { MOVE_ERIC_TO_ERICPOS, MOVE_ERIC_TO_DAVIDPOS, MOVE_DAVID_TO_DAVIDPOS, MOVE_ERIC_HEY_ERIC_POS, MOVE_DAVID_HEY_ERIC_POS }
 	private enum CharacterName { ERIC, DAVID, DAVID_END, DAVID_FROM_METHOD1, DAVID_FROM_METHOD2, DAVID_FROM_METHOD3 }
@@ -81,7 +80,8 @@ public class SceneBehaviour : MonoBehaviour {
 
 	public GameObject davidObj;
 	public GameObject ericObj;
-	private GameObject startBtn;
+	public GameObject johnObj;
+	private GameObject gameModeUI;
 
 	public Image textNavigationImage;
 
@@ -113,6 +113,8 @@ public class SceneBehaviour : MonoBehaviour {
 
 	public ReplayBtnBehaviour replayBtn;
 	public PlaySampleBehaviour playSampleBtn;
+
+	public GameObject recordingUI;
 
 	//---------------------------------------------
 	private bool IsBackwardWalk (GameObject currChar)
@@ -248,10 +250,12 @@ public class SceneBehaviour : MonoBehaviour {
         }
 	}
 
-	void Start () {
+	void Awake ()
+	{
 		debug = GameObject.Find ("debug").GetComponent<Text> ();
-		startBtn = GameObject.Find ("StartBtn");
-		startBtn.SetActive (false);
+		gameModeUI = GameObject.Find ("GameMode");
+
+		gameModeUI.SetActive (false);
 
 		//ToDo Create scenario FROM file loading mechanism
 		ConversationState newState0 = new ConversationState (true, 0, -3, 0, -1, new Dictionary<string, int>(), new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
@@ -307,14 +311,22 @@ public class SceneBehaviour : MonoBehaviour {
 		davidObj.transform.localRotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180 + davidObj.GetComponent<FacingCamera>().angleOffset, 0);
 		tempAngleOffset = davidObj.GetComponent<FacingCamera> ().angleOffset;
 		ericObj.transform.localRotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
+		johnObj.transform.localRotation = Quaternion.LookRotation (lookPos) * Quaternion.Euler (0, 180, 0);
 
-		if (Application.isEditor) {
+		/*if (Application.isEditor) {
 			transform.position = INITIAL_POSITION;
 			GetComponent<Placeable> ().ResetInitialPos ();
-			ericObj.SetActive (true);
-			GoState (0);
-			//ShowStartBtn ();
-		}
+
+			OnEmotionalAnalysisTap ();
+			/*ericObj.SetActive (true);
+			GoState (0);*/
+
+		//ShowStartBtn ();
+		//}
+	}
+
+	void Start () {
+
 	}
 
 	private int GetEyeContact ()
@@ -355,28 +367,27 @@ public class SceneBehaviour : MonoBehaviour {
 
 	public bool OnKeywordSaid (string keyWord)
 	{
-		if (possibleConvStates [convStateIndex].keywordStates.ContainsKey (keyWord)) {
-			if (keyWord.Equals ("practice again")) {
-				scriptLookTime = 0;
-				investorFaceLookTime = 0;
-				investorDoesNotLookTime = 0;
-				totalTimeTalking = 0;
-				totalTimeUserTalking = 0;
-				replayBtn.gameObject.SetActive (false);
-			}
+		if (!isEmotionalAnalysisRunning) {
+			if (possibleConvStates [convStateIndex].keywordStates.ContainsKey (keyWord)) {
+				if (keyWord.Equals ("practice again")) {
+					scriptLookTime = 0;
+					investorFaceLookTime = 0;
+					investorDoesNotLookTime = 0;
+					totalTimeTalking = 0;
+					totalTimeUserTalking = 0;
+					replayBtn.gameObject.SetActive (false);
+				}
 
-			GoState (possibleConvStates [convStateIndex].keywordStates [keyWord]);
-			return true;
-		}
-		else if (keyWord.Equals("sample"))
-		{
-			playSampleBtn.OnSelect ();
-			return true;
-		}
-		else if (keyWord.Equals("replay"))
-		{
-			replayBtn.OnSelect ();;
-			return true;
+				GoState (possibleConvStates [convStateIndex].keywordStates [keyWord]);
+				return true;
+			} else if (keyWord.Equals ("sample")) {
+				playSampleBtn.OnSelect ();
+				return true;
+			} else if (keyWord.Equals ("replay")) {
+				replayBtn.OnSelect ();
+				;
+				return true;
+			}
 		}
 
 		return false;
@@ -472,10 +483,55 @@ public class SceneBehaviour : MonoBehaviour {
 		return false;
 	}
 
-	public void ShowStartBtn ()
+	public void ShowGameModeUI ()
 	{
-		startBtn.SetActive(true);
+		gameModeUI.SetActive(true);
 		ericObj.SetActive (false);
+	}
+
+	public void OnPitchingPracticeTap ()
+	{
+		gameModeUI.SetActive (false);
+		ericObj.SetActive (true);
+		GoState (0);
+	}
+
+	private bool isEmotionalAnalysisRunning = false;
+	public void OnEmotionalAnalysisTap ()
+	{
+		gameModeUI.SetActive (false);
+		davidObj = johnObj;
+		tempAngleOffset = 0;
+		possibleConvStates.Clear ();
+		isEmotionalAnalysisRunning = true;
+
+		//ToDo Create scenario FROM file loading mechanism
+		ConversationState newState0 = new ConversationState (true, 0, -3, 0, -1, new Dictionary<string, int>(), new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
+		ConversationState newState1 = new ConversationState (1, -3, -1, -1, new Dictionary<string, int>() { /*{"hi eric", 2} }*/{"DISABLED", 0} });
+		ConversationState newState2 = new ConversationState (true, -1, -3, 1, -1, new Dictionary<string, int>());
+		ConversationState newState3 = new ConversationState (true, -1, -3, 2, -1, new Dictionary<string, int>());
+		ConversationState newState4 = new ConversationState (true, -1, -3, 3, -1, new Dictionary<string, int>());
+		ConversationState newState5 = new ConversationState (2, -3, -1, -1, new Dictionary<string, int>() {{"DISABLED", 0}}/*{ {"repeat", 2}, {"lets do it", 6} }*/);
+
+		ConversationState newState6 = new ConversationState (true, -1, -1, 4, -1, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "Back_SmallStep"} });
+
+		ConversationState newState7 = new ConversationState (-1, -1, -1, -1,new Dictionary<string, int>() {{"DISABLED", 0}}/*{ {"hey eric", 8} }*/, new Dictionary<CharacterName, string>());
+
+		ConversationState newState8 = new ConversationState (4, -1, 5, -1, new Dictionary<string, int>() {{"DISABLED", 0}}/*{ {"continue", 6} }*/, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_HEY_ERIC_POS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
+
+		possibleConvStates.Add (newState0);
+		possibleConvStates.Add (newState1);
+		possibleConvStates.Add (newState2);
+		possibleConvStates.Add (newState3);
+		possibleConvStates.Add (newState4);
+		possibleConvStates.Add (newState5);
+		possibleConvStates.Add (newState6);
+		possibleConvStates.Add (newState7);
+		possibleConvStates.Add (newState8);
+		//-----------------------------------------------
+
+		ericObj.SetActive (true);
+		GoState (0);
 	}
 
 	/// <summary>
@@ -484,13 +540,7 @@ public class SceneBehaviour : MonoBehaviour {
 	/// </summary>
 	public void OnSceneAirTap()
 	{
-		if (convStateIndex < 0) 
-		{
-			startBtn.SetActive (false);
-			ericObj.SetActive (true);
-			GoState (0);
-		} 
-		else 
+		if (convStateIndex >= 0)
 		{
 			if (InvestorCommunicator.Instance.IsRecordedAudioPlaying () || !OnAirTapSkipAllowed ())
 				return;
@@ -565,12 +615,27 @@ public class SceneBehaviour : MonoBehaviour {
 		if (possibleConvStates [convStateIndex].currInvestorState >= -1)
 		{
 			if (!possibleConvStates [convStateIndex].stateAnimations.ContainsKey (CharacterName.ERIC)) {
-				InvestorCommunicator.Instance.gameObject.SetActive (true);
+				if (isEmotionalAnalysisRunning) {
+					MoodsRecognizer.Instance.gameObject.SetActive (true);
+					recordingUI.SetActive (true);
+				}
+				else
+					InvestorCommunicator.Instance.gameObject.SetActive (true);
 			} else {
-				InvestorCommunicator.Instance.gameObject.SetActive (false);
+				if (isEmotionalAnalysisRunning) {
+					MoodsRecognizer.Instance.gameObject.SetActive (false);
+					recordingUI.SetActive (false);
+				}
+				else
+					InvestorCommunicator.Instance.gameObject.SetActive (false);
 			}
 		} else {
-			InvestorCommunicator.Instance.gameObject.SetActive (false);
+			if (isEmotionalAnalysisRunning) {
+				MoodsRecognizer.Instance.gameObject.SetActive (false);
+				recordingUI.SetActive (false);
+			}
+			else
+				InvestorCommunicator.Instance.gameObject.SetActive (false);
 		}
 
 		//----------Audio part-----------

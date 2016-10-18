@@ -117,7 +117,7 @@ Material:
       second: 0
     - first:
         name: _WireThickness
-      second: 550
+      second: 600
     - first:
         name: _ZWrite
       second: 1
@@ -133,4 +133,4 @@ Material:
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _WireColor
-      second: {r: 0.91369176, g: 0.9264706, b: 0, a: 1}
+      second: {r: 0.819422, g: 0.8308824, b: 0, a: 1}

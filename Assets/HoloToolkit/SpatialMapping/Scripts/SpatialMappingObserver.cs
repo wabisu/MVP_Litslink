@@ -95,27 +95,26 @@ namespace HoloToolkit.Unity
         /// </summary>
         private void Update()
         {
-            // Only do processing if the observer is running.
-            if (ObserverState == ObserverStates.Running)
-            {
-                // If we don't have mesh creation in flight, but we could schedule mesh creation, do so.
-                if (surfaceWorkOutstanding == false && surfaceWorkQueue.Count > 0)
-                {
-                    // Pop the SurfaceData off the queue.  A more sophisticated algorithm could prioritize
-                    // the queue based on distance to the user or some other metric.
-                    SurfaceData surfaceData = surfaceWorkQueue.Dequeue();
+			if (!Application.isEditor) {
+				// Only do processing if the observer is running.
+				if (ObserverState == ObserverStates.Running) {
+					// If we don't have mesh creation in flight, but we could schedule mesh creation, do so.
+					if (surfaceWorkOutstanding == false && surfaceWorkQueue.Count > 0) {
+						// Pop the SurfaceData off the queue.  A more sophisticated algorithm could prioritize
+						// the queue based on distance to the user or some other metric.
+						SurfaceData surfaceData = surfaceWorkQueue.Dequeue ();
 
-                    // If RequestMeshAsync succeeds, then we have successfully scheduled mesh creation.
-                    surfaceWorkOutstanding = observer.RequestMeshAsync(surfaceData, SurfaceObserver_OnDataReady);
-                }
+						// If RequestMeshAsync succeeds, then we have successfully scheduled mesh creation.
+						surfaceWorkOutstanding = observer.RequestMeshAsync (surfaceData, SurfaceObserver_OnDataReady);
+					}
                 // If we don't have any other work to do, and enough time has passed since the previous
                 // update request, request updates for the spatial mapping data.
-                else if (surfaceWorkOutstanding == false && (Time.time - updateTime) >= TimeBetweenUpdates)
-                {
-                    observer.Update(SurfaceObserver_OnSurfaceChanged);
-                    updateTime = Time.time;
-                }
-            }
+                else if (surfaceWorkOutstanding == false && (Time.time - updateTime) >= TimeBetweenUpdates) {
+						observer.Update (SurfaceObserver_OnSurfaceChanged);
+						updateTime = Time.time;
+					}
+				}
+			}
         }
 
         /// <summary>

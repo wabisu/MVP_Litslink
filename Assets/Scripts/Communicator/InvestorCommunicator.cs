@@ -48,6 +48,8 @@ public class InvestorCommunicator : Singleton<InvestorCommunicator>
 
 	void Awake ()
 	{
+		InvestorCommunicator.Instance.gameObject.SetActive (false);
+
 		replayBtn.gameObject.SetActive (false);
 
 		//ToDo Create scenario FROM file loading mechanism

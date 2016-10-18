@@ -52,6 +52,10 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 
         // Register for the MakePlanesComplete event.
         SurfaceMeshesToPlanes.Instance.MakePlanesComplete += SurfaceMeshesToPlanes_MakePlanesComplete;
+
+		if (Application.isEditor) {
+			SpaceCollectionManager.Instance.GenerateItemsInWorld (null);
+		}
     }
 
     /// <summary>

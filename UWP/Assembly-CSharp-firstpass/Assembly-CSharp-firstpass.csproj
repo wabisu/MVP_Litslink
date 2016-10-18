@@ -143,12 +143,28 @@
       <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\DOTween50.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\UnityEngine.HoloLens.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\DOTween46.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\DOTween43.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\UnityEngine.Networking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\DOTween.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VR">

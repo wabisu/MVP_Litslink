@@ -43,27 +43,33 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
     /// <param name="verticalSurfaces">Vertical surface planes (walls).</param>
     public bool GenerateItemsInWorld(List<GameObject> horizontalSurfaces)
     {
-		totalAttempts++;
-		Vector3 targetPosition;
-		Vector3 surfaceNormal;
-		bool canBePlaced = playgroundPrefab.GetComponent<Placeable>().ValidatePlacement(out targetPosition, out surfaceNormal, Camera.main.transform, 2.65f);
-
-		if (canBePlaced) {
-			PlacePlayground (targetPosition);
+		if (Application.isEditor) {
+			PlacePlayground (new Vector3());
+			playgroundPrefab.GetComponent<SceneBehaviour> ().OnEmotionalAnalysisTap ();
 			return true;
-		}
+		} else {
+			totalAttempts++;
+			Vector3 targetPosition;
+			Vector3 surfaceNormal;
+			bool canBePlaced = playgroundPrefab.GetComponent<Placeable> ().ValidatePlacement (out targetPosition, out surfaceNormal, Camera.main.transform, 2.65f);
 
-		minAngle = 360;
-		return CreateSpaceObjects(playgroundPrefab, horizontalSurfaces, PlacementSurfaces.Horizontal);
+			if (canBePlaced) {
+				PlacePlayground (targetPosition);
+				return true;
+			}
+
+			minAngle = 360;
+			return CreateSpaceObjects (playgroundPrefab, horizontalSurfaces, PlacementSurfaces.Horizontal);
+		}
     }
 
 	private void PlacePlayground (Vector3 targetPosition)
 	{
 		playgroundPrefab.transform.position = targetPosition;
-		playgroundPrefab.transform.parent = gameObject.transform;
+		//playgroundPrefab.transform.parent = gameObject.transform;
 		playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
 		RotatePlaygroundToCamera ();
-		playgroundPrefab.GetComponent<SceneBehaviour> ().ShowStartBtn ();
+		playgroundPrefab.GetComponent<SceneBehaviour> ().ShowGameModeUI ();
 	}
 
     /// <summary>
