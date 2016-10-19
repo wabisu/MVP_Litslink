@@ -66,7 +66,6 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 	private void PlacePlayground (Vector3 targetPosition)
 	{
 		playgroundPrefab.transform.position = targetPosition;
-		//playgroundPrefab.transform.parent = gameObject.transform;
 		playgroundPrefab.GetComponent<Placeable> ().ResetInitialPos ();
 		RotatePlaygroundToCamera ();
 		playgroundPrefab.GetComponent<SceneBehaviour> ().ShowGameModeUI ();
