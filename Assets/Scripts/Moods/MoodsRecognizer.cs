@@ -28,6 +28,8 @@ public class MoodsRecognizer : Singleton<MoodsRecognizer>
 	private const string ATTITUDE_TEMPER = "Temper";
 	private const string ATTITUDE_VALENCE = "Valence";
 	private const string ATTITUDE_AROUSAL = "Arousal";
+	private const string ATTITUDE_GROUP = "Group";
+	private const string ATTITUDE_VALUE = "Value";
 
 	private const string MOOD_GROUP11 = "Group11";
 	private const string MOOD_COMPOSITE = "Composite";
@@ -144,20 +146,36 @@ public class MoodsRecognizer : Singleton<MoodsRecognizer>
 		return jsonElem.str;
 	}
 
-	private float GetAttitude (string attType)
+	private string GetAttitudeGroup (string attType)
+	{
+		if (receivedJSON == null)
+			return MOOD_NONE;
+
+		JSONObject jsonElem = receivedJSON.GetField ("result")
+			.GetField ("analysisSegments")[0].GetField ("analysis")
+			.GetField (attType).GetField (ATTITUDE_GROUP);
+
+		if (jsonElem == null) {
+			return MOOD_NONE;
+		}
+
+		return jsonElem.str;
+	}
+
+	private int GetAttitudeValue (string attType)
 	{
 		if (receivedJSON == null)
 			return -1;
 
 		JSONObject jsonElem = receivedJSON.GetField ("result")
 			.GetField ("analysisSegments")[0].GetField ("analysis")
-			.GetField (attType).GetField ("Value");
+			.GetField (attType).GetField (ATTITUDE_VALUE);
 
 		if (jsonElem == null) {
 			return -1;
 		}
 
-		return float.Parse(jsonElem.str);
+		return (int)float.Parse(jsonElem.str);
 	}
 
 	private MoodGroups GetMoodGroup11 (string moodType)
@@ -286,9 +304,12 @@ public class MoodsRecognizer : Singleton<MoodsRecognizer>
 						temperTxt.text = "";
 						valenceAttitudeTxt.text = "";					
 					} else if (status.str.Equals ("success")) {
-						float temper = GetAttitude (ATTITUDE_TEMPER);
-						float valence = GetAttitude (ATTITUDE_VALENCE);
-						float arousal = GetAttitude (ATTITUDE_AROUSAL);
+						int temper = GetAttitudeValue (ATTITUDE_TEMPER);
+						string temperGroup = GetAttitudeGroup (ATTITUDE_TEMPER);
+						int valence = GetAttitudeValue (ATTITUDE_VALENCE);
+						string valenceGroup = GetAttitudeGroup (ATTITUDE_VALENCE);
+						int arousal = GetAttitudeValue (ATTITUDE_AROUSAL);
+						string arousalGroup = GetAttitudeGroup (ATTITUDE_AROUSAL);
 						MoodGroups primaryMood = GetMoodGroup11 (MOOD_PRIMARY);
 						MoodGroups secondaryMood = GetMoodGroup11 (MOOD_SECONDARY);
 						string primaryCompositeMood = GetMoodComposite (MOOD_PRIMARY);
@@ -298,9 +319,9 @@ public class MoodsRecognizer : Singleton<MoodsRecognizer>
 						secondaryCompositeTxt.text = secondaryCompositeMood;
 						primaryGroup11Txt.text = GetEnumDescription (primaryMood);
 
-						arousalEnergyTxt.text = "Arousal = " + arousal;
-						temperTxt.text = "Temper = " + temper;
-						valenceAttitudeTxt.text = "Attitude = " + valence;
+						arousalEnergyTxt.text = char.ToUpper(arousalGroup[0]) + arousalGroup.Substring(1) + " ( " + arousal + "% )";
+						temperTxt.text = char.ToUpper(temperGroup[0]) + temperGroup.Substring(1) + " Temper ( " + temper + "% )";
+						valenceAttitudeTxt.text = char.ToUpper(valenceGroup[0]) + valenceGroup.Substring(1) + " Attitude ( " + valence + "% )";
 					} else {
 						debug.text = "Response status failed";
 						Debug.Log ("Response status failed");
@@ -341,9 +362,11 @@ public class MoodsRecognizer : Singleton<MoodsRecognizer>
 		if (Microphone.IsRecording(deviceName))
 			Microphone.End(deviceName);
 
-		recordingCountdown.text = "";
-		Debug.Log ("Stopped.");
-		debug.text = "Stopped.";
+		if (!debug.IsDestroyed () && !recordingCountdown.IsDestroyed ()) {
+			debug.text = "Stopped.";
+			recordingCountdown.text = "";
+			Debug.Log ("Stopped.");
+		}
 	}
 
 	/// <summary>

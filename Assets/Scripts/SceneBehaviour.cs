@@ -196,7 +196,8 @@ public class SceneBehaviour : MonoBehaviour {
 				movingCharactersFinalPos.Add (DAVID_POSITION);
 				break;
 			case CharacterMovingState.MOVE_ERIC_HEY_ERIC_POS:
-				mainModelFade (new Color (0.4f, 0.4f, 0.4f), false);
+				if (!isEmotionalAnalysisRunning)
+					mainModelFade (new Color (0.4f, 0.4f, 0.4f), false);
 
 				movingCharacters.Add (ericObj);
 				movingCharactersFinalPos.Add (HEY_ERIC_POSITION);
@@ -508,6 +509,7 @@ public class SceneBehaviour : MonoBehaviour {
 		isEmotionalAnalysisRunning = true;
 
 		//ToDo Create scenario FROM file loading mechanism
+		//public ConversationState (bool autoSkip, int ericMenuState, int investorState, int audioStateEric, int audioStateInvestor, Dictionary <string, int> keywordsDict, List<CharacterMovingState> moveTo, Dictionary<CharacterName, string> animationsList)
 		ConversationState newState0 = new ConversationState (true, 0, -3, 0, -1, new Dictionary<string, int>(), new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
 		ConversationState newState1 = new ConversationState (1, -3, -1, -1, new Dictionary<string, int>() { {"hi eric", 2} });
 		ConversationState newState2 = new ConversationState (true, -1, -3, 1, -1, new Dictionary<string, int>());
@@ -515,11 +517,11 @@ public class SceneBehaviour : MonoBehaviour {
 		ConversationState newState4 = new ConversationState (true, -1, -3, 3, -1, new Dictionary<string, int>());
 		ConversationState newState5 = new ConversationState (2, -3, -1, -1, new Dictionary<string, int>() { {"repeat", 2}, {"lets do it", 6} });
 
-		ConversationState newState6 = new ConversationState (true, -1, -1, 4, -1, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "Back_SmallStep"} });
+		ConversationState newState6 = new ConversationState (true, -1, -1, 4, -1, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_TO_ERICPOS, CharacterMovingState.MOVE_DAVID_TO_DAVIDPOS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "Back_SmallStep"}, {CharacterName.DAVID, "SmallStep"} });
 
 		ConversationState newState7 = new ConversationState (-1, -1, -1, -1,new Dictionary<string, int>() { {"hey eric", 8} }, new Dictionary<CharacterName, string>());
 
-		ConversationState newState8 = new ConversationState (4, -1, 5, -1, new Dictionary<string, int>() { {"continue", 6} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_HEY_ERIC_POS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"} });
+		ConversationState newState8 = new ConversationState (4, -1, 5, -1, new Dictionary<string, int>() { {"continue", 6} }, new List<CharacterMovingState>() { CharacterMovingState.MOVE_ERIC_HEY_ERIC_POS, CharacterMovingState.MOVE_DAVID_HEY_ERIC_POS }, new Dictionary<CharacterName, string>() { {CharacterName.ERIC, "SmallStep"}, {CharacterName.DAVID, "Back_SmallStep"} });
 
 		possibleConvStates.Clear ();
 		possibleConvStates.Add (newState0);
@@ -534,6 +536,7 @@ public class SceneBehaviour : MonoBehaviour {
 		//-----------------------------------------------
 
 		mainModelObj = johnObj;
+		mainModelObj.transform.position = INITIAL_POSITION;
 		StartScenario (0);
 	}
 
