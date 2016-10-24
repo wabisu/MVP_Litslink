@@ -536,7 +536,7 @@ public class SceneBehaviour : MonoBehaviour {
 		//-----------------------------------------------
 
 		mainModelObj = johnObj;
-		mainModelObj.transform.position = INITIAL_POSITION;
+		mainModelObj.transform.localPosition = INITIAL_POSITION;
 		StartScenario (0);
 	}
 

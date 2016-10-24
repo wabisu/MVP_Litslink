@@ -46,6 +46,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
 		if (Application.isEditor) {
 			PlacePlayground (new Vector3());
 			playgroundPrefab.GetComponent<SceneBehaviour> ().OnEmotionalAnalysisTap ();
+			//playgroundPrefab.GetComponent<SceneBehaviour> ().OnPitchingPracticeTap ();
 			return true;
 		} else {
 			totalAttempts++;
