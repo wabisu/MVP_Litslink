@@ -315,7 +315,7 @@ public class SceneBehaviour : MonoBehaviour {
 
 	private int GetEyeContact ()
 	{
-		return (int)(investorFaceLookTime / totalTimeTalking * 100);
+		return (int)(investorFaceLookTime / totalTimeTalking * 100 + 5);
 	}
 
 	private int GetMemorization ()
